@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { ThemeProvider } from "styled-components";
+import { LightTheme, DarkTheme, GlobalStyles } from "./_components/themes";
+import styled from "styled-components";
+import DesktopLayout from "./_layout/DesktopLayout"
+
+
+const ContaininerTheme = styled.div`
+position: fixed;
+top: 1rem;
+right: 1.5rem;
+color:red;
+z-index:9999;
+`;
+
+
 
 function App() {
+  const [theme, setTheme] = useState("dark");
+  const themeToggler = () => {
+    theme === 'light' ? setTheme('dark') : setTheme('light');
+
+
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme}>
+      <GlobalStyles />
+      <DesktopLayout />
+      <ContaininerTheme>
+        <label className="switch">
+          {" "}
+          <input type="checkbox" />
+          <span className="slider round" onClick={() => themeToggler()}></span>
+        </label>
+      </ContaininerTheme>
+    </ThemeProvider>
   );
 }
 
