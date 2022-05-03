@@ -6,6 +6,7 @@ import { ExternalLinks, NavLinksFooter } from "./Styles";
 const FooterContainer = styled.div`
   transition: 1s;
   display: flex;
+  flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
   gap: 1rem;
@@ -13,7 +14,6 @@ const FooterContainer = styled.div`
   top: 0;
   width: auto;
   padding: 1.5rem 0;
-  border-top: 2px solid red;
   flex-wrap: wrap;
   font-weight: bold;
   background: rgba(104, 104, 104, 0.26);
@@ -27,7 +27,7 @@ const FooterContainer = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-top: 1.8px solid ${(props) => props.theme.colorLines};
-  padding: 4rem 0;
+  padding: 2rem 2rem;
 `;
 
 const LogoContainer = styled.a`
@@ -35,15 +35,14 @@ const LogoContainer = styled.a`
   flex-direction: column;
   align-items: ${isMobile ? "initial" : "end"};
   text-transform: uppercase;
-  ${isMobile ? "transform: rotate(-90deg);" : ""}
-  font-size: 3rem;
+  font-size: ${isMobile ? "2rem;" : "3rem;"};
 `;
 
 const FooterCopyright = styled.div`
   display: flex;
   flex-direction: column;
   text-align: ${isMobile ? "center" : "end"};
-  font-size: ${(props) => props.theme.sizeGeneralText};
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   padding-left: ${isMobile ? "" : "10rem"};
   font-weight: 500;
 `;

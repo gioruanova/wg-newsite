@@ -20,8 +20,12 @@ export const DarkTheme = {
   hooverLinks: "#D8D8D8;",
   tattooStudioTitle: "'Updock', cursive;",
   tattooStudioTitleColor: "#D8D8D8;",
-  iconBackground: "#1c1a1a;",
-  iconColor: "#6b5a3d;",
+
+  backgroundIcons: "#6d6d6d",
+  strokeIcons: "#a58959;",
+  fillIcons: "#d1d1d1",
+  hoverStrokeIcons: "#d1d1d1;",
+  hoverFillIcons: "#a58959;",
 };
 
 export const LightTheme = {
@@ -44,8 +48,12 @@ export const LightTheme = {
   hooverLinks: "#343A40;",
   tattooStudioTitle: "'Updock', cursive;",
   tattooStudioTitleColor: "#343A40;",
-  iconBackground: "#aaaaaa;",
-  iconColor: "#795e30;",
+
+  backgroundIcons: "#272A2D;",
+  strokeIcons: "#a58959;",
+  fillIcons: "#d1d1d1;",
+  hoverStrokeIcons: "#d1d1d1;",
+  hoverFillIcons: "#a58959;",
 };
 
 export const GlobalStyles = createGlobalStyle`

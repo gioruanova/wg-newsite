@@ -5,25 +5,26 @@ import { isMobile } from "react-device-detect";
 
 const IconWrapper = styled.div`
   padding: ${isMobile ? "0.4rem 0.3rem;" : "0.5rem 0.5rem;"}
-  transition: 200ms;
+  &:hover{
+      transition:1s;
+  }
+
   svg {
-    transition: 1s;
     display: flex;
     align-items: center;
-    width: ${isMobile ? "1.3rem;" : "1.5rem;"}
-    height: ${isMobile ? "1.3rem;" : "1.5rem;"}
-    fill: ${(props) => props.theme.iconColor};
-    &:hover {
-      fill: #534224;
-    }
+    width: ${isMobile ? "1.3rem;" : "2rem;"}
+    height: ${isMobile ? "1.3rem;" : "2rem;"}
+    stroke:${(props) => props.theme.strokeIcons};
+    fill:${(props) => props.theme.fillIcons};
+    transition:600ms;
+    
+    &:hover{
+      fill:${(props) => props.theme.hoverFillIcons};
+      stroke:${(props) => props.theme.hoverStrokeIcons};
+      
+    
   }
-`;
-
-const IconWrapperFixed = styled(IconWrapper)`
-  svg {
-    width: ${isMobile ? "1.5rem;" : "1.8rem;"}
-    height: ${isMobile ? "1.5rem;" : "1.8rem;"}
-  }
+}
 `;
 
 export default function Icons({ name }) {
@@ -78,9 +79,9 @@ export default function Icons({ name }) {
       );
     case "whatsapp":
       return (
-        <IconWrapperFixed>
+        <IconWrapper>
           <ReactSVG src="_assets/_icons/whatsapp.svg" />
-        </IconWrapperFixed>
+        </IconWrapper>
       );
     case "top":
       return (

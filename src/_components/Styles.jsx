@@ -29,7 +29,7 @@ export const MainContent = styled.div`
 `;
 
 export const MainContentHome = styled(MainContent)`
-  margin: ${isMobile ? "0rem 3rem 5rem 3rem;" : "0 20rem 0rem 20rem;"};
+  margin: ${isMobile ? "0rem 3rem 0 3rem;" : "0 20rem 0rem 20rem;"};
 `;
 
 export const Content = styled.div`
@@ -74,7 +74,7 @@ export const Paragraphs = styled.p`
 
 export const ExternalLinks = styled.a`
   color: ${(props) => props.theme.navigationLinksColor};
-  font-size: ${(props) => props.theme.sizeGeneralText};
+  font-size: 0.8rem;
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 300;
@@ -147,7 +147,7 @@ export const NavLinksTop = styled(Link)`
 
 export const NavLinksFooter = styled(NavLinksTop)`
   ${isMobile ? "" : "padding: 0 0 0 2rem;"}
-  ${isMobile ? "text-align: initial;" : ""}
+  ${isMobile ? "text-align: center;" : "text-align: initial;"}
 `;
 
 // Incons}
@@ -158,11 +158,12 @@ const ContaininerRedes = styled.div`
   top:${isMobile ? " 15rem;" : "22rem;"}
   left: 0.2rem;
    border-radius: 15px;
-   transition: 1s;
-  background-color: ${(props) => props.theme.iconBackground};
-  border: 3px solid ${(props) => props.theme.iconColor};
+   transition: 200ms;
+  background-color: ${(props) => props.theme.backgroundIcons};
+  border: 3px outset ${(props) => props.theme.strokeIcons};
   align-items: center;
   opacity: 50%;
+  transition: 1s;
   &:hover {
     opacity: 100%;
   }
@@ -177,8 +178,8 @@ const ContaininerRightPanel = styled.div`
   z-index: 9999;
   border-radius: 15px;
   transition: 1s;
-  background-color: ${(props) => props.theme.iconBackground};
-  border: 3px solid ${(props) => props.theme.iconColor};
+  background-color: ${(props) => props.theme.backgroundIcons};
+  border: 3px outset ${(props) => props.theme.strokeIcons};
   align-items: center;
   opacity: 50%;
   &:hover {

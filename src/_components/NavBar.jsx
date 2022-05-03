@@ -8,7 +8,7 @@ import Icons from "./Icons";
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: center;
+  justify-content: space-evenly;
   ${isMobile ? "" : "gap: 2rem;"}
   align-items: ${isMobile ? "self-start" : "center"};
   width: 100%;
@@ -38,12 +38,12 @@ const ContainerLogo = styled.div``;
 
 const LogoTitle = styled.h2`
   margin: 0;
-  text-align: ${isMobile ? "center" : "center"};
+  text-align: ${isMobile ? "center" : "end"};
   text-transform: uppercase;
 `;
 
 const LinksContainer = styled.div`
-transition: 1s;
+  transition: 1s;
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
   align-items: self-start;
@@ -62,7 +62,6 @@ const NavBar = () => {
             setShow(!show);
           }}
         >
-          
           <div
             onClick={() => {
               setShow(!show);
