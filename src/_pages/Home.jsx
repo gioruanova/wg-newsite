@@ -10,7 +10,7 @@ import Contacto from "./Contacto";
 
 const Home = () => {
   return (
-    <MainContentHome id="TopContent">
+    <MainContentHome>
       <Content>
         <Bio />
         <Separator />

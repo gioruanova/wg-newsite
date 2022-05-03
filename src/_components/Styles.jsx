@@ -8,7 +8,6 @@ export const BackgroundComponent = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
   position: relative;
@@ -16,6 +15,8 @@ export const BackgroundComponent = styled.div`
   align-items: center;
   text-align: center;
   align-content: center;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
 `;
 
 export const MainContent = styled.div`
@@ -149,8 +150,8 @@ const ContaininerRedes = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 25rem;
-  left: 1.5rem;
+  top: 20rem;
+  left: 0.5rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -167,8 +168,8 @@ const ContaininerRightPanel = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 25rem;
-  right: 1.5rem;
+  top: 20rem;
+  right: 0.5rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -236,9 +237,9 @@ export const Redescontainer = () => {
 export const RightPanelContainer = () => {
   return (
     <ContaininerRightPanel>
-      <a href="/">
-        <Icons name="home" rel="noreferrer" />
-      </a>
+      <InternalLinks to="/">
+        <Icons name="home" />
+      </InternalLinks>
       <a href="#TopContent" rel="noreferrer">
         <Icons name="top" />
       </a>

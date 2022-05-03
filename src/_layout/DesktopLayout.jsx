@@ -6,7 +6,7 @@ import { BackgroundComponent } from "../_components/Styles";
 
 const DesktopLayout = () => {
   return (
-    <BackgroundComponent>
+    <BackgroundComponent id="TopContent">
       <NavBar />
       <RoutesData />
       <Footer />
