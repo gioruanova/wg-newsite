@@ -263,7 +263,7 @@ export const RightPanelContainer = () => {
 
 export const ContaininerTheme = styled.div`
   position: fixed;
-  top: 1rem;
+  top: 2rem;
   right: 1.5rem;
   z-index: 9999;
 `;
