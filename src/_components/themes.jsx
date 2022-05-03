@@ -1,4 +1,6 @@
+import { isMobile } from "react-device-detect";
 import { createGlobalStyle } from "styled-components";
+isMobile
 
 export const DarkTheme = {
   id: "DarkTheme",
