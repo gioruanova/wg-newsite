@@ -42,18 +42,18 @@ const ImgContainer = styled.div`
   background-image: url(${BioPicture});
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16rem;
-  height: 100%;
+  width: 100%;
+  height: 20rem;
   margin: 2rem 0;
   border-radius: 10px;
 `;
 
 const BioTextContainer = styled.div`
-  padding: 0 1rem;
+  padding: 0 5rem;
   p {
     text-align: ${isMobile ? "center" : "left"};
   }

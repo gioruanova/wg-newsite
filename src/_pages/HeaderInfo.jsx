@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import HeaderPicture from "../_images/HeaderPicture.jpeg";
 
+
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -63,8 +64,8 @@ const PictureContainer = styled.div`
   justify-content: center;
   color: white;
   border-radius: 10px;
-  width: ${isMobile ? "10rem" : "12rem"};
-  height: ${isMobile ? "10rem" : "15rem"};
+  width: ${isMobile ? "10rem" : "14%"};
+  height: ${isMobile ? "10rem" : "18rem"};
 `;
 
 AOS.init();
