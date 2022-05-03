@@ -7,11 +7,17 @@ import Tatuaje from "./Tatuaje";
 import Pintura from "./Pintura";
 import PlasticaYMas from "./PlasticaYMas";
 import Contacto from "./Contacto";
+import HeaderInfo from "./HeaderInfo";
+import ProximosEventos from "./ProximosEventos";
 
 const Home = () => {
   return (
     <MainContentHome>
       <Content>
+        <HeaderInfo />
+        <Separator />
+        <ProximosEventos />
+        <Separator />
         <Bio />
         <Separator />
         <Musica />
