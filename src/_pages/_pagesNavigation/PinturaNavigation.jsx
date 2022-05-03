@@ -3,7 +3,7 @@ import { MainContent, Titles, Paragraphs } from "../../_components/Styles";
 
 const PinturaNavigation = () => {
   return (
-    <MainContent>
+    <MainContent className="animate__animated animate__fadeInRight animate__slow">
       <Titles>Pintura Navigation</Titles>
       <Paragraphs>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem

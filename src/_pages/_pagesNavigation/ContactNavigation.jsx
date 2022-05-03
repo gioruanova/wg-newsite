@@ -3,7 +3,7 @@ import { MainContent, Titles, Paragraphs } from "../../_components/Styles";
 
 const ContactNavigation = () => {
   return (
-    <MainContent>
+    <MainContent className="animate__animated animate__fadeInDown animate__slow">
       <Titles>Contacto Navigation</Titles>
 
       <Paragraphs>

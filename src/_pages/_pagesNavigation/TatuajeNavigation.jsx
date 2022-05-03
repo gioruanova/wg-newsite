@@ -8,7 +8,7 @@ import {
 
 const TatuajeNavigation = () => {
   return (
-    <MainContent>
+    <MainContent className="animate__animated animate__fadeInRight animate__slow">
       <Titles>Tatuaje Navigation</Titles>
       <StudioTitle>Ganesha Art Tattoo Studio</StudioTitle>
       <Paragraphs>

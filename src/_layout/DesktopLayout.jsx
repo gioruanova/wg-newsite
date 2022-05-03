@@ -6,7 +6,10 @@ import { BackgroundComponent } from "../_components/Styles";
 
 const DesktopLayout = () => {
   return (
-    <BackgroundComponent id="TopContent">
+    <BackgroundComponent
+      className="animate__animated animate__fadeIn animate__delay-0.8s"
+      id="TopContent"
+    >
       <NavBar />
       <RoutesData />
       <Footer />

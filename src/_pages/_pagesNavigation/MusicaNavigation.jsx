@@ -3,7 +3,7 @@ import { MainContent, Titles, Paragraphs } from "../../_components/Styles";
 
 const MusicaNavigation = () => {
   return (
-    <MainContent>
+    <MainContent className="animate__animated animate__fadeInLeft animate__slow">
       <Titles>Musica Navigation</Titles>
       <Paragraphs>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem

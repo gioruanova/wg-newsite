@@ -32,7 +32,15 @@ const PlasticaYMas = () => {
         alias quasi facilis atque, deserunt architecto eius, nesciunt ex
         inventore quis sapiente similique possimus nihil? Vel, reiciendis.
       </Paragraphs>
-      <InternalLinks to="/plasticaymasnavigation">Ver Mas</InternalLinks>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/plasticaymasnavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

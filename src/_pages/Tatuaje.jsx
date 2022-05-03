@@ -34,7 +34,15 @@ const Tatuaje = () => {
         alias quasi facilis atque, deserunt architecto eius, nesciunt ex
         inventore quis sapiente similique possimus nihil? Vel, reiciendis.
       </Paragraphs>
-      <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

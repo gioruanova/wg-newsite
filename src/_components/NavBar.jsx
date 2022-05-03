@@ -48,8 +48,8 @@ const LinksContainer = styled.div`
 
 const NavBar = () => {
   return (
-    <NavBarContainer>
-      <ContainerLogo>
+    <NavBarContainer className="animate__animated animate__fadeIn animate__delay-1s">
+      <ContainerLogo >
         <LogoTitle>Walter</LogoTitle>
         <LogoTitle>Gandini</LogoTitle>
       </ContainerLogo>

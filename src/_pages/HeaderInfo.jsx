@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Content, Paragraphs, Titles } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -6,6 +6,11 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 AOS.init();
 
 const HeaderInfo = () => {
+  
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  });
+
   return (
     <Content
       data-aos="fade-down"
