@@ -10,8 +10,8 @@ const IconWrapper = styled.div`
     transition: 0.5s;
     display: flex;
     align-items: center;
-    width: ${isMobile ? "1.2rem;" : "1.5rem;"}
-    height: ${isMobile ? "1.2rem;" : "1.5rem;"}
+    width: ${isMobile ? "1.3rem;" : "1.5rem;"}
+    height: ${isMobile ? "1.3rem;" : "1.5rem;"}
     fill: ${(props) => props.theme.iconColor};
     &:hover {
       fill: #534224;
@@ -21,8 +21,8 @@ const IconWrapper = styled.div`
 
 const IconWrapperFixed = styled(IconWrapper)`
   svg {
-    width: ${isMobile ? "1.3rem;" : "1.8rem;"}
-    height: ${isMobile ? "1.3rem;" : "1.8rem;"}
+    width: ${isMobile ? "1.5rem;" : "1.8rem;"}
+    height: ${isMobile ? "1.5rem;" : "1.8rem;"}
   }
 `;
 

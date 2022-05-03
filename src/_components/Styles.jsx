@@ -150,7 +150,7 @@ const ContaininerRedes = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top:${isMobile ? " 20rem;" : "22rem;"}
+  top:${isMobile ? " 15rem;" : "22rem;"}
   left: 0.2rem;
   z-index: 9999;
   border-radius: 0.5rem;
