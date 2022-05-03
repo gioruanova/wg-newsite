@@ -62,7 +62,9 @@ export const SubTitles = styled(Titles)`
 
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
-  font-size: ${(props) => props.theme.sizeGeneralText};
+  font-size: ${isMobile
+    ? "0.6rem"
+    : "${(props) => props.theme.sizeGeneralText}"};
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 400;
@@ -150,8 +152,8 @@ const ContaininerRedes = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 20rem;
-  left: 0.5rem;
+  top:${isMobile ? " 12rem;" : "22rem;"}
+  left: 0rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -168,8 +170,8 @@ const ContaininerRightPanel = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 20rem;
-  right: 0.5rem;
+  top: ${isMobile ? " 12rem;" : "50rem;"}
+  right: 0rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;

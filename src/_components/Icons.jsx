@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import { ReactSVG } from "react-svg";
+import { isMobile } from "react-device-detect";
 
 const IconWrapper = styled.div`
-  padding: 0.5rem 0.5rem;
+  padding: ${isMobile ? "0.2rem 0.2rem;" : "0.5rem 0.5rem;"}
   transition: 0.5s;
   svg {
     transition: 0.5s;
     display: flex;
     align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: ${isMobile ? "1.2rem;" : "1.5rem;"}
+    height: ${isMobile ? "1.2rem;" : "1.5rem;"}
     fill: ${(props) => props.theme.iconColor};
     &:hover {
       fill: #534224;
@@ -20,8 +21,8 @@ const IconWrapper = styled.div`
 
 const IconWrapperFixed = styled(IconWrapper)`
   svg {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: ${isMobile ? "1.3rem;" : "1.8rem;"}
+    height: ${isMobile ? "1.3rem;" : "1.8rem;"}
   }
 `;
 
