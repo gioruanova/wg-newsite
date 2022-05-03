@@ -10,7 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 import styled from "styled-components";
-import { isMobile, isOpera } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 
 const TatuajeContainer = styled.div`
   display: grid;
