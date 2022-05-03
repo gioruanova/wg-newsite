@@ -24,19 +24,20 @@ const BioContainer = styled.div`
 
 const TitleContainer1 = styled.div`
   justify-content: center;
-  text-align: start;
+  text-align: ${isMobile ? "center" : "start"};
   transform: ${isMobile ? "" : "rotate(-90deg);"}
   line-height: 2.5rem;
   letter-spacing: 1.2rem;
-  
+  padding-left:1rem;
 
   h1 {
     color: ${(props) => props.theme.mainTitlesColor};
-    font-size: 2.5rem;
+    font-size: ${isMobile ? "2rem" : "2.5rem;"}
     font-family: ${(props) => props.theme.generalFont};
     margin: 0;
     text-transform: uppercase;
     transition: 1s;
+    
   }
 `;
 
@@ -45,7 +46,9 @@ const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   border: 2px solid white;
-  width: 60%;
+  width: 80%;
+  height: 15rem;
+  margin: 2rem 0;
 `;
 
 const BioTextContainer = styled.div`

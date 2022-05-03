@@ -24,7 +24,9 @@ const ImgContainer = styled.div`
   justify-content: center;
   align-items: center;
   border: 2px solid white;
-  width: 60%;
+  width: 80%;
+  height: 15rem;
+  margin: 2rem 0;
 `;
 
 const MusicTextContainer = styled.div`
