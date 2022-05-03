@@ -122,7 +122,7 @@ const Tatuaje = () => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
+        <InternalLinks to="/tatuajenavigation"> Ver Mas{" >"} </InternalLinks>
       </div>
     </Content>
   );

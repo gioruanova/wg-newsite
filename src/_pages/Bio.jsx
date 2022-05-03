@@ -91,8 +91,6 @@ const Bio = () => {
               nesciunt ex inventore quis sapiente similique possimus nihil? Vel,
               reiciendis. sapiente similique possimus nihil? Vel, reiciendis.
               atque, deserunt architecto eius, nesciunt ex inventore quis
-              
-              
             </Paragraphs>
           </div>
         </BioTextContainer>
@@ -104,7 +102,7 @@ const Bio = () => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <InternalLinks to="/bionavigation">Ver Mas</InternalLinks>
+        <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
       </div>
     </Content>
   );

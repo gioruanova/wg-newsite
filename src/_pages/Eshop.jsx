@@ -143,7 +143,9 @@ const Eshop = () => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <InternalLinks to="/plasticaymasnavigation">Ver Mas</InternalLinks>
+        <InternalLinks to="/plasticaymasnavigation">
+          Ver Mas{" >"}{" "}
+        </InternalLinks>
       </div>
     </Content>
   );

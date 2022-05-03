@@ -29,7 +29,6 @@ const ImgContainer = styled.div`
   width: 90%;
   height: 20rem;
   margin: 0 0 2rem 0;
-  
 `;
 
 const ImgContainer1 = styled.div`
@@ -121,18 +120,17 @@ const Pintura = () => {
             deserunt architecto eius, nesciunt ex inventore quis sapiente
             similique possimus nihil? Vel, reiciendis.
           </Paragraphs>
-         
         </BioTextContainer>
       </PinturaContainer>
       <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/pinturanavigation">Ver Mas</InternalLinks>
-          </div>
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/pinturanavigation"> Ver Mas{" >"} </InternalLinks>
+      </div>
     </Content>
   );
 };

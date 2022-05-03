@@ -77,7 +77,7 @@ const Musica = () => {
         data-aos-duration="1000"
         data-aos-easing="ease-in-out"
       >
-        <InternalLinks to="/musicanavigation">Ver Mas</InternalLinks>
+        <InternalLinks to="/musicanavigation"> Ver Mas{" >"} </InternalLinks>
       </div>
     </Content>
   );

@@ -82,12 +82,18 @@ const Footer = () => {
         </ContainerLinks>
         <FooterCopyright>
           <div>Walter Gandini © </div>
-          <div> All Rights Reserved 2021 - {new Date().getFullYear()}</div>
           <div>
-            Designed and Developed by{" "}
+            {" "}
+            Todos los derechos reservados 2021 - {new Date().getFullYear()}
+          </div>
+          <div>
+            Diseño y Desarrollo por{" "}
             <ExternalLinks
               href="https://www.giorgioruanova.com/"
               target="blank"
+              rel="noreferrer"
+              title="Giorgio Ruanova Development"
+              aria-label="Giorgio Ruanova Development"
             >
               Giorgio Ruanova
             </ExternalLinks>
