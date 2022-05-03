@@ -125,6 +125,14 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
+                  to="/eshopnavegacion"
+                >
+                  E-Shop
+                </NavLinksTop>
+                <NavLinksTop
+                  onClick={() => {
+                    setShow(!show);
+                  }}
                   to="/contactnavigation"
                 >
                   Contacto
@@ -146,6 +154,7 @@ const NavBar = () => {
             <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
             <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
+            <NavLinksTop to="/eshopnavegacion">E-Shop</NavLinksTop>
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>
         </NavBarContainer>

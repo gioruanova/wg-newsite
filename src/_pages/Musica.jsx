@@ -12,6 +12,8 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
+import MusicSection from "../_images/MusicSection.jpg";
+
 const MusicContainer = styled.div`
   display: grid;
   ${isMobile ? "grid-template-row: 1fr 2fr;" : "grid-template-columns:1fr 2fr;"}
@@ -20,13 +22,17 @@ const MusicContainer = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  background-image: url(${MusicSection});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
-  width: 80%;
+  width: 100%;
   height: 15rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
+  border-radius: 10px;
 `;
 
 const MusicTextContainer = styled.div`
@@ -55,9 +61,7 @@ const Musica = () => {
     >
       <Titles>Musica</Titles>
       <MusicContainer>
-        <ImgContainer>
-          <Titles>IMG</Titles>
-        </ImgContainer>
+        <ImgContainer></ImgContainer>
         <MusicTextContainer>
           <div>
             <Paragraphs>
@@ -74,17 +78,17 @@ const Musica = () => {
               sapiente similique possimus nihil? Vel, reiciendis.
             </Paragraphs>
           </div>
-          <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/musicanavigation">Ver Mas</InternalLinks>
-          </div>
         </MusicTextContainer>
       </MusicContainer>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/musicanavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

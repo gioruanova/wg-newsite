@@ -76,6 +76,7 @@ const Footer = () => {
             <NavLinksFooter to="/plasticaymasnavigation">
               Plastica & +
             </NavLinksFooter>
+            <NavLinksFooter to="/eshopnavegacion">E-Shop</NavLinksFooter>
             <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
           </>
         </ContainerLinks>

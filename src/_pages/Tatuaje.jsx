@@ -29,7 +29,7 @@ const ImgContainer = styled.div`
   align-items: center;
   width: 80%;
   height: 15rem;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
   ${isMobile ? "grid-row:1;" : ";"}
 `;
 const ImgContainer1 = styled.div`
@@ -89,15 +89,7 @@ const Tatuaje = () => {
             deserunt architecto eius, nesciunt ex inventore quis sapiente
             similique possimus nihil? Vel, reiciendis.
           </Paragraphs>
-          <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
-          </div>
+ 
         </div>
         <ImgContainer>
           <ImgContainer1>
@@ -114,6 +106,15 @@ const Tatuaje = () => {
           </ImgContainer4>
         </ImgContainer>
       </TatuajeContainer>
+      <div
+            data-aos="fade-down"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
+          </div>
     </Content>
   );
 };

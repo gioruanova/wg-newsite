@@ -9,6 +9,7 @@ import PlasticaYMas from "./PlasticaYMas";
 import Contacto from "./Contacto";
 import HeaderInfo from "./HeaderInfo";
 import ProximosEventos from "./ProximosEventos";
+import Eshop from "./Eshop";
 
 const Home = () => {
   return (
@@ -27,6 +28,8 @@ const Home = () => {
         <Pintura />
         <Separator />
         <PlasticaYMas />
+        <Separator />
+        <Eshop />
         <Separator />
         <Contacto />
       </Content>

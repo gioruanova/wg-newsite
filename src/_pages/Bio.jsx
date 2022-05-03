@@ -12,6 +12,8 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
+import BioPicture from "../_images/BioPicture.jpeg";
+
 const BioContainer = styled.div`
   display: grid;
   ${isMobile
@@ -42,13 +44,18 @@ const TitleContainer1 = styled.div`
 `;
 
 const ImgContainer = styled.div`
+  background-image: url(${BioPicture});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
-  width: 80%;
-  height: 15rem;
+  width: 16rem;
+  height: 100%;
   margin: 2rem 0;
+  border-radius: 10px;
+  
 `;
 
 const BioTextContainer = styled.div`
@@ -78,9 +85,7 @@ const Bio = () => {
           <h1>Gandini</h1>
         </TitleContainer1>
 
-        <ImgContainer>
-          <Titles>IMG</Titles>
-        </ImgContainer>
+        <ImgContainer></ImgContainer>
         <BioTextContainer>
           <div>
             <Paragraphs>
@@ -94,20 +99,22 @@ const Bio = () => {
               reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing
               elit. Ab autem perspiciatis dolores error alias quasi facilis
               atque, deserunt architecto eius, nesciunt ex inventore quis
-              sapiente similique possimus nihil? Vel, reiciendis.
+              sapiente similique possimus nihil? Vel, reiciendis. atque,
+              deserunt architecto eius, nesciunt ex inventore quis sapiente
+              similique possimus nihil? Vel, reiciendis.
             </Paragraphs>
-          </div>
-          <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/bionavigation">Ver Mas</InternalLinks>
           </div>
         </BioTextContainer>
       </BioContainer>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/bionavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

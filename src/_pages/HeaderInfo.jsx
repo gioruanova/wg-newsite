@@ -5,6 +5,7 @@ import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
+import HeaderPicture from "../_images/HeaderPicture.jpeg";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -52,13 +53,17 @@ const MainHeaderSubTitle = styled.p`
 `;
 
 const PictureContainer = styled.div`
+  background-image: url(${HeaderPicture});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   color: white;
-  border: 1px solid white;
-  width: ${isMobile ? "10rem" : "15rem"};
+  border-radius: 10px;
+  width: ${isMobile ? "10rem" : "12rem"};
   height: ${isMobile ? "10rem" : "15rem"};
 `;
 
@@ -105,9 +110,7 @@ const HeaderInfo = () => {
             <MainHeaderSubTitle>Plastica</MainHeaderSubTitle>
           </MainHeaderSubTitleContainer>
         </MainHeaderTitle>
-        <PictureContainer>
-          <h1>Foto</h1>
-        </PictureContainer>
+        <PictureContainer></PictureContainer>
       </HeaderContainer>
     </Content>
   );
