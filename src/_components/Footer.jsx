@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { ExternalLinks, NavLinksFooter } from "./Styles";
 
 const FooterContainer = styled.div`
-  transition: 200ms;
+  transition: 1s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ const ContainerLinks = styled.div`
   grid-template-columns: ${isMobile ? "1fr" : "repeat(1, 1fr 1fr);"}
   text-align: ${isMobile ? "center" : "initial"};
   gap: 1rem;
-  transition: 200ms;
+  transition: 1s;
   
   
   

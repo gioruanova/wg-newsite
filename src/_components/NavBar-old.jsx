@@ -28,7 +28,7 @@ const NavbarContainer = styled.div`
   backdrop-filter: blur(17px);
   -webkit-backdrop-filter: blur(17px);
   border-bottom: 1.8px solid ${(props) => props.theme.colorLines};
-  transition: 0.5s;
+  transition: 1s;
   z-index: 9999;
 `;
 

@@ -4,10 +4,10 @@ import { ReactSVG } from "react-svg";
 import { isMobile } from "react-device-detect";
 
 const IconWrapper = styled.div`
-  padding: ${isMobile ? "0.4rem 0.2rem;" : "0.5rem 0.5rem;"}
+  padding: ${isMobile ? "0.4rem 0.3rem;" : "0.5rem 0.5rem;"}
   transition: 200ms;
   svg {
-    transition: 200ms;
+    transition: 1s;
     display: flex;
     align-items: center;
     width: ${isMobile ? "1.3rem;" : "1.5rem;"}

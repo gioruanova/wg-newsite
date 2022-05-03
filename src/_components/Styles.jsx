@@ -11,7 +11,7 @@ export const BackgroundComponent = styled.div`
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  transition: 200mss;
+  transition: 1s;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -21,7 +21,7 @@ export const BackgroundComponent = styled.div`
 
 export const MainContent = styled.div`
   width: auto;
-  transition: 200mss;
+  transition: 1s;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -34,7 +34,7 @@ export const MainContentHome = styled(MainContent)`
 
 export const Content = styled.div`
   width: auto;
-  transition: 200mss;
+  transition: 1s;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -45,6 +45,7 @@ export const Separator = styled.hr`
   height: 2px;
   background-color: ${(props) => props.theme.colorLines};
   border: none;
+  transition: 1s;
 `;
 
 export const Titles = styled.h1`
@@ -53,6 +54,7 @@ export const Titles = styled.h1`
   font-family: ${(props) => props.theme.generalFont};
   margin: 0 0 2rem 0;
   text-transform: uppercase;
+  transition: 1s;
 `;
 
 export const SubTitles = styled(Titles)`
@@ -67,6 +69,7 @@ export const Paragraphs = styled.p`
   margin: 0;
   font-weight: 400;
   margin: 0 0 2rem 0;
+  transition: 1s;
 `;
 
 export const ExternalLinks = styled.a`
@@ -78,10 +81,10 @@ export const ExternalLinks = styled.a`
   margin: 0 0 5rem 0;
   text-decoration: none;
   font-weight: 600;
-  transition: 200ms;
+  transition: 1s;
   cursor: pointer;
   text-transform: uppercase;
-  
+
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
@@ -95,7 +98,7 @@ export const InternalLinks = styled(Link)`
   font-weight: 300;
   text-decoration: none;
   font-weight: 600;
-  transition: 200ms;
+  transition: 1s;
   cursor: pointer;
   text-transform: uppercase;
 
@@ -110,33 +113,34 @@ export const StudioTitle = styled.h2`
   font-family: ${(props) => props.theme.tattooStudioTitle};
   font-weight: 500;
   margin: 2rem 0;
+  transition: 1s;
 `;
 
 export const NavLinksTop = styled(Link)`
-cursor:pointer;
-text-transform:uppercase;
-font-size: ${(props) => props.theme.sizeNavigationLinks};
-color: ${(props) => props.theme.navigationLinksColor};
-margin: 0;
-padding: ${isMobile ? "0.5rem 0 " : "0 1rem"};
-align-items: end;
-transform:translateX(-0.75em);
-font-weight: bold;
-  transition 200ms;
-  &::before{
-    content:'>';
-    display:inline-block;
-    width:0.75em;
-    
-    opacity:0;
-    transition:opacity 200ms;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: ${(props) => props.theme.sizeNavigationLinks};
+  color: ${(props) => props.theme.navigationLinksColor};
+  margin: 0;
+  padding: ${isMobile ? "0.5rem 0 " : "0 1rem"};
+  align-items: end;
+  transform: translateX(-0.75em);
+  font-weight: bold;
+  transition: 1s;
+  &::before {
+    content: ">";
+    display: inline-block;
+    width: 0.75em;
+
+    opacity: 0;
+    transition: opacity 1s;
   }
-  &:hover{
-    transform:none;
+  &:hover {
+    transform: none;
     color: ${(props) => props.theme.hooverLinks};
   }
-  &:hover::before{
-    opacity:1;
+  &:hover::before {
+    opacity: 1;
   }
   text-decoration: none;
 `;
@@ -153,8 +157,8 @@ const ContaininerRedes = styled.div`
   position: fixed;
   top:${isMobile ? " 15rem;" : "22rem;"}
   left: 0.2rem;
-   border-radius: 200msrem;
-  transition: 200mss;
+   border-radius: 15px;
+   transition: 1s;
   background-color: ${(props) => props.theme.iconBackground};
   border: 3px solid ${(props) => props.theme.iconColor};
   align-items: center;
@@ -171,8 +175,8 @@ const ContaininerRightPanel = styled.div`
   top: ${isMobile ? " 30rem;" : "50rem;"}
   right: 0.4rem;
   z-index: 9999;
-  border-radius: 200msrem;
-  transition: 200mss;
+  border-radius: 15px;
+  transition: 1s;
   background-color: ${(props) => props.theme.iconBackground};
   border: 3px solid ${(props) => props.theme.iconColor};
   align-items: center;

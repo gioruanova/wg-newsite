@@ -31,7 +31,7 @@ const NavBarContainer = styled.div`
   top: 0;
   left: 0rem;
   z-index: 9999;
-  transition: 200ms;
+  transition: 1s;
 `;
 
 const ContainerLogo = styled.div``;
@@ -43,7 +43,7 @@ const LogoTitle = styled.h2`
 `;
 
 const LinksContainer = styled.div`
-  transition: 200ms;
+transition: 1s;
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
   align-items: self-start;
