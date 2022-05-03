@@ -1,5 +1,5 @@
 import React from "react";
-import { Content, Titles } from "../_components/Styles";
+import { Content, Titles, InternalLinks } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -12,6 +12,7 @@ const GridEventos = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
+  margin-bottom: 2rem;
 `;
 const EventoContainer = styled.div`
   display: flex;
@@ -78,7 +79,7 @@ AOS.init();
 const ProximosEventos = () => {
   return (
     <Content
-      data-aos="fade-down"
+      data-aos="fade-right"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"
@@ -134,8 +135,16 @@ const ProximosEventos = () => {
             <h3>Linea 2 evento</h3>
           </DetailEvent>
         </EventoContainer>
-        
       </GridEventos>
+      <div
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/#"> Ver Mas{" >"} </InternalLinks>
+      </div>
     </Content>
   );
 };

@@ -116,7 +116,7 @@ const Tatuaje = () => {
         </ImgContainer>
       </TatuajeContainer>
       <div
-        data-aos="fade-down"
+        data-aos="fade-right"
         data-aos-offset="200"
         data-aos-delay="50"
         data-aos-duration="1000"
