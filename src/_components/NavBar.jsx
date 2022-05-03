@@ -29,6 +29,7 @@ const NavBarContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0rem;
+  z-index: 9999;
 `;
 
 const ContainerLogo = styled.div``;
@@ -49,7 +50,7 @@ const LinksContainer = styled.div`
 const NavBar = () => {
   return (
     <NavBarContainer className="animate__animated animate__fadeIn animate__delay-1s">
-      <ContainerLogo >
+      <ContainerLogo>
         <LogoTitle>Walter</LogoTitle>
         <LogoTitle>Gandini</LogoTitle>
       </ContainerLogo>
