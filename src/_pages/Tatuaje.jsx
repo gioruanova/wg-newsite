@@ -61,6 +61,14 @@ const ImgContainer4 = styled(ImgContainer1)`
   top: 6rem;
 `;
 
+const TatuajeTextContainer = styled.div`
+padding: ${isMobile ? "" : "0 1rem;"}
+text-align: justify;
+p {
+  text-align: justify;
+}
+`;
+
 AOS.init();
 
 const Tatuaje = () => {
@@ -76,20 +84,21 @@ const Tatuaje = () => {
       <TatuajeContainer>
         <div>
           <StudioTitle>Ganesha Art Tattoo Studio</StudioTitle>
-          <Paragraphs>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-            perspiciatis dolores error alias quasi facilis atque, deserunt
-            architecto eius, nesciunt ex inventore quis sapiente similique
-            possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Ab autem perspiciatis dolores error
-            alias quasi facilis atque, deserunt architecto eius, nesciunt ex
-            inventore quis sapiente similique possimus nihil? Vel,
-            reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ab autem perspiciatis dolores error alias quasi facilis atque,
-            deserunt architecto eius, nesciunt ex inventore quis sapiente
-            similique possimus nihil? Vel, reiciendis.
-          </Paragraphs>
- 
+          <TatuajeTextContainer>
+            <Paragraphs>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
+              perspiciatis dolores error alias quasi facilis atque, deserunt
+              architecto eius, nesciunt ex inventore quis sapiente similique
+              possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Ab autem perspiciatis dolores error
+              alias quasi facilis atque, deserunt architecto eius, nesciunt ex
+              inventore quis sapiente similique possimus nihil? Vel,
+              reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Ab autem perspiciatis dolores error alias quasi facilis
+              atque, deserunt architecto eius, nesciunt ex inventore quis
+              sapiente similique possimus nihil? Vel, reiciendis.
+            </Paragraphs>
+          </TatuajeTextContainer>
         </div>
         <ImgContainer>
           <ImgContainer1>
@@ -107,14 +116,14 @@ const Tatuaje = () => {
         </ImgContainer>
       </TatuajeContainer>
       <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
-          </div>
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/tatuajenavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

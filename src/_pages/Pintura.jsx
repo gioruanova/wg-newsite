@@ -71,13 +71,11 @@ const ImgContainer4 = styled(ImgContainer3)`
 `;
 
 const BioTextContainer = styled.div`
-  padding: 0 1rem;
-  p {
-    text-align: ${isMobile ? "center" : "left"};
-  }
-  :last-child {
-    text-align: center;
-  }
+padding: ${isMobile ? "" : "0 1rem;"}
+text-align: justify;
+p {
+  text-align: justify;
+}
 `;
 
 AOS.init();

@@ -7,7 +7,6 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import HeaderPicture from "../_images/HeaderPicture.jpeg";
 
-
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,23 +48,13 @@ const MainHeaderSubTitle = styled.p`
   margin: 0;
   font-weight: 400;
   transition: 1s;
-  line-height: ${isMobile ? "1.8rem" : "1.7rem"};
+  line-height: ${isMobile ? "2rem" : "1.7rem"};
    
 `;
 
-const PictureContainer = styled.div`
-  background-image: url(${HeaderPicture});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  color: white;
+const PictureContainer = styled.img`
   border-radius: 10px;
-  width: ${isMobile ? "10rem" : "14%"};
-  height: ${isMobile ? "10rem" : "18rem"};
+  width: ${isMobile ? "10rem" : "15%"};
 `;
 
 AOS.init();
@@ -111,7 +100,8 @@ const HeaderInfo = () => {
             <MainHeaderSubTitle>Plastica</MainHeaderSubTitle>
           </MainHeaderSubTitleContainer>
         </MainHeaderTitle>
-        <PictureContainer></PictureContainer>
+
+        <PictureContainer src={HeaderPicture} />
       </HeaderContainer>
     </Content>
   );

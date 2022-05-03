@@ -71,13 +71,11 @@ const ImgContainer6 = styled(ImgContainer4)`
   top: 1.5rem;
 `;
 
-const PlasticTextContainer = styled.div`
-  padding: 0 1rem;
+const EshopTextContainer = styled.div`
+  padding: ${isMobile ? "" : "0 1rem;"}
+  text-align: justify;
   p {
-    text-align: center;
-  }
-  :last-child {
-    text-align: center;
+    text-align: justify;
   }
 `;
 
@@ -120,7 +118,7 @@ const Eshop = () => {
             </ImgContainer6>
           </>
         </ImgContainer>
-        <PlasticTextContainer>
+        <EshopTextContainer>
           <div>
             <Paragraphs>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
@@ -136,7 +134,7 @@ const Eshop = () => {
               sapiente similique possimus nihil? Vel, reiciendis.
             </Paragraphs>
           </div>
-        </PlasticTextContainer>
+        </EshopTextContainer>
       </PlasticContainer>
       <div
         data-aos="fade-down"

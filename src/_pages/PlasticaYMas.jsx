@@ -74,13 +74,11 @@ const ImgContainer5 = styled(ImgContainer3)`
 `;
 
 const PlasticTextContainer = styled.div`
-  padding: 0 1rem;
-  p {
-    text-align: ${isMobile ? "center" : "right"};
-  }
-  :last-child {
-    text-align: center;
-  }
+padding: ${isMobile ? "" : "0 1rem;"}
+text-align: justify;
+p {
+  text-align: justify;
+}
 `;
 
 AOS.init();
@@ -112,7 +110,6 @@ const PlasticaYMas = () => {
               sapiente similique possimus nihil? Vel, reiciendis.
             </Paragraphs>
           </div>
-    
         </PlasticTextContainer>
         <ImgContainer>
           <>
@@ -135,14 +132,14 @@ const PlasticaYMas = () => {
         </ImgContainer>
       </PlasticContainer>
       <div
-            data-aos="fade-down"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/plasticaymasnavigation">Ver Mas</InternalLinks>
-          </div>
+        data-aos="fade-down"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+      >
+        <InternalLinks to="/plasticaymasnavigation">Ver Mas</InternalLinks>
+      </div>
     </Content>
   );
 };

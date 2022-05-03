@@ -21,28 +21,18 @@ const MusicContainer = styled.div`
   align-items: center;
 `;
 
-const ImgContainer = styled.div`
-  background-image: url(${MusicSection});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 15rem;
-  margin: 0 0 2rem 0;
+const PictureContainer = styled.img`
   border-radius: 10px;
+  width: ${isMobile ? "100%" : "70%"};
+  margin: 0 0 2rem 0;
 `;
 
-const MusicTextContainer = styled.div`
-  padding: 0 1rem;
-  p {
-    text-align: ${isMobile ? "center" : "left"};
-  }
-  :last-child {
-    text-align: center;
-  }
+const MusicaTextContainer = styled.div`
+padding: ${isMobile ? "" : "0 1rem;"}
+text-align: justify;
+p {
+  text-align: justify;
+}
 `;
 
 AOS.init();
@@ -61,8 +51,8 @@ const Musica = () => {
     >
       <Titles>Musica</Titles>
       <MusicContainer>
-        <ImgContainer></ImgContainer>
-        <MusicTextContainer>
+        <PictureContainer src={MusicSection} />
+        <MusicaTextContainer>
           <div>
             <Paragraphs>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
@@ -78,7 +68,7 @@ const Musica = () => {
               sapiente similique possimus nihil? Vel, reiciendis.
             </Paragraphs>
           </div>
-        </MusicTextContainer>
+        </MusicaTextContainer>
       </MusicContainer>
       <div
         data-aos="fade-down"

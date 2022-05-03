@@ -38,28 +38,19 @@ const TitleContainer1 = styled.div`
   }
 `;
 
-const ImgContainer = styled.div`
-  background-image: url(${BioPicture});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 20rem;
-  margin: 2rem 0;
+const PictureContainer = styled.img`
   border-radius: 10px;
+  width: ${isMobile ? "100%" : "90%"};
+  margin: 2rem 0;
 `;
 
 const BioTextContainer = styled.div`
-  padding: 0 5rem;
-  p {
+  padding: ${isMobile ? "" : "0 5rem;"} p {
     text-align: ${isMobile ? "center" : "left"};
   }
-  :last-child {
-    text-align: center;
-  }
+
+  text-align: center;
+  text-align: justify;
 `;
 
 AOS.init();
@@ -79,7 +70,7 @@ const Bio = () => {
           <h1>Gandini</h1>
         </TitleContainer1>
 
-        <ImgContainer></ImgContainer>
+        <PictureContainer src={BioPicture} />
         <BioTextContainer>
           <div>
             <Paragraphs>
