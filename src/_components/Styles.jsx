@@ -1,12 +1,13 @@
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import Icons from "../_components/Icons";
 
 export const BackgroundComponent = styled.div`
   background-color: ${(props) => props.theme.generalBackground};
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
@@ -115,8 +116,10 @@ text-transform:uppercase;
 font-size: ${(props) => props.theme.sizeNavigationLinks};
 color: ${(props) => props.theme.navigationLinksColor};
 margin: 0;
+padding: ${isMobile ? "0.5rem 0 " : "0 1rem"};
 align-items: end;
 transform:translateX(-0.75em);
+font-weight: bold;
   transition 200ms;
   &::before{
     content:'>';
@@ -139,4 +142,122 @@ transform:translateX(-0.75em);
 export const NavLinksFooter = styled(NavLinksTop)`
   ${isMobile ? "" : "padding: 0 0 0 2rem;"}
   ${isMobile ? "text-align: initial;" : ""}
+`;
+
+// Incons}
+const ContaininerRedes = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25rem;
+  left: 1.5rem;
+  z-index: 9999;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  background-color: ${(props) => props.theme.iconBackground};
+  border: 3px solid ${(props) => props.theme.iconColor};
+  align-items: center;
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+  }
+`;
+
+const ContaininerRightPanel = styled.div`
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 25rem;
+  right: 1.5rem;
+  z-index: 9999;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+  background-color: ${(props) => props.theme.iconBackground};
+  border: 3px solid ${(props) => props.theme.iconColor};
+  align-items: center;
+  opacity: 50%;
+  &:hover {
+    opacity: 100%;
+  }
+`;
+
+export const Redescontainer = () => {
+  return (
+    <ContaininerRedes>
+      <a
+        href="https://www.patreon.com/bePatron?u=38804295"
+        rel="noreferrer"
+        target="_blank"
+        title="Patreon"
+        aria-label="Patreon"
+      >
+        <Icons name="patreon" />
+      </a>
+      <a
+        href="https://open.spotify.com/artist/6AxS0nhTn6xwtTIBjUkeyh?si=msTwOLnETJOyEof6nsaxrg&nd=1"
+        rel="noreferrer"
+        target="_blank"
+        title="Spotify"
+        aria-label="Spotify"
+      >
+        <Icons name="spotify" />
+      </a>
+      <a
+        href="https://www.instagram.com/waltergandini/"
+        rel="noreferrer"
+        target="_blank"
+        title="Instagram"
+        aria-label="Instagram"
+      >
+        <Icons name="instagram" />
+      </a>
+      <a
+        href="https://www.youtube.com/c/WalterGandini"
+        rel="noreferrer"
+        target="_blank"
+        title="YouTube"
+        aria-label="YouTube"
+      >
+        <Icons name="youtube" />
+      </a>
+      <a
+        href="https://www.facebook.com/walter.gandini"
+        rel="noreferrer"
+        target="_blank"
+        title="Facebook"
+        aria-label="Facebook"
+      >
+        <Icons name="facebook" />
+      </a>
+    </ContaininerRedes>
+  );
+};
+
+export const RightPanelContainer = () => {
+  return (
+    <ContaininerRightPanel>
+      <a href="/">
+        <Icons name="home" rel="noreferrer" />
+      </a>
+      <a href="#TopContent" rel="noreferrer">
+        <Icons name="top" />
+      </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=5491157001186&text=Hola%20Walter,%20te%20contactaba%20para%20una%20consulta"
+        rel="noreferrer"
+        target="_blank"
+        title="Pedi tu Turno"
+        aria-label="Pedi tu Turno"
+      >
+        <Icons name="whatsapp" />
+      </a>
+    </ContaininerRightPanel>
+  );
+};
+
+export const ContaininerTheme = styled.div`
+  position: fixed;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 9999;
 `;

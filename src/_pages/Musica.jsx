@@ -5,10 +5,20 @@ import {
   Titles,
   Paragraphs,
 } from "../_components/Styles";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Musica = () => {
   return (
-    <Content>
+    <Content
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="900"
+      data-aos-easing="ease-in-out"
+    >
       <Titles>Musica</Titles>
       <Paragraphs>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem

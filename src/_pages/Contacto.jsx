@@ -1,9 +1,19 @@
 import React from "react";
 import { Content, Titles, Paragraphs } from "../_components/Styles";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Contacto = () => {
   return (
-    <Content>
+    <Content
+      data-aos="fade-down"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <Titles>Contacto</Titles>
       <Paragraphs>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem

@@ -18,9 +18,11 @@ export const DarkTheme = {
 
   backgroundButtons: "#555555;",
   textButtonsColor: "#FFFFFF;",
-  hooverLinks:"#D8D8D8;" ,
-  tattooStudioTitle:"'Updock', cursive;",
-  tattooStudioTitleColor:"#D8D8D8;",
+  hooverLinks: "#D8D8D8;",
+  tattooStudioTitle: "'Updock', cursive;",
+  tattooStudioTitleColor: "#D8D8D8;",
+  iconBackground: "#1c1a1a;",
+  iconColor: "#6b5a3d;",
 };
 
 export const LightTheme = {
@@ -41,9 +43,11 @@ export const LightTheme = {
 
   backgroundButtons: "#555555;",
   textButtonsColor: "#FFFFFF;",
-  hooverLinks:"#343A40;" ,
-  tattooStudioTitle:"'Updock', cursive;",
-  tattooStudioTitleColor:"#343A40;",
+  hooverLinks: "#343A40;",
+  tattooStudioTitle: "'Updock', cursive;",
+  tattooStudioTitleColor: "#343A40;",
+  iconBackground: "#aaaaaa;",
+  iconColor: "#795e30;",
 };
 
 export const GlobalStyles = createGlobalStyle`

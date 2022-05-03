@@ -5,10 +5,20 @@ import {
   InternalLinks,
   Paragraphs,
 } from "../_components/Styles";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const PlasticaYMas = () => {
   return (
-    <Content>
+    <Content
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <Titles>Plastica & +</Titles>
       <Paragraphs>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem

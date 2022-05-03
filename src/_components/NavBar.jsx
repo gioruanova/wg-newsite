@@ -4,81 +4,66 @@ import { NavLinksTop } from "../_components/Styles";
 
 import styled from "styled-components";
 
-const NavbarContainer = styled.div`
+const NavBarContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: space-around;
-  align-items: ${isMobile ? "flex-start" : "center"};
-  gap: 1rem;
-  color: ${(props) => props.theme.navigationLinksColor};
-  text-transform: uppercase;
-  position: fixed;
+  justify-content: center;
+  gap: 2rem;
+  align-items: ${isMobile ? "start" : "center"};
   width: 100%;
-  padding: 1.5rem 1rem;
-  top: 0;
-  font-weight: bold;
+  background-color: white;
+  height: auto;
+  color: ${(props) => props.theme.navigationLinksColor};
+  padding: ${isMobile ? "1rem;" : "1rem 0"};
+  // Background
   background: rgba(104, 104, 104, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(104, 104, 104, 0.31);
   /* From https://css.glass */
   background: rgba(104, 104, 104, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(17px);
-  -webkit-backdrop-filter: blur(17px);
-  border-bottom: 1.8px solid ${(props) => props.theme.colorLines};
-  transition: 0.5s;
-  z-index: 9999;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  left: 0rem;
 `;
 
-const LogoContainer = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: ${isMobile ? "flex-start" : "center"};
+const ContainerLogo = styled.div``;
+
+const LogoTitle = styled.h2`
+  margin: 0;
+  text-align: ${isMobile ? "initial" : "center"};
   text-transform: uppercase;
-  font-size: 1.5rem;
-  color: ${(props) => props.theme.navigationLinksColor};
-  text-decoration: none;
 `;
 
-const ContainerLinks = styled.div`
+const LinksContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: ${isMobile ? "flex-start" : "center"};
-  gap: 2rem;
   flex-direction: ${isMobile ? "column" : "row"};
-`;
-
-const NavbarLeftContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: ${(props) => props.theme.sizeNavigationLinks};
+  align-items: baseline;
+  margin-top: ${isMobile ? "1rem" : ""};
 `;
 
 const NavBar = () => {
   return (
-    <NavbarContainer>
-      <LogoContainer>
-        <div>Walter</div>
-        <div>Gandini</div>
-      </LogoContainer>
-      <ContainerLinks>
-        <>
-          <NavLinksTop to="/">Home</NavLinksTop>
-          <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
-          <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
-          <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
-          <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
-          <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
-          <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
-        </>
-      </ContainerLinks>
-      <NavbarLeftContainer>
-        <div>ES | EN</div>
-      </NavbarLeftContainer>
-    </NavbarContainer>
+    <NavBarContainer>
+      <ContainerLogo>
+        <LogoTitle>Walter</LogoTitle>
+        <LogoTitle>Gandini</LogoTitle>
+      </ContainerLogo>
+
+      <LinksContainer>
+        <NavLinksTop to="/">Home</NavLinksTop>
+        <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
+        <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
+        <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
+        <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
+        <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
+        <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
+      </LinksContainer>
+    </NavBarContainer>
   );
 };
 

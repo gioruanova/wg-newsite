@@ -6,10 +6,20 @@ import {
   InternalLinks,
   Paragraphs,
 } from "../_components/Styles";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Tatuaje = () => {
   return (
-    <Content>
+    <Content
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+    >
       <Titles>Tatuaje</Titles>
       <StudioTitle>Ganesha Art Tattoo Studio</StudioTitle>
       <Paragraphs>
