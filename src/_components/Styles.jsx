@@ -150,8 +150,8 @@ const ContaininerRedes = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top:${isMobile ? " 12rem;" : "22rem;"}
-  left: 0rem;
+  top:${isMobile ? " 20rem;" : "22rem;"}
+  left: 0.2rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;
@@ -168,8 +168,8 @@ const ContaininerRightPanel = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: ${isMobile ? " 20rem;" : "50rem;"}
-  right: 0rem;
+  top: ${isMobile ? " 40rem;" : "50rem;"}
+  right: 0.2rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;
