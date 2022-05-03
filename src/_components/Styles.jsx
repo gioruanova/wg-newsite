@@ -62,7 +62,7 @@ export const SubTitles = styled(Titles)`
 
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
-  font-size: ${(props) => props.theme.sizeGeneralText};
+  font-size: ${isMobile ? "0.8rem;": "1rem;"}
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 400;
@@ -169,7 +169,7 @@ const ContaininerRightPanel = styled.div`
   flex-direction: column;
   position: fixed;
   top: ${isMobile ? " 30rem;" : "50rem;"}
-  right: 0.2rem;
+  right: 0.4rem;
   z-index: 9999;
   border-radius: 0.5rem;
   transition: 0.5s;

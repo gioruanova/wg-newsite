@@ -1,6 +1,4 @@
-
 import { createGlobalStyle } from "styled-components";
-
 
 export const DarkTheme = {
   id: "DarkTheme",
@@ -13,7 +11,6 @@ export const DarkTheme = {
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#C5C5C5;",
-  sizeGeneralText: "1rem;",
 
   navigationLinksColor: "#847A65;",
   sizeNavigationLinks: "0.9rem;",
@@ -38,7 +35,6 @@ export const LightTheme = {
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#0a0a0a;",
-  sizeGeneralText: "1rem;",
 
   navigationLinksColor: "#493f2b;",
   sizeNavigationLinks: "0.9rem;",
