@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Content,
-  InternalLinks,
-  Paragraphs,
-  Titles,
-} from "../_components/Styles";
+import { Content, InternalLinks, Paragraphs } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -55,7 +50,6 @@ const ImgContainer = styled.div`
   height: 100%;
   margin: 2rem 0;
   border-radius: 10px;
-  
 `;
 
 const BioTextContainer = styled.div`
