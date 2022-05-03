@@ -40,12 +40,12 @@ const TitleContainer1 = styled.div`
 
 const PictureContainer = styled.img`
   border-radius: 10px;
-  width: ${isMobile ? "100%" : "90%"};
+  width: ${isMobile ? "100%" : "100%"};
   margin: 2rem 0;
 `;
 
 const BioTextContainer = styled.div`
-  padding: ${isMobile ? "" : "0 5rem;"} p {
+  padding: ${isMobile ? "" : "0 2rem;"} p {
     text-align: ${isMobile ? "center" : "left"};
   }
 
@@ -86,7 +86,13 @@ const Bio = () => {
               atque, deserunt architecto eius, nesciunt ex inventore quis
               sapiente similique possimus nihil? Vel, reiciendis. atque,
               deserunt architecto eius, nesciunt ex inventore quis sapiente
-              similique possimus nihil? Vel, reiciendis.
+              similique possimus nihil? Vel, reiciendis. sapiente similique
+              possimus nihil? Vel, reiciendis. atque, deserunt architecto eius,
+              nesciunt ex inventore quis sapiente similique possimus nihil? Vel,
+              reiciendis. sapiente similique possimus nihil? Vel, reiciendis.
+              atque, deserunt architecto eius, nesciunt ex inventore quis
+              
+              
             </Paragraphs>
           </div>
         </BioTextContainer>
