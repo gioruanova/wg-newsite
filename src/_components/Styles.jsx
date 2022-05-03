@@ -11,7 +11,7 @@ export const BackgroundComponent = styled.div`
   overflow-x: hidden;
   width: 100%;
   position: relative;
-  transition: 0.5s;
+  transition: 200mss;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -21,7 +21,7 @@ export const BackgroundComponent = styled.div`
 
 export const MainContent = styled.div`
   width: auto;
-  transition: 0.5s;
+  transition: 200mss;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -34,7 +34,7 @@ export const MainContentHome = styled(MainContent)`
 
 export const Content = styled.div`
   width: auto;
-  transition: 0.5s;
+  transition: 200mss;
   align-items: center;
   text-align: center;
   align-content: center;
@@ -62,7 +62,7 @@ export const SubTitles = styled(Titles)`
 
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
-  font-size: ${isMobile ? "0.8rem;": "1rem;"}
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 400;
@@ -81,6 +81,7 @@ export const ExternalLinks = styled.a`
   transition: 200ms;
   cursor: pointer;
   text-transform: uppercase;
+  
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
@@ -152,9 +153,8 @@ const ContaininerRedes = styled.div`
   position: fixed;
   top:${isMobile ? " 15rem;" : "22rem;"}
   left: 0.2rem;
-  z-index: 9999;
-  border-radius: 0.5rem;
-  transition: 0.5s;
+   border-radius: 200msrem;
+  transition: 200mss;
   background-color: ${(props) => props.theme.iconBackground};
   border: 3px solid ${(props) => props.theme.iconColor};
   align-items: center;
@@ -171,8 +171,8 @@ const ContaininerRightPanel = styled.div`
   top: ${isMobile ? " 30rem;" : "50rem;"}
   right: 0.4rem;
   z-index: 9999;
-  border-radius: 0.5rem;
-  transition: 0.5s;
+  border-radius: 200msrem;
+  transition: 200mss;
   background-color: ${(props) => props.theme.iconBackground};
   border: 3px solid ${(props) => props.theme.iconColor};
   align-items: center;

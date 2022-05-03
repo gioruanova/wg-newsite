@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { ThemeProvider } from "styled-components";
 import { LightTheme, DarkTheme, GlobalStyles } from "./_components/themes";
-import { Redescontainer, RightPanelContainer, ContaininerTheme } from "./_components/Styles";
+import { ContaininerTheme } from "./_components/Styles";
 
 import DesktopLayout from "./_layout/DesktopLayout"
 
@@ -26,8 +26,7 @@ function App() {
           <span className="slider round" onClick={() => themeToggler()}></span>
         </label>
       </ContaininerTheme>
-      <Redescontainer />
-      <RightPanelContainer />
+
 
     </ThemeProvider>
   );

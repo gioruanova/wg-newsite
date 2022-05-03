@@ -5,9 +5,9 @@ import { isMobile } from "react-device-detect";
 
 const IconWrapper = styled.div`
   padding: ${isMobile ? "0.4rem 0.2rem;" : "0.5rem 0.5rem;"}
-  transition: 0.5s;
+  transition: 200ms;
   svg {
-    transition: 0.5s;
+    transition: 200ms;
     display: flex;
     align-items: center;
     width: ${isMobile ? "1.3rem;" : "1.5rem;"}
