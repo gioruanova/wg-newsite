@@ -16,9 +16,9 @@ const Home = () => {
     <MainContentHome>
       <Content>
         <HeaderInfo />
-        <Separator />
+        <Separator className="animate__animated animate__fadeIn animate__delay-1s" />
         <ProximosEventos />
-        <Separator />
+        <Separator className="animate__animated animate__fadeIn animate__delay-1s" />
         <Bio />
         <Separator />
         <Musica />

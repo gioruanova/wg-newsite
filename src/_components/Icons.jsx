@@ -21,14 +21,59 @@ const IconWrapper = styled.div`
     &:hover{
       fill:${(props) => props.theme.hoverFillIcons};
       stroke:${(props) => props.theme.hoverStrokeIcons};
-      
-    
+        
   }
+}
+`;
+const IconWrapperDark = styled.div`
+  svg {
+    display: flex;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    stroke: #a58959;
+    fill: ${(props) => props.theme.fillIcons};
+  }
+`;
+const IconWrapperLight = styled.div`
+  svg {
+    display: flex;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: #a58959;
+    stroke: #272a2d;
+    stroke-width: 1;
+  }
+`;
+
+const IconWrapper2 = styled.div`
+padding: ${isMobile ? "0.4rem 0.3rem;" : "0.5rem 0.5rem;"}
+&:hover{
+    transition:1s;
+}
+
+svg {
+  display: flex;
+  align-items: center;
+  width: ${isMobile ? "1.3rem;" : "2rem;"}
+  height: ${isMobile ? "1.3rem;" : "2rem;"}
+  stroke:${(props) => props.theme.strokeIcons};
+  
+  transition:600ms;
+  
+  &:hover{
+    
+    stroke:${(props) => props.theme.hoverStrokeIcons};
+      
+}
 }
 `;
 
 export default function Icons({ name }) {
   switch (name) {
+    //-----------------------------------
+    //NAVBAR
     case "burgeropen":
       return (
         <IconWrapper>
@@ -42,7 +87,8 @@ export default function Icons({ name }) {
           <ReactSVG src="_assets/_icons/cross.svg" />
         </IconWrapper>
       );
-
+    //-----------------------------------
+    //REDES
     case "patreon":
       return (
         <IconWrapper>
@@ -77,10 +123,12 @@ export default function Icons({ name }) {
           <ReactSVG src="_assets/_icons/facebook.svg" />
         </IconWrapper>
       );
-    case "whatsapp":
+    //-----------------------------------
+    //RIGHT-PANEL
+    case "home":
       return (
         <IconWrapper>
-          <ReactSVG src="_assets/_icons/whatsapp.svg" />
+          <ReactSVG src="_assets/_icons/home.svg" />
         </IconWrapper>
       );
     case "top":
@@ -89,13 +137,48 @@ export default function Icons({ name }) {
           <ReactSVG src="_assets/_icons/arrowtop.svg" />
         </IconWrapper>
       );
-    case "home":
+    case "whatsapp":
       return (
         <IconWrapper>
-          <ReactSVG src="_assets/_icons/home.svg" />
+          <ReactSVG src="_assets/_icons/whatsapp.svg" />
         </IconWrapper>
       );
-
+    //-----------------------------------
+    //THEME_SELECTOR
+    case "dark":
+      return (
+        <IconWrapperDark>
+          <ReactSVG src="_assets/_icons/dark.svg" />
+        </IconWrapperDark>
+      );
+    case "light":
+      return (
+        <IconWrapperLight>
+          <ReactSVG src="_assets/_icons/light.svg" />
+        </IconWrapperLight>
+      );
+    //-----------------------------------
+    //MISC
+    case "showmore":
+      return (
+        <IconWrapper>
+          <ReactSVG src="_assets/_icons/plus.svg" />
+        </IconWrapper>
+      );
+    case "toggleright":
+      return (
+        <IconWrapper2>
+          <ReactSVG src="_assets/_icons/right_toggle.svg" />
+        </IconWrapper2>
+      );
+    case "toggleleft":
+      return (
+        <IconWrapper2>
+          <ReactSVG src="_assets/_icons/left_toggle.svg" />
+        </IconWrapper2>
+      );
+    //-----------------------------------
+    //DEFAULT
     default:
       return (
         <IconWrapper>

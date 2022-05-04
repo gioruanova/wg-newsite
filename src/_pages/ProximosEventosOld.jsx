@@ -4,16 +4,13 @@ import { Content, Titles, InternalLinks } from "../_components/Styles";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import { Eventos } from "../_components/Messages";
-
 const GridEventos = styled.div`
   display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
+  flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 3rem;
   margin-bottom: 2rem;
-  align-items: center;
 `;
 const EventoContainer = styled.div`
   display: flex;
@@ -24,9 +21,7 @@ const EventoContainer = styled.div`
   border: 2px solid ${(props) => props.theme.mainTitlesColor};
   border-radius: 10px;
   padding: 1rem;
-  transition: 1s;
-  width: ${isMobile ? "80%" : "30%"};
-  height: 15rem;
+  transition:1s;
 `;
 
 const MainTitleEvent = styled.div`
@@ -42,21 +37,22 @@ const MainTitleEvent = styled.div`
   h2 {
     font-size: ${isMobile ? "1.2rem;" : "1.5rem;"}
     margin: 0;
-    
+    padding-left: 1rem;
   }
 `;
 const LocationEvent = styled.div`
   color: ${(props) => props.theme.generalTextColor};
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  transition: 1s;
-   h2 {
-    font-size: ${isMobile ? "1.2rem;" : "1.2rem;"}
+  transition:1s;
+  h2 {
     margin: 0;
-    color:${(props) => props.theme.mainTitlesColor};
+    font-weight: 400;
+    font-size: ${isMobile ? "1rem;" : "1.2rem;"};
   }
   h3 {
     margin: 0;
@@ -79,53 +75,27 @@ const DetailEvent = styled(LocationEvent)`
   }
 `;
 
-function Item({
-  Fecha,
-  NombreEvento,
-  Direccion,
-  Hora,
-  Linea1,
-  Linea2,
-  Linea3,
-}) {
-  return (
-    <>
-      <EventoContainer>
-        <MainTitleEvent>
-          <h1>{Fecha}</h1>
-        </MainTitleEvent>
-        <LocationEvent>
-          <h2>{NombreEvento}</h2>
-
-          <h2>{Direccion}</h2>
-        </LocationEvent>
-        <DetailEvent>
-          <h2>{Hora}</h2>
-          <h3>{Linea1}</h3>
-          <h3>{Linea2}</h3>
-          <h3>{Linea3}</h3>
-        </DetailEvent>
-      </EventoContainer>
-    </>
-  );
-}
-
 const ProximosEventos = () => {
   return (
     <Content className="animate__animated animate__fadeIn animate__delay-1s">
       <Titles>Proximos Eventos</Titles>
       <GridEventos>
-        {Eventos.reverse().map((e) => (
-          <Item
-            Fecha={e.Fecha}
-            NombreEvento={e.NombreEvento}
-            Direccion={e.Direccion}
-            Hora={e.Hora}
-            Linea1={e.Linea1}
-            Linea2={e.Linea2}
-            Linea3={e.Linea3}
-          />
-        ))}
+        <EventoContainer>
+          <MainTitleEvent>
+            <h1>08/04</h1>
+
+            <h2>Nombre evento</h2>
+          </MainTitleEvent>
+          <LocationEvent>
+            <h2>Direccion</h2>
+          </LocationEvent>
+          <DetailEvent>
+            <h2>Hora</h2>
+            <h3>Linea 1 evento</h3>
+            <h3>Linea 2 evento</h3>
+            <h3>Linea 3 evento</h3>
+          </DetailEvent>
+        </EventoContainer>
       </GridEventos>
       <div>
         <InternalLinks to="/#"> Ver Mas{" >"} </InternalLinks>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { NavLinksTop } from "../_components/Styles";
+import { NavLinksTop } from "./Styles";
 
 import styled from "styled-components";
 import Icons from "./Icons";
@@ -8,7 +8,7 @@ import Icons from "./Icons";
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: space-evenly;
+  justify-content: ${isMobile ? "flex-start" : "center"};
   ${isMobile ? "" : "gap: 2rem;"}
   align-items: ${isMobile ? "self-start" : "center"};
   width: 100%;
@@ -23,9 +23,9 @@ const NavBarContainer = styled.div`
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(104, 104, 104, 0.31);
   /* From https://css.glass */
-  background: rgba(104, 104, 104, 0.26);
+  background: rgba(33, 33, 33, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
@@ -47,8 +47,11 @@ const LinksContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
   align-items: self-start;
-  margin-top: ${isMobile ? "1rem" : ""};
+  margin: ${isMobile ? "2rem 0" : ""};
+  height: 100%;
+  padding-bottom: ${isMobile ? "100rem" : ""};
 `;
+
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
@@ -93,18 +96,19 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/tatuajenavigation"
+                  to="/musicanavigation"
                 >
-                  Tatuaje
+                  Musica
                 </NavLinksTop>
                 <NavLinksTop
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/musicanavigation"
+                  to="/tatuajenavigation"
                 >
-                  Musica
+                  Tatuaje
                 </NavLinksTop>
+
                 <NavLinksTop
                   onClick={() => {
                     setShow(!show);
@@ -150,8 +154,8 @@ const NavBar = () => {
           <LinksContainer>
             <NavLinksTop to="/">Home</NavLinksTop>
             <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
-            <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
+            <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
             <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
             <NavLinksTop to="/eshopnavegacion">E-Shop</NavLinksTop>

@@ -13,6 +13,7 @@ export const DarkTheme = {
   generalTextColor: "#C5C5C5;",
 
   navigationLinksColor: "#847A65;",
+  navigationLinksColorBack: "black;",
   sizeNavigationLinks: "0.9rem;",
 
   backgroundButtons: "#555555;",
@@ -41,6 +42,7 @@ export const LightTheme = {
   generalTextColor: "#0a0a0a;",
 
   navigationLinksColor: "#493f2b;",
+  navigationLinksColorBack: "white;",
   sizeNavigationLinks: "0.9rem;",
 
   backgroundButtons: "#555555;",
@@ -50,7 +52,7 @@ export const LightTheme = {
   tattooStudioTitleColor: "#343A40;",
 
   backgroundIcons: "#272A2D;",
-  strokeIcons: "#a58959;",
+  strokeIcons: "#493f2b;",
   fillIcons: "#d1d1d1;",
   hoverStrokeIcons: "#d1d1d1;",
   hoverFillIcons: "#a58959;",

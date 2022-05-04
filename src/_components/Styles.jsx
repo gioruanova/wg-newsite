@@ -19,6 +19,7 @@ export const BackgroundComponent = styled.div`
   scroll-behavior: smooth;
 `;
 
+
 export const MainContent = styled.div`
   width: auto;
   transition: 1s;
@@ -38,7 +39,7 @@ export const Content = styled.div`
   align-items: center;
   text-align: center;
   align-content: center;
-  padding: ${isMobile ? "4rem 0 4rem 0;" : "5rem 0 4rem 0;"};
+  padding: ${isMobile ? "4rem 0 4rem 0;" : "4rem 0 4rem 0;"};
 `;
 
 export const Separator = styled.hr`
@@ -124,30 +125,20 @@ export const NavLinksTop = styled(Link)`
   margin: 0;
   padding: ${isMobile ? "0.5rem 0 " : "0 1rem"};
   align-items: end;
-  transform: translateX(-0.75em);
+  text-decoration:none;
   font-weight: bold;
-  transition: 1s;
-  &::before {
-    content: ">";
-    display: inline-block;
-    width: 0.75em;
-
-    opacity: 0;
-    transition: opacity 1s;
-  }
+  transition: 400ms;
+  text-shadow: -2px 1px 6px ${(props) => props.theme.navigationLinksColorBack};
+ 
   &:hover {
-    transform: none;
     color: ${(props) => props.theme.hooverLinks};
-  }
-  &:hover::before {
-    opacity: 1;
-  }
-  text-decoration: none;
+ 
 `;
 
 export const NavLinksFooter = styled(NavLinksTop)`
   ${isMobile ? "" : "padding: 0 0 0 2rem;"}
   ${isMobile ? "text-align: center;" : "text-align: initial;"}
+  text-shadow: none;
 `;
 
 // Incons}
@@ -189,7 +180,7 @@ const ContaininerRightPanel = styled.div`
 
 export const Redescontainer = () => {
   return (
-    <ContaininerRedes>
+    <ContaininerRedes className="animate__animated animate__fadeIn animate__delay-1s">
       <a
         href="https://www.patreon.com/bePatron?u=38804295"
         rel="noreferrer"
@@ -241,7 +232,7 @@ export const Redescontainer = () => {
 
 export const RightPanelContainer = () => {
   return (
-    <ContaininerRightPanel>
+    <ContaininerRightPanel className="animate__animated animate__fadeIn animate__delay-1s">
       <InternalLinks to="/">
         <Icons name="home" />
       </InternalLinks>
@@ -266,4 +257,9 @@ export const ContaininerTheme = styled.div`
   top: 1.3rem;
   right: 1.5rem;
   z-index: 9999;
+`;
+
+export const ContaininerTheme2 = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

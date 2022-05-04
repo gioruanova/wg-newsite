@@ -3,6 +3,7 @@ import { Content, InternalLinks, Paragraphs } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+import { BioData } from "../_components/Messages";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
@@ -46,7 +47,7 @@ const PictureContainer = styled.img`
 
 const BioTextContainer = styled.div`
   padding: ${isMobile ? "" : "0 2rem;"} p {
-    text-align: ${isMobile ? "center" : "left"};
+
   }
 
   text-align: center;
@@ -55,57 +56,66 @@ const BioTextContainer = styled.div`
 
 AOS.init();
 
+function Item({ Paragraph }) {
+  return (
+    <>
+      <>
+        <>
+          <></>
+        </>
+        <>
+          <div>
+            <Paragraphs>{Paragraph}</Paragraphs>
+          </div>
+        </>
+      </>
+    </>
+  );
+}
+
 const Bio = () => {
   return (
-    <Content
-      data-aos="fade-right"
-      data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-    >
-      <BioContainer>
-        <TitleContainer1>
-          <h1>Walter</h1>
-          <h1>Gandini</h1>
-        </TitleContainer1>
+    <div>
+      <>
+        <Content
+          data-aos="fade-right"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
+          <BioContainer>
+            <TitleContainer1>
+              <h1>Walter</h1>
+              <h1>Gandini</h1>
+            </TitleContainer1>
 
-        <PictureContainer src={BioPicture} />
-        <BioTextContainer>
-          <div>
-            <Paragraphs>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-              perspiciatis dolores error alias quasi facilis atque, deserunt
-              architecto eius, nesciunt ex inventore quis sapiente similique
-              possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Ab autem perspiciatis dolores error
-              alias quasi facilis atque, deserunt architecto eius, nesciunt ex
-              inventore quis sapiente similique possimus nihil? Vel,
-              reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Ab autem perspiciatis dolores error alias quasi facilis
-              atque, deserunt architecto eius, nesciunt ex inventore quis
-              sapiente similique possimus nihil? Vel, reiciendis. atque,
-              deserunt architecto eius, nesciunt ex inventore quis sapiente
-              similique possimus nihil? Vel, reiciendis. sapiente similique
-              possimus nihil? Vel, reiciendis. atque, deserunt architecto eius,
-              nesciunt ex inventore quis sapiente similique possimus nihil? Vel,
-              reiciendis. sapiente similique possimus nihil? Vel, reiciendis.
-              atque, deserunt architecto eius, nesciunt ex inventore quis
-            </Paragraphs>
+            <PictureContainer src={BioPicture} />
+            <BioTextContainer>
+              <div>
+                {BioData.reverse()
+                  .slice(6, 7)
+                  .map((e) => (
+                    <Item Paragraph={e.Paragraph} />
+                  ))}
+              </div>
+            </BioTextContainer>
+          </BioContainer>
+          <div
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
           </div>
-        </BioTextContainer>
-      </BioContainer>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-      >
-        <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
-      </div>
-    </Content>
+        </Content>
+      </>
+    </div>
   );
 };
 
 export default Bio;
+
+//------------------------------------------------------------------------------------------------------------------------------------------------

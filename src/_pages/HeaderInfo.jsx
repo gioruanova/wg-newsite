@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Content } from "../_components/Styles";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import HeaderPicture from "../_images/HeaderPicture.jpeg";
@@ -57,21 +55,9 @@ const PictureContainer = styled.img`
   width: ${isMobile ? "10rem" : "15%"};
 `;
 
-AOS.init();
-
 const HeaderInfo = () => {
-  useEffect(() => {
-    AOS.init({ duration: 2000 });
-  });
-
   return (
-    <Content
-      data-aos="fade-down"
-      data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-    >
+    <Content className="animate__animated animate__fadeIn animate__delay-1s">
       {isMobile ? (
         <>
           <div>

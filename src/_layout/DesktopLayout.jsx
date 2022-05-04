@@ -2,11 +2,14 @@ import React from "react";
 import Footer from "../_components/Footer";
 import NavBar from "../_components/NavBar";
 import RoutesData from "../_components/RoutesData";
+
 import {
   BackgroundComponent,
   Redescontainer,
   RightPanelContainer,
 } from "../_components/Styles";
+
+
 
 const DesktopLayout = () => {
   return (

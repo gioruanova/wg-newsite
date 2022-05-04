@@ -27,7 +27,7 @@ const FooterContainer = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-top: 1.8px solid ${(props) => props.theme.colorLines};
-  padding: 2rem 2rem;
+  padding: ${isMobile ? "3rem 2rem;" : "3rem 20rem;"};
 `;
 
 const LogoContainer = styled.a`
@@ -69,14 +69,14 @@ const Footer = () => {
         <ContainerLinks>
           <>
             <NavLinksFooter to="/">Home</NavLinksFooter>
-            <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
-            <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
-            <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
             <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
+            <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
             <NavLinksFooter to="/plasticaymasnavigation">
               Plastica & +
             </NavLinksFooter>
+            <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
             <NavLinksFooter to="/eshopnavegacion">E-Shop</NavLinksFooter>
+            <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
             <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
           </>
         </ContainerLinks>
