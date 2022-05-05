@@ -34,13 +34,10 @@ function Item({ paragraph, img, isreverse }) {
     background-size: cover;
     border-color: none;
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     margin: 1rem;
     border-radius: 5px;
     filter: grayscale(1);
-    &:hover {
-      filter: none;
-    }
   `;
 
   const Paragraphs = styled.p`

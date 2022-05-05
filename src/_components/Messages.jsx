@@ -53,12 +53,12 @@ export const BioData = [
     isReverse: false,
   },
   {
-    Paragraph:
-      "En 2017 participó en el festival 'Back To Roots' en Niceto. Durante el año 2019, grabó su disco 'Electric Mantra', que si bin no fue editado, fue lanzado en modo de sencillos (los mismos pueden ser escuchados en Spotify:'Phonke'y 'Princess Lula'. A nivel artista, se desarrolla el campo del tatuaje profesional y artes plásticas, llevando a cabo trabajos estandarizados, exposiciones, y venta de obras.",
+    Img: BioImg3,
     isReverse: false,
   },
   {
-    Img: BioImg3,
+    Paragraph:
+      "En 2017 participó en el festival 'Back To Roots' en Niceto. Durante el año 2019, grabó su disco 'Electric Mantra', que si bin no fue editado, fue lanzado en modo de sencillos (los mismos pueden ser escuchados en Spotify:'Phonke'y 'Princess Lula'. A nivel artista, se desarrolla el campo del tatuaje profesional y artes plásticas, llevando a cabo trabajos estandarizados, exposiciones, y venta de obras.",
     isReverse: false,
   },
 
