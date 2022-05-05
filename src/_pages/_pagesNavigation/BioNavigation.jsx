@@ -6,18 +6,9 @@ import { MainContent, Titles } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
 // ------------------------------------------------------------
 
-export const Paragraphs = styled.p`
-  color: ${(props) => props.theme.generalTextColor};
-  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-  font-family: ${(props) => props.theme.generalFont};
-  font-weight: 400;  
-  margin: ${isMobile ? "1rem  0;" : "1rem 1rem;"};
-  transition: 1s;
-  text-align:justify;
-`;
-
 function Item({ paragraph, img, isreverse }) {
   const ContainerBio = styled.div`
+    transition: 1s;
     display: flex;
     align-items: center;
     ${isreverse ? "flex-direction: row-reverse;" : "flex-direction:row;"}
@@ -26,6 +17,7 @@ function Item({ paragraph, img, isreverse }) {
   `;
 
   const ContainerBioResponsive = styled.div`
+    transition: 1s;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -35,6 +27,7 @@ function Item({ paragraph, img, isreverse }) {
   `;
 
   const ImgContainer = styled.div`
+    transition: 1s;
     background-image: url(${img});
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +37,21 @@ function Item({ paragraph, img, isreverse }) {
     height: 12rem;
     margin: 1rem;
     border-radius: 5px;
+    filter: grayscale(1);
+    &:hover {
+      filter: none;
+    }
   `;
+
+  const Paragraphs = styled.p`
+  color: ${(props) => props.theme.generalTextColor};
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+  font-family: ${(props) => props.theme.generalFont};
+  font-weight: 400;  
+  margin: ${isMobile ? "1rem  0;" : "1rem 1rem;"};
+  transition:1s;
+  text-align:justify;
+`;
   return (
     <>
       {isMobile ? (
