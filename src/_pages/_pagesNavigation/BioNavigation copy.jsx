@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import { BioData } from "../../_components/Messages";
+
 import { MainContent, Titles } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
-// ------------------------------------------------------------
 
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
@@ -16,13 +16,12 @@ export const Paragraphs = styled.p`
   text-align:justify;
 `;
 
-function Item({ paragraph, img, isreverse }) {
+function Item({ Paragraph, Img, isReverse }) {
   const ContainerBio = styled.div`
     display: flex;
     align-items: center;
-    ${isreverse ? "flex-direction: row-reverse;" : "flex-direction:row;"}
+    ${isReverse ? "flex-direction: row-reverse;" : "flex-direction:row;"}
     justify-content:center;
-    width: 100%;
   `;
 
   const ContainerBioResponsive = styled.div`
@@ -30,32 +29,26 @@ function Item({ paragraph, img, isreverse }) {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-    height: 100%;
   `;
 
-  const ImgContainer = styled.div`
-    background-image: url(${img});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-color: none;
-    width: 100%;
-    height: 12rem;
-    margin: 1rem;
+  const ImgContainer = styled.img`
     border-radius: 5px;
+    width: ${isMobile ? "100%" : "20%"};
+    height: ${isMobile ? "100%" : "15%"};
+    margin: ${isMobile ? "1rem 0;" : "0 1rem;"};
+    justify-content: center;
   `;
   return (
     <>
       {isMobile ? (
         <ContainerBioResponsive>
-          {paragraph && <Paragraphs>{paragraph}</Paragraphs>}
-          {img && <ImgContainer img={img}></ImgContainer>}
+          {Paragraph && <Paragraphs>{Paragraph}</Paragraphs>}
+          {Img && <ImgContainer src={Img}></ImgContainer>}
         </ContainerBioResponsive>
       ) : (
         <ContainerBio>
-          {paragraph && <Paragraphs>{paragraph}</Paragraphs>}
-          {img && <ImgContainer img={img}></ImgContainer>}
+          {Paragraph && <Paragraphs>{Paragraph}</Paragraphs>}
+          {Img && <ImgContainer src={Img}></ImgContainer>}
         </ContainerBio>
       )}
     </>
@@ -70,7 +63,6 @@ const BioNavigation = () => {
     justify-content: center;
     align-items: center;
   `;
-
   return (
     <MainContent className="animate__animated animate__fadeIn animate__slower">
       <Titles>Walter Gandini</Titles>
@@ -79,9 +71,9 @@ const BioNavigation = () => {
           {BioData.slice(1, 8).map((e, Bio, isReverse, Img) => (
             <Item
               key={Bio}
-              paragraph={e.Paragraph}
-              isreverse={e.isReverse}
-              img={e.Img}
+              Paragraph={e.Paragraph}
+              isReverse={e.isReverse}
+              Img={e.Img}
             />
           ))}
         </MainContainer>

@@ -34,13 +34,13 @@ export const BioData = [
     Img: BioImg1,
     Paragraph:
       "Walter Gandini es un artista Argentino de amplia cobertura donde sus trabajos se basan en la música, tatuaje, plástica y arte en general. Con más de 20 años de trayectoria ha trabajado en estas áreas de manera profesional, ampliando día a día sus horizontes y cultura, para lograr una cobertura total sobre los distintos aspectos de su trabajo.",
-    isReverse: false,
+    isReverse: true,
   },
   {
     Img: BioImg2,
     Paragraph:
       "A nivel musical, ha estado recorriendo la ruta del blues desde mediados de los '80 participando de bandas del medio local. En 1993 firma contrato con la mundialmente conocida marca de armónicas “Lee Oskar”, y a partir del año '94 forma parte del trio “The Acoustic Blues”, con esta formación participo de festivales de jazz de todo el país y del exterior. ",
-    isReverse: true,
+    isReverse: false,
   },
   {
     Paragraph:
@@ -48,7 +48,6 @@ export const BioData = [
     isReverse: false,
   },
   {
-    Img: BioImg3,
     Paragraph:
       "En 2002 graba su primer trabajo solista “LUCKY”, compuesto de estándares de jazz, clásicos de blues y composiciones propias. Este trabajo le valió la postulación a “Mejor álbum de Jazz” en los premios Gardel 2004. En 2015 en celebración de los 30 años de la saga 'Volver al Futuro', participó en dicho festival, mientras que habitualmente realizaba constantes presentaciones en Boris Club.",
     isReverse: false,
@@ -56,6 +55,10 @@ export const BioData = [
   {
     Paragraph:
       "En 2017 participó en el festival 'Back To Roots' en Niceto. Durante el año 2019, grabó su disco 'Electric Mantra', que si bin no fue editado, fue lanzado en modo de sencillos (los mismos pueden ser escuchados en Spotify:'Phonke'y 'Princess Lula'. A nivel artista, se desarrolla el campo del tatuaje profesional y artes plásticas, llevando a cabo trabajos estandarizados, exposiciones, y venta de obras.",
+    isReverse: false,
+  },
+  {
+    Img: BioImg3,
     isReverse: false,
   },
 

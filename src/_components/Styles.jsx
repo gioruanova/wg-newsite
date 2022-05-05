@@ -25,7 +25,7 @@ export const MainContent = styled.div`
   align-items: center;
   text-align: center;
   align-content: center;
-  margin: ${isMobile ? "8rem 3rem 5rem 3rem;" : "10rem 20rem 7rem 20rem;"};
+  margin: ${isMobile ? "6rem 2rem 5rem 2rem;" : "10rem 20rem 7rem 20rem;"};
 `;
 
 export const MainContentHome = styled(MainContent)`
