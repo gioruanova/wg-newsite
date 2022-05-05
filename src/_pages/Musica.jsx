@@ -22,7 +22,7 @@ const MusicContainer = styled.div`
   align-items: center;
 `;
 
-const PictureContainer = styled.img`
+const ImgContainer = styled.img`
   border-radius: 10px;
   width: ${isMobile ? "100%" : "70%"};
   margin: 0 0 2rem 0;
@@ -78,7 +78,7 @@ const Musica = () => {
     >
       <Titles>Musica</Titles>
       <MusicContainer>
-        <PictureContainer src={MusicSection} />
+        <ImgContainer src={MusicSection} />
         <MusicaTextContainer>
         <div>
                 {MusicData.slice(0, 1).map((e, Bio) => (

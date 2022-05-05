@@ -82,30 +82,30 @@ const DetailEvent = styled(LocationEvent)`
 `;
 
 function Item({
-  Fecha,
-  NombreEvento,
-  Direccion,
-  Hora,
-  Linea1,
-  Linea2,
-  Linea3,
+  EventDate,
+  EventName,
+  EventLocation,
+  EventTime,
+  EventContent1,
+  EventContent2,
+  EventContent3,
 }) {
   return (
     <>
       <EventoContainer>
         <MainTitleEvent>
-          <h1>{Fecha}</h1>
+          <h1>{EventDate}</h1>
         </MainTitleEvent>
         <LocationEvent>
-          <h2>{NombreEvento}</h2>
+          <h2>{EventName}</h2>
 
-          <h2>{Direccion}</h2>
+          <h2>{EventLocation}</h2>
         </LocationEvent>
         <DetailEvent>
-          <h2>{Hora}</h2>
-          <h3>{Linea1}</h3>
-          <h3>{Linea2}</h3>
-          <h3>{Linea3}</h3>
+          <h2>{EventTime}</h2>
+          <h3>{EventContent1}</h3>
+          <h3>{EventContent2}</h3>
+          <h3>{EventContent3}</h3>
         </DetailEvent>
       </EventoContainer>
     </>
@@ -120,13 +120,13 @@ const ProximosEventos = () => {
         {Eventos.map((e, Eventos) => (
           <Item
             key={Eventos}
-            Fecha={e.Fecha}
-            NombreEvento={e.NombreEvento}
-            Direccion={e.Direccion}
-            Hora={e.Hora}
-            Linea1={e.Linea1}
-            Linea2={e.Linea2}
-            Linea3={e.Linea3}
+            EventDate={e.EventDate}
+            EventName={e.EventName}
+            EventLocation={e.EventLocation}
+            EventTime={e.EventTime}
+            EventContent1={e.EventContent1}
+            EventContent2={e.EventContent2}
+            EventContent3={e.EventContent3}
           />
         ))}
       </GridEventos>

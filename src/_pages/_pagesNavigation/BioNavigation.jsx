@@ -3,12 +3,12 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import { MainContent, Titles } from "../../_components/Styles";
 import { BioData } from "../../_components/Messages";
-import BioPicture from "../../_images/BioPicture.jpeg";
-import BioPicture2 from "../../_images/BioPicture2.jpeg";
+import BioImg from "../../_images/BioImg.jpeg";
+import BioImg2 from "../../_images/BioImg2.jpeg";
 import MusicSection from "../../_images/MusicSection.jpg";
 import Icons from "../../_components/Icons";
 
-const PictureContainer = styled.img`
+const ImgContainer = styled.img`
   border-radius: 10px;
   width: ${isMobile ? "90%" : "15%"};
   height: ${isMobile ? "90%" : "15%"};
@@ -62,7 +62,7 @@ const BioNavigation = () => {
     <MainContent className="animate__animated animate__fadeIn animate__slower">
       <Titles>Walter Gandini</Titles>
       <ContainerBio>
-        <PictureContainer src={BioPicture} />
+        <ImgContainer src={BioImg} />
         <div>
           {BioData.slice(1, 3).map((e, Bio) => (
             <Item key={Bio} Paragraph={e.Paragraph} />
@@ -75,7 +75,7 @@ const BioNavigation = () => {
             <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
-        <PictureContainer src={BioPicture2} />
+        <ImgContainer src={BioImg2} />
       </ContainerBio>
 
       <>
@@ -84,7 +84,7 @@ const BioNavigation = () => {
             <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
-        <PictureContainer src={MusicSection} />
+        <ImgContainer src={MusicSection} />
       </>
       <ContainerBio>
         <div>

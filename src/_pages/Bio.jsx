@@ -8,7 +8,7 @@ import { BioData } from "../_components/Messages";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import BioPicture from "../_images/BioPicture.jpeg";
+import BioImg from "../_images/BioImg.jpeg";
 
 const BioContainer = styled.div`
   display: grid;
@@ -39,7 +39,7 @@ const TitleContainer1 = styled.div`
   }
 `;
 
-const PictureContainer = styled.img`
+const ImgContainer = styled.img`
   border-radius: 10px;
   width: ${isMobile ? "100%" : "100%"};
   margin: 2rem 0;
@@ -90,7 +90,7 @@ const Bio = () => {
               <h1>Gandini</h1>
             </TitleContainer1>
 
-            <PictureContainer src={BioPicture} />
+            <ImgContainer src={BioImg} />
             <BioTextContainer>
               <div>
                 {BioData.slice(0, 1).map((e, Bio) => (

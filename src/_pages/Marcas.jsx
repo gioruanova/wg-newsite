@@ -4,9 +4,9 @@ import { isMobile } from "react-device-detect";
 import { Content } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { MarcasArray } from "../_components/Messages";
+import { Sponsors } from "../_components/Messages";
 
-const MarcasContainer = styled.div`
+const SponsorsContainer = styled.div`
   margin-top: 4rem;
   display: flex;
   display: -webkit-flex;
@@ -19,17 +19,17 @@ const MarcasContainer = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
 `;
 
-const MarcasImg = styled.img`
+const SponsorImage = styled.img`
   width: 70%;
 `;
 
 AOS.init();
 
-function Item({ id, img, url, title }) {
+function Item({ SponsorId, SponsorImg, SponsorUrl, SponsorTitle }) {
   return (
     <>
-      <a href={url} target="_blank" rel="noreferrer" title={title}>
-        <MarcasImg src={img} />
+      <a href={SponsorUrl} target="_blank" rel="noreferrer" title={SponsorTitle}>
+        <SponsorImage src={SponsorImg} />
       </a>
     </>
   );
@@ -45,11 +45,11 @@ const Marcas = () => {
       data-aos-easing="ease-in-out"
     >
       <>
-        <MarcasContainer>
-          {MarcasArray.map((e, id, img, url, title) => (
-            <Item key={id} img={e.img} url={e.url} title={e.title} />
+        <SponsorsContainer>
+          {Sponsors.map((e, SponsorId, SponsorImg, SponsorUrl, SponsorTitle) => (
+            <Item key={SponsorId} SponsorImg={e.SponsorImg} SponsorUrl={e.SponsorUrl} SponsorTitle={e.SponsorTitle} />
           ))}
-        </MarcasContainer>
+        </SponsorsContainer>
       </>
     </Content>
   );

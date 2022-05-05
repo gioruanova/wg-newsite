@@ -3,7 +3,7 @@ import { Content } from "../_components/Styles";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-import HeaderPicture from "../_images/HeaderPicture.jpeg";
+import HeaderImg from "../_images/HeaderImg.jpeg";
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ const MainHeaderSubTitle = styled.p`
    
 `;
 
-const PictureContainer = styled.img`
+const ImgContainer = styled.img`
   border-radius: 10px;
   width: ${isMobile ? "10rem" : "15%"};
 `;
@@ -88,7 +88,7 @@ const HeaderInfo = () => {
           </MainHeaderSubTitleContainer>
         </MainHeaderTitle>
 
-        <PictureContainer src={HeaderPicture} />
+        <ImgContainer src={HeaderImg} />
       </HeaderContainer>
     </Content>
   );
