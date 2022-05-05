@@ -19,7 +19,6 @@ export const BackgroundComponent = styled.div`
   scroll-behavior: smooth;
 `;
 
-
 export const MainContent = styled.div`
   width: auto;
   transition: 1s;
@@ -79,7 +78,7 @@ export const ExternalLinks = styled.a`
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 300;
-  margin: 0 0 5rem 0;
+
   text-decoration: none;
   font-weight: 600;
   transition: 1s;

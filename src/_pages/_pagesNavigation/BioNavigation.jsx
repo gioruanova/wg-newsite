@@ -27,8 +27,6 @@ const ContainerBioRedes = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
-  &:hover {
-  }
 `;
 
 export const Paragraphs = styled.p`
@@ -61,20 +59,20 @@ function Item({ Paragraph }) {
 
 const BioNavigation = () => {
   return (
-    <MainContent className="animate__animated animate__fadeInLeft animate__slow">
+    <MainContent className="animate__animated animate__fadeIn animate__slower">
       <Titles>Walter Gandini</Titles>
       <ContainerBio>
         <PictureContainer src={BioPicture} />
         <div>
-          {BioData.slice(1, 3).map((e) => (
-            <Item Paragraph={e.Paragraph} />
+          {BioData.slice(1, 3).map((e, Bio) => (
+            <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
       </ContainerBio>
       <ContainerBio>
         <div>
-          {BioData.slice(3, 5).map((e) => (
-            <Item Paragraph={e.Paragraph} />
+          {BioData.slice(3, 5).map((e, Bio) => (
+            <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
         <PictureContainer src={BioPicture2} />
@@ -82,16 +80,16 @@ const BioNavigation = () => {
 
       <>
         <div>
-          {BioData.slice(5, 6).map((e) => (
-            <Item Paragraph={e.Paragraph} />
+          {BioData.slice(5, 6).map((e, Bio) => (
+            <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
         <PictureContainer src={MusicSection} />
       </>
       <ContainerBio>
         <div>
-          {BioData.slice(6, 7).map((e) => (
-            <Item Paragraph={e.Paragraph} />
+          {BioData.slice(6, 7).map((e, Bio) => (
+            <Item key={Bio} Paragraph={e.Paragraph} />
           ))}
         </div>
       </ContainerBio>

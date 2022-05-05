@@ -10,6 +10,8 @@ import Contacto from "./Contacto";
 import HeaderInfo from "./HeaderInfo";
 import ProximosEventos from "./ProximosEventos";
 import Eshop from "./Eshop";
+import Marcas from "./Marcas";
+
 
 const Home = () => {
   return (
@@ -32,6 +34,8 @@ const Home = () => {
         <Eshop />
         <Separator />
         <Contacto />
+        <Separator />
+        <Marcas/>
       </Content>
     </MainContentHome>
   );

@@ -11,6 +11,7 @@ const HeaderContainer = styled.div`
   text-align: end;
   justify-content: center;
   gap: ${isMobile ? "0.5rem" : "1rem"};
+  margin-top: 2rem;
 `;
 
 const MainHeaderTitle = styled.div`
@@ -57,7 +58,7 @@ const PictureContainer = styled.img`
 
 const HeaderInfo = () => {
   return (
-    <Content className="animate__animated animate__fadeIn animate__delay-1s">
+    <Content className="animate__animated animate__fadeIn animate__delay-0.5s">
       {isMobile ? (
         <>
           <div>

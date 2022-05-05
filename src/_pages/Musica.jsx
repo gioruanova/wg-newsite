@@ -13,6 +13,7 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
 import MusicSection from "../_images/MusicSection.jpg";
+import { MusicData } from "../_components/Messages";
 
 const MusicContainer = styled.div`
   display: grid;
@@ -35,6 +36,32 @@ p {
 }
 `;
 
+
+
+
+
+function Item({ Paragraph }) {
+  return (
+    <>
+      <>
+        <>
+          <></>
+        </>
+        <>
+          <div>
+            <Paragraphs>{Paragraph}</Paragraphs>
+          </div>
+        </>
+      </>
+    </>
+  );
+}
+
+
+
+
+
+
 AOS.init();
 
 const Musica = () => {
@@ -53,21 +80,16 @@ const Musica = () => {
       <MusicContainer>
         <PictureContainer src={MusicSection} />
         <MusicaTextContainer>
-          <div>
-            <Paragraphs>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-              perspiciatis dolores error alias quasi facilis atque, deserunt
-              architecto eius, nesciunt ex inventore quis sapiente similique
-              possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Ab autem perspiciatis dolores error
-              alias quasi facilis atque, deserunt architecto eius, nesciunt ex
-              inventore quis sapiente similique possimus nihil? Vel,
-              reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Ab autem perspiciatis dolores error alias quasi facilis
-              atque, deserunt architecto eius, nesciunt ex inventore quis
-              sapiente similique possimus nihil? Vel, reiciendis.
-            </Paragraphs>
-          </div>
+        <div>
+                {MusicData.slice(0, 1).map((e, Bio) => (
+                  <Item key={Bio} Paragraph={e.Paragraph} />
+                ))}
+              </div>
+              <div>
+                {MusicData.slice(4, 5).map((e, Bio) => (
+                  <Item key={Bio} Paragraph={e.Paragraph} />
+                ))}
+              </div>
         </MusicaTextContainer>
       </MusicContainer>
       <div

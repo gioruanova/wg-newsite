@@ -1,6 +1,15 @@
-// import BioPicture from "../_images/BioPicture.jpeg";
-// import HeaderPicture from "../_images/HeaderPicture.jpeg";
-// import MusicSection from "../_images/MusicSection.jpg";
+import BioPicture1 from "../_images/BioPicture.jpeg";
+import BioPicture2 from "../_images/BioPicture2.jpeg";
+import BioPicture3 from "../_images/BioPicture3.jpg";
+
+import HeaderPicture from "../_images/HeaderPicture.jpeg";
+import MusicSection from "../_images/MusicSection.jpg";
+
+import marca1 from "../_images/_marcas/sponsor_antiguaslunas.png";
+import marca2 from "../_images/_marcas/sponsor_estampaskoi.png";
+import marca3 from "../_images/_marcas/sponsor_finearts.png";
+import marca4 from "../_images/_marcas/sponsor_monroe.png";
+import marca5 from "../_images/_marcas/sponsor_royharpman.png";
 
 //TITULOS_INFO
 export const SectionsData = {
@@ -61,7 +70,7 @@ export const BioData = [
   },
   {
     Paragraph:
-      "En 2017 participó en el festival 'Back To Roots' en Niceto. Durante el año 2019, grabó su disco 'Electric Mantra', que si bin no fue editado, fue lanzado en modo de sencillos (los mismos pueden ser escuchados en Spotify: 'Phonke' y 'Princess Lula'. A nivel artista, se desarrolla el campo del tatuaje profesional y artes plásticas, llevando a cabo trabajos estandarizados, exposiciones, y venta de obras.",
+      "En 2017 participó en el festival 'Back To Roots' en Niceto. Durante el año 2019, grabó su disco 'Electric Mantra', que si bin no fue editado, fue lanzado en modo de sencillos (los mismos pueden ser escuchados en Spotify:'Phonke'y 'Princess Lula'. A nivel artista, se desarrolla el campo del tatuaje profesional y artes plásticas, llevando a cabo trabajos estandarizados, exposiciones, y venta de obras.",
   },
 
   {
@@ -93,6 +102,19 @@ export const MusicData = [
   {
     Paragraph:
       "Actualmente Walter se encuentra en constante grabacion y lanzamientos de sencillos como tambien presentaciones en vivo, eventos, clases musicales de armonica, exposiciones, y diferentes actividades. Todas las novedades pueden ser conocidas ya sea a traves de este sitio o sus diferentes redes sociales.",
+  },
+
+  {
+    Paragraph:
+      "Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Integrante 1 Iegrante 1 Integrante 1 Integrante 1 ",
+  },
+  {
+    Paragraph:
+      "Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 Integrante 2 ",
+  },
+  {
+    Paragraph:
+      "Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 Integrante 3 ",
   },
 ];
 //------------------------------------------------------------------------------------------------------
@@ -220,35 +242,46 @@ export const Eventos = [
 ];
 //------------------------------------------------------------------------------------------------------
 //PICTURES_SECTION
-
-// export const PicturesSection = [
-//   {
-//  HeaderPicture1: ,
-//  BioPicture1: ,
-//  BioPicture2: ,
-//  BioPicture3: ,
-//  MusicPicture1: ,
-//  MusicPicture2: ,
-//  MusicPicture3: ,
-//  MusicIntegrantesPicture1: ,
-//  MusicIntegrantesPicture2: ,
-//  MusicIntegrantesPicture3: ,
-//  TatuajePicture1:,
-//  TatuajePicture2:,
-//  TatuajePicture3:,
-//  TatuajePicture4:,
-//  PinturaPicture1:,
-//  PinturaPicture2:,
-//  PinturaPicture3:,
-//  PinturaPicture4:,
-//  PlasticaPicture1:,
-//  PlasticaPicture2:,
-//  PlasticaPicture3:,
-//  PlasticaPicture4:,
-//  EshopPicture1:,
-//  EshopPicture2:,
-//  EshopPicture3:,
-//  EshopPicture4:,
-//  EshopPicture5:,
-//   },
-// ];
+export const PicturesSection = [
+  {
+    HeaderPicture1: HeaderPicture,
+    BioPicture1: BioPicture1,
+    BioPicture2: BioPicture2,
+    BioPicture3: BioPicture3,
+    MusicSection1: MusicSection,
+  },
+];
+//------------------------------------------------------------------------------------------------------
+//MARCAS_INFO
+export const MarcasArray = [
+  {
+    id: "estampaskoi",
+    title: "Estampas Koi",
+    img: marca2,
+    url: "",
+  },
+  {
+    id: "antiguaslunas",
+    title: "Antiguas Lunas",
+    img: marca1,
+    url: "https://www.instagram.com/antiguaslunas/?hl=es",
+  },
+  {
+    id: "finearts",
+    title: "Buenos Aires Fine Arts",
+    img: marca3,
+    url: "http://www.buenosairesfinearts.com/",
+  },
+  {
+    id: "monroe",
+    title: "Musical Monroe",
+    img: marca4,
+    url: "https://musicalmonroe.com.ar/",
+  },
+  {
+    id: "royharpman",
+    title: "Roy Harpman",
+    img: marca5,
+    url: "http://www.matrixrepairs.com.ar/",
+  },
+];

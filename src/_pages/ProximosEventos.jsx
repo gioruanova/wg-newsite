@@ -1,5 +1,5 @@
 import React from "react";
-import { Content, Titles, InternalLinks } from "../_components/Styles";
+import { Content, Titles } from "../_components/Styles";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
@@ -24,7 +24,7 @@ const EventoContainer = styled.div`
   border: 2px solid ${(props) => props.theme.mainTitlesColor};
   border-radius: 10px;
   padding: 1rem;
-  transition: 1s;
+  transition: 400ms;
   width: ${isMobile ? "80%" : "30%"};
   height: 15rem;
 `;
@@ -36,7 +36,7 @@ const MainTitleEvent = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  transition:1s;
+  transition: 400ms;
 
   h1,
   h2 {
@@ -52,13 +52,15 @@ const LocationEvent = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  transition: 1s;
+  transition: 400ms;
    h2 {
+    transition: 400ms;
     font-size: ${isMobile ? "1.2rem;" : "1.2rem;"}
     margin: 0;
     color:${(props) => props.theme.mainTitlesColor};
   }
   h3 {
+    
     margin: 0;
     font-weight: 400;
   }
@@ -68,7 +70,7 @@ const DetailEvent = styled(LocationEvent)`
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
-
+  transition: 400ms;
   h2 {
     margin: 0;
     font-weight: 400;
@@ -112,11 +114,12 @@ function Item({
 
 const ProximosEventos = () => {
   return (
-    <Content className="animate__animated animate__fadeIn animate__delay-1s">
+    <Content className="animate__animated animate__fadeIn animate__delay-0.5s">
       <Titles>Proximos Eventos</Titles>
       <GridEventos>
-        {Eventos.reverse().map((e) => (
+        {Eventos.map((e, Eventos) => (
           <Item
+            key={Eventos}
             Fecha={e.Fecha}
             NombreEvento={e.NombreEvento}
             Direccion={e.Direccion}
@@ -127,11 +130,12 @@ const ProximosEventos = () => {
           />
         ))}
       </GridEventos>
-      <div>
+      {/* <div>
         <InternalLinks to="/#"> Ver Mas{" >"} </InternalLinks>
-      </div>
+      </div> */}
     </Content>
   );
 };
 
 export default ProximosEventos;
+

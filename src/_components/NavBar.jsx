@@ -52,7 +52,6 @@ const LinksContainer = styled.div`
   padding-bottom: ${isMobile ? "100rem" : ""};
 `;
 
-
 const NavBar = () => {
   const [show, setShow] = useState(false);
 

@@ -8,7 +8,6 @@ const IconWrapper = styled.div`
   &:hover{
       transition:1s;
   }
-
   svg {
     display: flex;
     align-items: center;
@@ -23,6 +22,16 @@ const IconWrapper = styled.div`
       stroke:${(props) => props.theme.hoverStrokeIcons};
         
   }
+}
+`;
+
+const Menu = styled(IconWrapper)`
+  }
+  svg {
+  
+    stroke:${(props) => props.theme.navigationLinksColor};
+    fill:${(props) => props.theme.navigationLinksColor};
+
 }
 `;
 const IconWrapperDark = styled.div`
@@ -76,16 +85,16 @@ export default function Icons({ name }) {
     //NAVBAR
     case "burgeropen":
       return (
-        <IconWrapper>
+        <Menu>
           <ReactSVG src="_assets/_icons/burger.svg" />
-        </IconWrapper>
+        </Menu>
       );
 
     case "burgerclosed":
       return (
-        <IconWrapper>
+        <Menu>
           <ReactSVG src="_assets/_icons/cross.svg" />
-        </IconWrapper>
+        </Menu>
       );
     //-----------------------------------
     //REDES

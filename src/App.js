@@ -15,8 +15,8 @@ function App() {
   const [show, setShow] = useState(false);
   setTimeout(() => {
     setShow(true);
-    console.log("show");
-  }, 100);
+
+  }, 10);
 
   const [theme, setTheme] = useState("dark");
   const themeToggler = () => {

@@ -93,11 +93,9 @@ const Bio = () => {
             <PictureContainer src={BioPicture} />
             <BioTextContainer>
               <div>
-                {BioData.reverse()
-                  .slice(6, 7)
-                  .map((e) => (
-                    <Item Paragraph={e.Paragraph} />
-                  ))}
+                {BioData.slice(0, 1).map((e, Bio) => (
+                  <Item key={Bio} Paragraph={e.Paragraph} />
+                ))}
               </div>
             </BioTextContainer>
           </BioContainer>

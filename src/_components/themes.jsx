@@ -52,7 +52,7 @@ export const LightTheme = {
   tattooStudioTitleColor: "#343A40;",
 
   backgroundIcons: "#272A2D;",
-  strokeIcons: "#493f2b;",
+  strokeIcons: "#a58959;",
   fillIcons: "#d1d1d1;",
   hoverStrokeIcons: "#d1d1d1;",
   hoverFillIcons: "#a58959;",
