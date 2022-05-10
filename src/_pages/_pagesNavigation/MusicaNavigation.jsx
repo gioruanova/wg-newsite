@@ -174,7 +174,7 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
   const MemberCards = styled.div`
     display: flex;
     flex-direction: column;
-    width: 20rem;
+    width: ${isMobile ? "auto" : "20rem"};
     border: 2px solid ${(props) => props.theme.colorLines};
     border-radius: 0.5rem;
     margin: 1rem;
@@ -280,27 +280,6 @@ const MusicaNavigation = () => {
         <InternalLinks to="/contactnavigation">
           <ContactButtons>Reserva tu clase</ContactButtons>
         </InternalLinks>
-
-        <ContactButtons>
-          <ExternalLinks
-            href="https://open.spotify.com/artist/6AxS0nhTn6xwtTIBjUkeyh?si=msTwOLnETJOyEof6nsaxrg&nd=1"
-            rel="noreferrer"
-            target="_blank"
-            title="Spotify"
-            aria-label="Spotify"
-          >
-            Spotify
-          </ExternalLinks>
-        </ContactButtons>
-        <ExternalLinks
-          href="https://www.youtube.com/c/WalterGandini"
-          rel="noreferrer"
-          target="_blank"
-          title="YouTube"
-          aria-label="YouTube"
-        >
-          <ContactButtons>Canal Youtube</ContactButtons>
-        </ExternalLinks>
       </ContainerButtons>
       <ContainerRedesFootParagraph>
         <Redes />

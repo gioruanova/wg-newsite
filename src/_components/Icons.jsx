@@ -28,7 +28,7 @@ const Menu = styled(IconWrapper)`
   }
   svg {
   
-    stroke:${(props) => props.theme.navigationLinksColor};
+    stroke:#847A65;
     fill:${(props) => props.theme.navigationLinksColor};
 
 }

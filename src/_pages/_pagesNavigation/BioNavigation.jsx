@@ -13,7 +13,6 @@ import Redes from "../../_components/Redes";
 
 function Item({ paragraph, img, isReverseImg, titles }) {
   const ContainerBio = styled.div`
-    transition: 1s;
     display: flex;
     align-items: center;
     ${isReverseImg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
@@ -22,7 +21,6 @@ function Item({ paragraph, img, isReverseImg, titles }) {
   `;
 
   const ContainerBioResponsive = styled.div`
-    transition: 1s;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -32,7 +30,6 @@ function Item({ paragraph, img, isReverseImg, titles }) {
   `;
 
   const ImgContainer = styled.div`
-    transition: 1s;
     background-image: url(${img});
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +44,7 @@ function Item({ paragraph, img, isReverseImg, titles }) {
 
   return (
     <>
-      <Titles>{titles}</Titles>
+      {titles && <Titles>{titles}</Titles>}
       {isMobile ? (
         <ContainerBioResponsive>
           {paragraph && (

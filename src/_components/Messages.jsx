@@ -9,7 +9,8 @@ import BioImg8 from "../_images/_bio/BioImg8.JPG";
 import MusicImg1 from "../_images/_music/MusicImg1.jpg";
 import MusicImg2 from "../_images/_music/MusicImg2.jpg";
 import MusicImg3 from "../_images/_music/MusicImg3.jpg";
-import MusicImg4 from "../_images/_music/MusicImg4.jpg";
+import MusicImg4 from "../_images/_music/MusicImg4.PNG";
+import MusicImg5 from "../_images/_music/MusicImg5.JPG";
 import Integrante1 from "../_images/_music/Integrante1.jpg";
 import Integrante2 from "../_images/_music/Integrante2.jpg";
 import Integrante3 from "../_images/_music/Integrante3.jpg";
@@ -26,6 +27,45 @@ import Muestra7 from "../_images/_tatuaje/_muestras/6.jpg";
 import Muestra8 from "../_images/_tatuaje/_muestras/7.jpg";
 import Muestra9 from "../_images/_tatuaje/_muestras/8.jpg";
 import Muestra10 from "../_images/_tatuaje/_muestras/9.jpg";
+
+import PinturaImg1 from "../_images/_pintura/PinturaImg1.jpg";
+
+import MuestraPintura1 from "../_images/_pintura/_muestras/0.jpg";
+import MuestraPintura2 from "../_images/_pintura/_muestras/1.jpg";
+import MuestraPintura3 from "../_images/_pintura/_muestras/2.jpg";
+import MuestraPintura4 from "../_images/_pintura/_muestras/3.jpg";
+import MuestraPintura5 from "../_images/_pintura/_muestras/4.jpg";
+import MuestraPintura6 from "../_images/_pintura/_muestras/5.jpg";
+import MuestraPintura7 from "../_images/_pintura/_muestras/6.jpg";
+import MuestraPintura8 from "../_images/_pintura/_muestras/7.jpg";
+import MuestraPintura9 from "../_images/_pintura/_muestras/8.jpg";
+import MuestraPintura10 from "../_images/_pintura/_muestras/9.jpg";
+import MuestraPintura11 from "../_images/_pintura/_muestras/10.jpg";
+import MuestraPintura12 from "../_images/_pintura/_muestras/11.jpg";
+import MuestraPintura13 from "../_images/_pintura/_muestras/12.jpg";
+import MuestraPintura14 from "../_images/_pintura/_muestras/13.jpg";
+import MuestraPintura15 from "../_images/_pintura/_muestras/14.jpg";
+import MuestraPintura16 from "../_images/_pintura/_muestras/15.jpg";
+import MuestraPintura17 from "../_images/_pintura/_muestras/16.jpg";
+import MuestraPintura18 from "../_images/_pintura/_muestras/17.jpg";
+import MuestraPintura19 from "../_images/_pintura/_muestras/18.jpg";
+import MuestraPintura20 from "../_images/_pintura/_muestras/19.jpg";
+
+import PlasticaImg1 from "../_images/_plastica/PlasticaImg1.jpg";
+
+import MuestraPlastica1 from "../_images/_plastica/_muestras/0.jpg";
+import MuestraPlastica2 from "../_images/_plastica/_muestras/1.jpg";
+import MuestraPlastica3 from "../_images/_plastica/_muestras/2.jpg";
+import MuestraPlastica4 from "../_images/_plastica/_muestras/3.jpg";
+import MuestraPlastica5 from "../_images/_plastica/_muestras/4.jpg";
+import MuestraPlastica6 from "../_images/_plastica/_muestras/5.jpg";
+import MuestraPlastica7 from "../_images/_plastica/_muestras/6.jpg";
+import MuestraPlastica8 from "../_images/_plastica/_muestras/7.jpg";
+import MuestraPlastica9 from "../_images/_plastica/_muestras/8.jpg";
+import MuestraPlastica10 from "../_images/_plastica/_muestras/9.jpg";
+import MuestraPlastica11 from "../_images/_plastica/_muestras/10.jpg";
+import MuestraPlastica12 from "../_images/_plastica/_muestras/11.jpg";
+import MuestraPlastica13 from "../_images/_plastica/_muestras/12.jpg";
 
 import HeaderImg from "../_images/HeaderImg.jpeg";
 import MusicSection from "../_images/MusicSection.jpg";
@@ -143,8 +183,10 @@ export const MusicData = [
     isReverseImg: false,
   },
   {
+    Img: MusicImg5,
     Paragraph:
-      "Actualmente Walter se encuentra en constante grabacion y lanzamientos de sencillos como tambien presentaciones en vivo, eventos, clases musicales de armonica, exposiciones, y diferentes actividades. Todas las novedades pueden ser conocidas ya sea a traves de este sitio o sus diferentes redes sociales.",
+      "Actualmente Walter se encuentra en constante grabacion y lanzamientos de sencillos como tambien presentaciones en vivo, eventos, CLASES MUSICALES de armonica, exposiciones, y diferentes actividades. Todas las novedades pueden ser conocidas ya sea a traves de este sitio o sus diferentes redes sociales.",
+    isReverseImg: true,
   },
 
   {
@@ -184,19 +226,10 @@ export const TatuajeData = [
   },
   {
     ParagraphTatuajeSummary:
-      "Desde obras tradicionales haciendo recordar a la llegada del arte del tatuaje a america, como tambien la fuerte inspiracion del arte oriental creando piezas unicas y personalizadas, dando identidad y pertenencia a cada linea plasmada. Dicho estilo y marca se puede apreciar tanto en sus los trabajos de tatuaje como en sus pinturas. Estas ultimas habiendo formado parte de diferentes exposiciones y subastas.",
-  },
-  {
-    ParagraphTatuaje:
-      "Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.",
-  },
-  {
-    ParagraphTatuaje:
-      "Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.",
-  },
-  {
-    ParagraphTatuaje:
-      "Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.",
+      "A lo largo de los años ha desarrollado un arte propio en estas 3 areas, siendo destacable y reconocido su estilo y tipo de trabajo. Impulsado principalmente por el arte oriental y tatmbien tradicional, ha logrado la fusion artistica de estos 2 estilos generando su  propia marca e identidad en el arte que plasma en cada obra. Desde obras tradicionales haciendo recordar a la llegada del arte del tatuaje a america, como tambien la fuerte inspiracion del arte oriental creando piezas unicas y personalizadas, dando identidad y pertenencia a cada linea plasmada. ",
+    Img: TatuajeImg1,
+    Titles: "Tatuaje",
+    StudioTitle: "Ganesha Art Tattoo Studio",
   },
 ];
 // /TATUAJE_ARRAY
@@ -234,67 +267,146 @@ export const TatuajeSamples = [
 ];
 
 //------------------------------------------------------------------------------------------------------
-//PINTURA_INFO
+//MuestraPinturaINTURA_INFO
 export const PinturaData = [
   {
+    Img: PinturaImg1,
+    Titles: "Pintura",
+    ExternalShop: false,
+    UrlBuy: "http://www.buenosairesfinearts.com/",
+    SellerName: "Buenos Aires Fine Arts",
     Paragraph:
-      "Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.",
+      "Al igual que en el tatuaje, las pinturas, gigantografias, de diversos estilos y metodos forman parte de su trabajo y portfolio artistico. Como en el tatuaje, su metodo y creacion generan un estilo unico en cada pieza. Piezas de diversos tamaños y estilos, forman parte de su estudio y varias formando parte de diferentes exposiciones y subastas.",
+  },
+];
+
+// /PINTURA_ARRAY
+export const PinturaSamples = [
+  {
+    PinturaImg: MuestraPintura1,
   },
   {
-    Paragraph:
-      "Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.",
+    PinturaImg: MuestraPintura2,
   },
   {
-    Paragraph:
-      "Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.",
+    PinturaImg: MuestraPintura3,
   },
   {
-    Paragraph:
-      "Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.",
+    PinturaImg: MuestraPintura4,
   },
   {
-    Paragraph:
-      "Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.",
+    PinturaImg: MuestraPintura5,
+  },
+  {
+    PinturaImg: MuestraPintura6,
+  },
+  {
+    PinturaImg: MuestraPintura7,
+  },
+  {
+    PinturaImg: MuestraPintura8,
+  },
+  {
+    PinturaImg: MuestraPintura9,
+  },
+  {
+    PinturaImg: MuestraPintura10,
+  },
+
+  {
+    PinturaImg: MuestraPintura11,
+  },
+  {
+    PinturaImg: MuestraPintura12,
+  },
+  {
+    PinturaImg: MuestraPintura13,
+  },
+  {
+    PinturaImg: MuestraPintura14,
+  },
+  {
+    PinturaImg: MuestraPintura15,
+  },
+  {
+    PinturaImg: MuestraPintura16,
+  },
+  {
+    PinturaImg: MuestraPintura17,
+  },
+  {
+    PinturaImg: MuestraPintura18,
+  },
+  {
+    PinturaImg: MuestraPintura19,
+  },
+  {
+    PinturaImg: MuestraPintura20,
   },
 ];
 //------------------------------------------------------------------------------------------------------
 //PLASTICA_INFO
 export const PlasticaData = [
   {
+    Img: PlasticaImg1,
+    Titles: "Plastica",
+    ExternalShop: true,
+    UrlBuy: "http://www.buenosairesfinearts.com/",
+    SellerName: "Buenos Aires Fine Arts",
     Paragraph:
-      "Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.Paragraph 4 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.Paragraph 5 detail.",
+      "Su arte no solo se limita a lienzos planos o el mismo cuerpo en si, ya que tambien es constante su desarrollo en diferentes superficies y materiales, generando piezas unicas ya sean calados, ceramica, gigantografias, stickers personalizados, entre otros. Al igual que con la pintura, muchas de estas piezas participaron de exhibiciones y exposiciones, actualmente con varias de las mismas en galerias para su posible adquisicion.",
   },
 ];
 //------------------------------------------------------------------------------------------------------
+
+// /PINTURA_ARRAY
+export const PlasticaSamples = [
+  {
+    PinturaImg: MuestraPlastica1,
+  },
+  {
+    PlasticaImg: MuestraPlastica2,
+  },
+  {
+    PlasticaImg: MuestraPlastica3,
+  },
+  {
+    PlasticaImg: MuestraPlastica4,
+  },
+  {
+    PlasticaImg: MuestraPlastica5,
+  },
+  {
+    PlasticaImg: MuestraPlastica6,
+  },
+  {
+    PlasticaImg: MuestraPlastica7,
+  },
+  {
+    PlasticaImg: MuestraPlastica8,
+  },
+  {
+    PlasticaImg: MuestraPlastica9,
+  },
+  {
+    PlasticaImg: MuestraPlastica10,
+  },
+
+  {
+    PlasticaImg: MuestraPlastica11,
+  },
+  {
+    PlasticaImg: MuestraPlastica12,
+  },
+  {
+    PlasticaImg: MuestraPlastica13,
+  },
+];
 //ESHOP_INFO
 export const EshopData = [
   {
     Paragraph:
       "Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.Paragraph 3 detail.",
   },
 ];
 //------------------------------------------------------------------------------------------------------
@@ -303,10 +415,6 @@ export const ContactoData = [
   {
     Paragraph:
       "Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.Paragraph 1 detail.",
-  },
-  {
-    Paragraph:
-      "Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.Paragraph 2 detail.",
   },
 ];
 //------------------------------------------------------------------------------------------------------

@@ -9,11 +9,41 @@ import {
   ContainerRedesFootParagraph,
   Separator,
   StudioTitle,
+  InternalLinks,
 } from "../../_components/Styles";
+import TattooGrid from "../../_components/_helpers/TattooGrid";
 
 // ------------------------------------------------------------
 
-export const Paragraphs = styled.p`
+const ContainerButtons = styled.div`
+  display: flex;
+  flex-direction: ${isMobile ? "column" : "row"};
+  justify-content: center;
+  align-items: center;
+`;
+
+const ContactButtons = styled.button`
+  width: 10rem;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: ${(props) => props.theme.backgroundButtons};
+  font-family: ${(props) => props.theme.generalFont};
+  color: ${(props) => props.theme.textButtonsColor};
+  border: none;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
+  transition: 400ms;
+  &:hover {
+    cursor: pointer;
+    background-color: ${(props) => props.theme.colorLines};
+  }
+  &:active {
+    background-color: white;
+  }
+`;
+
+const Paragraphs = styled.p`
 color: ${(props) => props.theme.generalTextColor};
 font-size: ${isMobile ? "0.8rem;" : "1rem;"}
 font-family: ${(props) => props.theme.generalFont};
@@ -49,8 +79,8 @@ function Item({ paragraph, img, isReverseImg, titles, studiotitle }) {
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 20rem;
-    height: 15rem;
+    width: 19rem;
+    height: 19rem;
     margin: 1rem;
     border-radius: 5px;
   `;
@@ -79,6 +109,11 @@ function Item({ paragraph, img, isReverseImg, titles, studiotitle }) {
           <div> {img && <ImgContainer img={img}></ImgContainer>}</div>
         </ContainerBio>
       )}
+      <ContainerButtons>
+        <InternalLinks to="/contactnavigation">
+          <ContactButtons>Reserva tu turno</ContactButtons>
+        </InternalLinks>
+      </ContainerButtons>
     </>
   );
 }
@@ -96,7 +131,7 @@ const TatuajeNavigation = () => {
     <MainContent className="animate__animated animate__fadeIn animate__slower">
       <>
         <MainContainer>
-          {TatuajeData.slice(0, 2).map((e, TattoDescp) => (
+          {TatuajeData.slice(1, 2).map((e, TattoDescp) => (
             <Item
               key={TattoDescp}
               paragraph={e.ParagraphTatuajeSummary}
@@ -111,7 +146,7 @@ const TatuajeNavigation = () => {
       <ContainerRedesFootParagraph>
         <Separator />
         <Titles>Trabajos</Titles>
-        <></>
+        <TattooGrid />
       </ContainerRedesFootParagraph>
     </MainContent>
   );

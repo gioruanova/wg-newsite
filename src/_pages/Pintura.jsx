@@ -1,138 +1,128 @@
 import React from "react";
 import {
   Content,
-  Titles,
   InternalLinks,
   Paragraphs,
+  Titles,
 } from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
+import { PinturaData } from "../_components/Messages";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-const PinturaContainer = styled.div`
+const BioContainer = styled.div`
   display: grid;
   ${isMobile
-    ? "grid-template-row: 1fr  3fr;"
-    : "grid-template-columns: 1fr  2fr;"}
+    ? "grid-template-row: 9fr 4fr 1fr;"
+    : "grid-template-columns: 9fr 4fr 1fr;"}
+
   justify-items: center;
   align-items: center;
+  margin-bottom: 3rem;
 `;
 
-const ImgContainer = styled.div`
-  position: relative;
-  display: flex;
+const TitleContainer1 = styled.div`
   justify-content: center;
-  align-items: center;
-  width: 90%;
-  height: 20rem;
-  margin: 0 0 2rem 0;
-`;
+  text-align: ${isMobile ? "center" : "start"};
+  transform: ${isMobile ? "" : "rotate(90deg);"}
+  line-height: 2.5rem;
+  letter-spacing: 1.2rem;
+  padding-left:1rem;
 
-const ImgContainer1 = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  width: 40%;
-  height: 10rem;
-  color: white;
-  left: 0;
-  top: 2.5rem;
-  background-color: grey;
-`;
-
-const ImgContainer2 = styled(ImgContainer1)`
-  left: ${isMobile ? "2rem" : "5rem"};
-  top: 4rem;
-`;
-
-const ImgContainer3 = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  width: 40%;
-  height: 10rem;
-  color: white;
-  right: 4rem;
-  top: 6rem;
-  background-color: grey;
-`;
-
-const ImgContainer4 = styled(ImgContainer3)`
-  right: 0rem;
-  top: 8rem;
+  h1 {
+    color: ${(props) => props.theme.mainTitlesColor};
+    font-size: ${isMobile ? "2rem" : "2.5rem;"}
+    font-family: ${(props) => props.theme.generalFont};
+    margin: 0;
+    text-transform: uppercase;
+    transition: 1s;
+    
+  }
 `;
 
 const BioTextContainer = styled.div`
-padding: ${isMobile ? "" : "0 1rem;"}
-text-align: justify;
-p {
+  padding: ${isMobile ? "" : "0 2rem;"} p {
+
+  }
+  text-align: center;
   text-align: justify;
-}
+  ${isMobile ? "grid-row: 3;" : ""}
 `;
 
 AOS.init();
 
+function Item({ paragraph, img, titles }) {
+  const ImgContainer = styled.div`
+    transition: 1s;
+    background-image: url(${img});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: none;
+    width: 100%;
+    height: 22rem;
+    margin: 1rem;
+    border-radius: 5px;
+
+    ${isMobile ? "grid-row: 2;" : ""}
+  `;
+  return (
+    <BioContainer>
+      <BioTextContainer>
+        <Paragraphs>{paragraph}</Paragraphs>
+      </BioTextContainer>
+      <ImgContainer img={img}></ImgContainer>
+
+      <TitleContainer1>
+        <Titles>{titles}</Titles>
+      </TitleContainer1>
+    </BioContainer>
+  );
+}
+
 const Pintura = () => {
   return (
-    <Content
-      data-aos="fade-left"
-      data-aos-offset="200"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-    >
-      <Titles>Pintura</Titles>
-      <PinturaContainer>
-        <ImgContainer>
-          <>
-            <ImgContainer1>
-              <p>IMG 1</p>
-            </ImgContainer1>
-            <ImgContainer2>
-              <p>IMG 2</p>
-            </ImgContainer2>
-            <ImgContainer3>
-              <p>IMG 3</p>
-            </ImgContainer3>
-            <ImgContainer4>
-              <p>IMG 4</p>
-            </ImgContainer4>
-          </>
-        </ImgContainer>
-        <BioTextContainer>
-          <Paragraphs>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-            perspiciatis dolores error alias quasi facilis atque, deserunt
-            architecto eius, nesciunt ex inventore quis sapiente similique
-            possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
-            consectetur, adipisicing elit. Ab autem perspiciatis dolores error
-            alias quasi facilis atque, deserunt architecto eius, nesciunt ex
-            inventore quis sapiente similique possimus nihil? Vel,
-            reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Ab autem perspiciatis dolores error alias quasi facilis atque,
-            deserunt architecto eius, nesciunt ex inventore quis sapiente
-            similique possimus nihil? Vel, reiciendis.
-          </Paragraphs>
-        </BioTextContainer>
-      </PinturaContainer>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-      >
-        <InternalLinks to="/pinturanavigation"> Ver Mas{" >"} </InternalLinks>
-      </div>
-    </Content>
+    <div>
+      <>
+        <Content
+          data-aos="fade-left"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+        >
+          <div>
+            {PinturaData.slice(0, 1).map((e, Bio) => (
+              <Item
+                key={Bio}
+                paragraph={e.Paragraph}
+                img={e.Img}
+                titles={e.Titles}
+              />
+            ))}
+          </div>
+
+          <div
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+          >
+            <InternalLinks to="/pinturanavigation">
+              {" "}
+              Ver Mas{" >"}{" "}
+            </InternalLinks>
+          </div>
+        </Content>
+      </>
+    </div>
   );
 };
 
 export default Pintura;
+
+//------------------------------------------------------------------------------------------------------------------------------------------------

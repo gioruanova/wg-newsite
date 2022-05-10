@@ -88,7 +88,7 @@ const Musica = () => {
     <div>
       <>
         <Content
-          data-aos="fade-right"
+          data-aos="fade-left"
           data-aos-offset="200"
           data-aos-delay="50"
           data-aos-duration="1000"
@@ -106,7 +106,7 @@ const Musica = () => {
           </div>
 
           <div
-            data-aos="fade-right"
+            data-aos="fade-left"
             data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"

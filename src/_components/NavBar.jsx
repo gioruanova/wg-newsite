@@ -18,7 +18,7 @@ const NavBarContainer = styled.div`
   color: ${(props) => props.theme.navigationLinksColor};
   padding: 1rem 1rem;
   // Background
-  background: rgba(104, 104, 104, 0.26);
+  background: rgba(45, 44, 44, 0.85);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
