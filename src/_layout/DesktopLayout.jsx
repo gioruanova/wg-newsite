@@ -5,11 +5,8 @@ import RoutesData from "../_components/RoutesData";
 
 import {
   BackgroundComponent,
-  Redescontainer,
   RightPanelContainer,
 } from "../_components/Styles";
-
-
 
 const DesktopLayout = () => {
   return (
@@ -20,7 +17,6 @@ const DesktopLayout = () => {
       <NavBar />
       <RoutesData />
       <Footer />
-      <Redescontainer />
       <RightPanelContainer />
     </BackgroundComponent>
   );

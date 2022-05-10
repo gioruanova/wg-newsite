@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import Icons from "../_components/Icons";
 
+// -----------------LAYOUTS-----------------
 export const BackgroundComponent = styled.div`
   background-color: ${(props) => props.theme.generalBackground};
   background-repeat: no-repeat;
@@ -48,6 +49,8 @@ export const Separator = styled.hr`
   transition: 1s;
 `;
 
+// -----------------TITLES AND TEXT-----------------
+
 export const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-size: ${(props) => props.theme.sizeMaintTitles};
@@ -62,16 +65,43 @@ export const SubTitles = styled(Titles)`
   text-transform: none;
 `;
 
+export const StudioTitle = styled.h2`
+  color: ${(props) => props.theme.tattooStudioTitleColor};
+  font-size: ${isMobile ? "2.2rem" : "3rem"};
+  font-family: ${(props) => props.theme.tattooStudioTitle};
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  transition: 1s;
+`;
+
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
   font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   font-weight: 400;
-  margin: 0 0 2rem 0;
-  transition: 1s;
+    transition: 1s;
+    line-height: 1.5rem;
+    word-break: break-word;
+    word-spacing: 0.1rem;
+    text-align:justify;
 `;
 
+export const ParagraphsNavigation = styled.p`
+color: ${(props) => props.theme.generalTextColor};
+font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+font-family: ${(props) => props.theme.generalFont};
+font-weight: 400;  
+margin: ${isMobile ? "1rem  0;" : "1rem 1rem;"};
+transition:1s;
+text-align:justify;
+line-height: 1.5rem;
+word-break: break-word;
+word-spacing: 0.1rem;
+`;
+
+// -------------------------LINKS-------------------------
 export const ExternalLinks = styled.a`
   color: ${(props) => props.theme.navigationLinksColor};
   font-size: 0.8rem;
@@ -101,28 +131,19 @@ export const InternalLinks = styled(Link)`
   transition: 1s;
   cursor: pointer;
   text-transform: uppercase;
-
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
 `;
 
-export const StudioTitle = styled.h2`
-  color: ${(props) => props.theme.tattooStudioTitleColor};
-  font-size: ${isMobile ? "2.2rem" : "3rem"};
-  font-family: ${(props) => props.theme.tattooStudioTitle};
-  font-weight: 500;
-  margin: 2rem 0;
-  transition: 1s;
-`;
-
+// -------------------------NAVIGATION-------------------------
 export const NavLinksTop = styled(Link)`
   cursor: pointer;
   text-transform: uppercase;
   font-size: ${(props) => props.theme.sizeNavigationLinks};
   color: ${(props) => props.theme.navigationLinksColor};
   margin: 0;
-  padding: ${isMobile ? "0.5rem 0 " : "0 1rem"};
+  padding: ${isMobile ? "0.5rem 0.5rem " : "0 1rem"};
   align-items: end;
   text-decoration:none;
   font-weight: bold;
@@ -140,7 +161,7 @@ export const NavLinksFooter = styled(NavLinksTop)`
   text-shadow: none;
 `;
 
-// Incons}
+// ------------------------CONTAINERS AND ICONS------------------------------
 const ContaininerRedes = styled.div`
   display: flex;
   flex-direction: column;
@@ -165,7 +186,6 @@ const ContaininerRightPanel = styled.div`
   position: fixed;
   top: ${isMobile ? " 30rem;" : "50rem;"}
   right: 0.4rem;
-  z-index: 9999;
   border-radius: 15px;
   transition: 1s;
   background-color: ${(props) => props.theme.backgroundIcons};
@@ -253,7 +273,7 @@ export const RightPanelContainer = () => {
 
 export const ContaininerTheme = styled.div`
   position: fixed;
-  top: 1.3rem;
+  top: ${isMobile ? "1.3rem" : "2.3rem"};
   right: 1.5rem;
   z-index: 9999;
 `;
@@ -261,4 +281,8 @@ export const ContaininerTheme = styled.div`
 export const ContaininerTheme2 = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const ContainerRedesFootParagraph = styled.div`
+  margin: 2rem 0;
 `;

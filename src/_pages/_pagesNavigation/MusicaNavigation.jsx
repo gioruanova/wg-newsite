@@ -1,312 +1,406 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
+import { MusicData } from "../../_components/Messages";
 import {
   MainContent,
-  Titles,
-  NavLinksTop,
-  ExternalLinks,
   Separator,
+  ContainerRedesFootParagraph,
+  InternalLinks,
 } from "../../_components/Styles";
-import { MusicData } from "../../_components/Messages";
-import MusicSection from "../../_images/MusicSection.jpg";
+import Redes from "../../_components/Redes";
 
-const PictureContainer = styled.img`
-  border-radius: 10px;
-  width: ${isMobile ? "90%" : "15%"};
-  height: ${isMobile ? "90%" : "15%"};
-  margin: 1rem;
-`;
+// ------------------------------------------------------------
 
-const ContainerBio = styled.div`
+const ContainerButtons = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  align-items: center;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
-  align-items: center;
   justify-content: center;
-  margin: 2rem 0;
+  align-items: center;
 `;
-const Buttons = styled.button`
+
+const ContactButtons = styled.button`
+  width: 10rem;
+  height: auto;
   margin: 1rem;
-  color: ${(props) => props.theme.textButtonsColor};
+  padding: 0.5rem;
   background-color: ${(props) => props.theme.backgroundButtons};
   font-family: ${(props) => props.theme.generalFont};
-  text-transform: uppercase;
+  color: ${(props) => props.theme.textButtonsColor};
   border: none;
-  width: 10rem;
-  height: 2rem;
+  border-radius: 0.4rem;
+  text-transform: uppercase;
   transition: 400ms;
   &:hover {
     cursor: pointer;
-    border: 3px inset #a58959;
-    height: 2rem;
+    background-color: ${(props) => props.theme.colorLines};
+  }
+  &:active {
+    background-color: white;
   }
 `;
 
-const Paragraphs = styled.p`
-  color: ${(props) => props.theme.generalTextColor};
-  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-  font-family: ${(props) => props.theme.generalFont};
-  margin: 0;
-  font-weight: 400;
-  margin: 0.5rem 0 0.5rem 0;
-  transition: 1s;
-  text-align:justify;
+const ExternalLinks = styled.a`
+  color: ${(props) => props.theme.textButtonsColor};
+  text-decoration: none;
 `;
 
-export const TitlesMusicos = styled.h1`
+const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
-  font-size: 1rem;
+  font-size: ${(props) => props.theme.sizeMaintTitles};
   font-family: ${(props) => props.theme.generalFont};
-  margin: 0.5rem 0 0 0;
+  margin: 1rem;
   text-transform: uppercase;
   transition: 1s;
 `;
 
-const ContainerMusicosCards = styled.div`
-  margin-top: 4rem;
+export const ParagraphsCards = styled.p`
+color: ${(props) => props.theme.generalTextColor};
+font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+font-family: ${(props) => props.theme.generalFont};
+font-weight: 400;  
+margin: 0 1rem 1rem 1rem;
+transition:1s;
+text-align:justify;
+`;
+
+export const Paragraphs = styled.p`
+color: ${(props) => props.theme.generalTextColor};
+font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+font-family: ${(props) => props.theme.generalFont};
+font-weight: 400;  
+transition:1s;
+text-align:justify;
+`;
+
+const ContainerMultimedia = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  gap: 2rem;
   justify-content: center;
-`;
-
-const MediaContaienr = styled.div`
-  margin: 2rem 0;
-  display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
-  gap: 2rem;
-  justify-content: space-evenly;
   align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
 `;
-
-const SpotifyFrameMediaContaienr = styled.div`
-  display: flex;
+const MultimediaSpotify = styled.div`
   flex-direction: column;
-`;
-
-const YoutubeFrameMediaContaienr = styled(SpotifyFrameMediaContaienr)`
   display: flex;
-  flex-direction: row;
-  flex-direction: ${isMobile ? "column" : "row"};
-`;
-const MusicosCards = styled.div`
-  width: 98%;
-  gap: 2rem;
-  border: 2px solid ${(props) => props.theme.colorLines};
-  border-radius: 5px;
+  gap: ${isMobile ? "" : "5rem"};
 `;
 
-const MusicosCardsPicture = styled.img`
-  width: 100%;
-  border-radius: 5px 5px 0 0;
-`;
-
-const MusicosCardsText = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 0 1rem;
-`;
-
-const YoutubePlayer = styled.iframe`
-  margin-top: 1rem;
+const SpotifyFrame = styled.iframe`
   border-radius: 1rem 0 1rem 0;
-  margin: 1rem;
-  transition: 0.5s;
   border: none;
-`;
-
-const Spoty = styled.iframe`
-  border-radius: 1rem 0 1rem 0;
   margin: 1rem 1rem;
   transition: 0.5s;
   width: 15rem;
-  border: none;
+  &:hover {
+    box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
+      rgb(48 48 48 / 93%) 2px 2px 9px;
+    cursor: pointer;
+  }
+`;
+const MultimediaYouTube = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 `;
 
-function Item({ Paragraph }) {
+const YoutubeFrame = styled.iframe`
+  margin-top: 0 !important;
+  border: none;
+  border-radius: 1rem 0 1rem 0;
+  margin: 1rem;
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
+      rgb(48 48 48 / 93%) 2px 2px 9px;
+  }
+`;
+
+function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
+  const ContainerBio = styled.div`
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    ${isReverseImg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
+    justify-content:center;
+    width: 100%;
+  `;
+
+  const ContainerBioResponsive = styled.div`
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  `;
+
+  const ImgContainer = styled.div`
+    transition: 1s;
+    background-image: url(${img});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: none;
+    width: 100%;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 5px;
+    filter: grayscale(1);
+  `;
+
+  return (
+    <>
+      {titles && <Titles>{titles}</Titles>}
+      {isMobile ? (
+        <ContainerBioResponsive>
+          {paragraph && <Paragraphs>{paragraph}</Paragraphs>}
+          {img && <ImgContainer img={img}></ImgContainer>}
+        </ContainerBioResponsive>
+      ) : (
+        <ContainerBio>
+          {paragraph && <Paragraphs>{paragraph}</Paragraphs>}
+          {img && <ImgContainer img={img}></ImgContainer>}
+        </ContainerBio>
+      )}
+    </>
+  );
+}
+
+function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
+  const MemberCards = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    border: 2px solid ${(props) => props.theme.colorLines};
+    border-radius: 0.5rem;
+    margin: 1rem;
+    height: 100%;
+    filter: grayscale(1);
+    transition: 400ms;
+    h2 {
+      transition: 40ms;
+      visibility: hidden;
+    }
+    &:hover {
+      box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
+        rgb(48 48 48 / 93%) 2px 2px 9px;
+      filter: none;
+      h2 {
+        visibility: inherit;
+      }
+    }
+  `;
+
+  const ImgContainer = styled.div`
+    transition: 400ms;
+    background-image: url(${memberimg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: none;
+    width: 100%;
+    height: 15rem;
+    border-radius: 5px 5px 0 0;
+  `;
+
+  const HashContainer = styled.h2`
+  transition: 400ms;
+    margin: 0;
+    color: ${(props) => props.theme.textButtonsColor};
+    font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+    font-family: ${(props) => props.theme.generalFont};
+    text-align: initial;
+    padding-left: 0.5rem;
+    background-color: ${(props) => props.theme.colorLines};
+    
+  `;
+
   return (
     <>
       <>
-        <>
-          <></>
-        </>
-        <>
-          <div>
-            <Paragraphs>{Paragraph}</Paragraphs>
-          </div>
-        </>
+        <ExternalLinks
+          href={instagram}
+          rel="noreferrer"
+          target="_blank"
+          title="Instagram"
+          aria-label="Instagram"
+        >
+          <MemberCards>
+            {ImgContainer && (
+              <ImgContainer img={memberimg}>
+                <HashContainer>{hash}</HashContainer>
+              </ImgContainer>
+            )}
+            {name && <Titles>{name}</Titles>}
+            {paragraphmember && (
+              <ParagraphsCards>{paragraphmember}</ParagraphsCards>
+            )}
+          </MemberCards>
+        </ExternalLinks>
       </>
     </>
   );
 }
 
-const BioNavigation = () => {
+const MusicaNavigation = () => {
+  const MainContainer = styled.div`
+    margin:${isMobile ? " 0 1rem;" : " 0 10rem;"}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  `;
+
+  const ContainerMemberCards = styled.div`
+    display: flex;
+    flex-direction: ${isMobile ? "column" : "row"};
+    justify-content: center;
+  `;
+
   return (
-    <MainContent className="animate__animated animate__fadeInLeft animate__slow">
-      <Titles>Walter Gandini</Titles>
-      <ContainerBio>
-        <PictureContainer src={MusicSection} />
-        <div>
-          {MusicData.slice(0, 1).map((e, Bio) => (
-            <Item key={Bio} Paragraph={e.Paragraph} />
-          ))}
-        </div>
-      </ContainerBio>
-      <ContainerBio>
-        <div>
-          {MusicData.slice(1, 3).map((e, Bio) => (
-            <Item key={Bio} Paragraph={e.Paragraph} />
-          ))}
-        </div>
-        <PictureContainer src={MusicSection} />
-      </ContainerBio>
-
+    <MainContent className="animate__animated animate__fadeIn animate__slower">
       <>
-        <div>
-          {MusicData.slice(3, 4).map((e, Bio) => (
-            <Item key={Bio} Paragraph={e.Paragraph} />
+        <MainContainer>
+          {MusicData.slice(1).map((e, MusicParagraph) => (
+            <MainMusicBio
+              key={MusicParagraph}
+              paragraph={e.Paragraph}
+              isReverseImg={e.isReverseImg}
+              img={e.Img}
+              titles={e.Titles}
+            />
           ))}
-        </div>
-        <PictureContainer src={MusicSection} />
+        </MainContainer>
       </>
-      <ContainerBio>
-        <div>
-          {MusicData.slice(4, 5).map((e, Bio) => (
-            <Item key={Bio} Paragraph={e.Paragraph} />
-          ))}
-        </div>
-      </ContainerBio>
+      <ContainerButtons>
+        <InternalLinks to="/contactnavigation">
+          <ContactButtons>Reserva tu clase</ContactButtons>
+        </InternalLinks>
 
-      {/* ------------BOTONES------------ */}
-      <ButtonContainer>
-        <NavLinksTop
-          to="/contactnavigation"
-          title="Contacate y reserva tu clase"
-          aria-label="Contacate y reserva tu clase"
-        >
-          <Buttons>Reservar clase</Buttons>
-        </NavLinksTop>
-
+        <ContactButtons>
+          <ExternalLinks
+            href="https://open.spotify.com/artist/6AxS0nhTn6xwtTIBjUkeyh?si=msTwOLnETJOyEof6nsaxrg&nd=1"
+            rel="noreferrer"
+            target="_blank"
+            title="Spotify"
+            aria-label="Spotify"
+          >
+            Spotify
+          </ExternalLinks>
+        </ContactButtons>
         <ExternalLinks
           href="https://www.youtube.com/c/WalterGandini"
           rel="noreferrer"
           target="_blank"
-          title="YouTube Channel"
-          aria-label="YouTube Channel"
+          title="YouTube"
+          aria-label="YouTube"
         >
-          <Buttons>Youtube</Buttons>
+          <ContactButtons>Canal Youtube</ContactButtons>
         </ExternalLinks>
-
-        <ExternalLinks
-          href="https://open.spotify.com/artist/6AxS0nhTn6xwtTIBjUkeyh?si=msTwOLnETJOyEof6nsaxrg&nd=1"
-          rel="noreferrer"
-          target="_blank"
-          title="Spotify"
-          aria-label="Spotify"
-        >
-          <Buttons>Spotify</Buttons>
-        </ExternalLinks>
-      </ButtonContainer>
-      {/* ------------BOTONES------------ */}
+      </ContainerButtons>
+      <ContainerRedesFootParagraph>
+        <Redes />
+      </ContainerRedesFootParagraph>
       <Separator />
-
-      <MediaContaienr>
-        <SpotifyFrameMediaContaienr>
-          <Titles>Trabajos</Titles>
-          <Spoty
-            src="https://open.spotify.com/embed/album/51ph64ekAVHPHXSoEzikNq"
-            width="300"
-            height="80"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-            title="Lucky"
-          ></Spoty>
-
-          <Spoty
-            src="https://open.spotify.com/embed/album/5qfTNvCIzd7a0fGo7Cnhrr"
-            width="300"
-            height="80"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-            title="Phonke"
-          ></Spoty>
-
-          <Spoty
-            id="Clases"
-            src="https://open.spotify.com/embed/album/6g7cHeNcuaDCXE2bZI8NsH"
-            width="300"
-            height="80"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-            title="Princess Lula"
-          ></Spoty>
-        </SpotifyFrameMediaContaienr>
-        <YoutubeFrameMediaContaienr>
-          <YoutubePlayer
-            width="240"
-            height="150"
-            src="https://www.youtube.com/embed/PGiMwP9ZMIs"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen="1"
-          ></YoutubePlayer>
-
-          <YoutubePlayer
-            width="240"
-            height="150"
-            src="https://www.youtube.com/embed/videoseries?list=PLH7ws52_WwFfXTqrXvKEfz0H_2RdtghDw"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen="1"
-          ></YoutubePlayer>
-        </YoutubeFrameMediaContaienr>
-      </MediaContaienr>
-      <Titles>Trabajan con Walter</Titles>
-      <ContainerMusicosCards>
-        <MusicosCards>
-          <MusicosCardsPicture src={MusicSection} />
-          <TitlesMusicos>Musico 1</TitlesMusicos>
-          <MusicosCardsText>
+      <Titles>Trabajos</Titles>
+      <ContainerMultimedia>
+        <MultimediaYouTube>
+          <div>
             {" "}
-            {MusicData.slice(5, 6).map((e, Bio) => (
-              <Item key={Bio} Paragraph={e.Paragraph} />
-            ))}
-          </MusicosCardsText>
-        </MusicosCards>
-        <MusicosCards>
-          <MusicosCardsPicture src={MusicSection} />
-          <TitlesMusicos>Musico 2</TitlesMusicos>
-          <MusicosCardsText>
+            <YoutubeFrame
+              width="240"
+              height="150"
+              src="https://www.youtube.com/embed/jSslwVYbfSE"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="1"
+            />
+          </div>
+          <div>
+            <YoutubeFrame
+              width="240"
+              height="150"
+              src="https://www.youtube.com/embed/PGiMwP9ZMIs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="1"
+            />
+          </div>
+          <div>
             {" "}
-            {MusicData.slice(6, 7).map((e, Bio) => (
-              <Item key={Bio} Paragraph={e.Paragraph} />
-            ))}
-          </MusicosCardsText>
-        </MusicosCards>
-        <MusicosCards>
-          <MusicosCardsPicture src={MusicSection} />
-          <TitlesMusicos>Musico 3</TitlesMusicos>
-          <MusicosCardsText>
+            <YoutubeFrame
+              width="240"
+              height="150"
+              src="https://www.youtube.com/embed/videoseries?list=PLH7ws52_WwFfXTqrXvKEfz0H_2RdtghDw"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="1"
+            />
+          </div>
+        </MultimediaYouTube>
+
+        <MultimediaSpotify>
+          <div>
             {" "}
-            {MusicData.slice(7, 8).map((e, Bio) => (
-              <Item key={Bio} Paragraph={e.Paragraph} />
-            ))}
-          </MusicosCardsText>
-        </MusicosCards>
-      </ContainerMusicosCards>
+            <SpotifyFrame
+              src="https://open.spotify.com/embed/album/51ph64ekAVHPHXSoEzikNq"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title="Lucky"
+            />
+          </div>
+          <div>
+            {" "}
+            <SpotifyFrame
+              src="https://open.spotify.com/embed/album/5qfTNvCIzd7a0fGo7Cnhrr"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title="Phonke"
+            />
+          </div>
+          <div>
+            <SpotifyFrame
+              id="Clases"
+              src="https://open.spotify.com/embed/album/6g7cHeNcuaDCXE2bZI8NsH"
+              width="300"
+              height="80"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+              title="Princess Lula"
+            />
+          </div>
+        </MultimediaSpotify>
+      </ContainerMultimedia>
+      <Separator />
+      <Titles>Musicos principales</Titles>
+      <ContainerMemberCards>
+        {MusicData.slice(6).map((e, Name) => (
+          <BandMembers
+            key={Name}
+            paragraphmember={e.ParagraphMember}
+            name={e.Name}
+            memberimg={e.MemberImg}
+            instagram={e.Instagram}
+            hash={e.Hash}
+          />
+        ))}
+      </ContainerMemberCards>
     </MainContent>
   );
 };
 
-export default BioNavigation;
+export default MusicaNavigation;

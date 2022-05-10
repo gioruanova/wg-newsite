@@ -1,5 +1,10 @@
 import React from "react";
-import { Content, InternalLinks, Paragraphs } from "../_components/Styles";
+import {
+  Content,
+  InternalLinks,
+  Paragraphs,
+  Titles,
+} from "../_components/Styles";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -7,8 +12,6 @@ import { BioData } from "../_components/Messages";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-
-import BioImg from "../_images/BioImg.jpeg";
 
 const BioContainer = styled.div`
   display: grid;
@@ -18,6 +21,7 @@ const BioContainer = styled.div`
 
   justify-items: center;
   align-items: center;
+  margin-bottom: 3rem;
 `;
 
 const TitleContainer1 = styled.div`
@@ -39,37 +43,40 @@ const TitleContainer1 = styled.div`
   }
 `;
 
-const ImgContainer = styled.img`
-  border-radius: 10px;
-  width: ${isMobile ? "100%" : "100%"};
-  margin: 2rem 0;
-`;
-
 const BioTextContainer = styled.div`
   padding: ${isMobile ? "" : "0 2rem;"} p {
 
   }
-
   text-align: center;
   text-align: justify;
 `;
 
 AOS.init();
 
-function Item({ Paragraph }) {
+function Item({ Paragraph, img, titles }) {
+  const ImgContainer = styled.div`
+    transition: 1s;
+    background-image: url(${img});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: none;
+    width: 100%;
+    height: 20rem;
+    margin: 1rem;
+    border-radius: 5px;
+  `;
+
   return (
-    <>
-      <>
-        <>
-          <></>
-        </>
-        <>
-          <div>
-            <Paragraphs>{Paragraph}</Paragraphs>
-          </div>
-        </>
-      </>
-    </>
+    <BioContainer>
+      <TitleContainer1>
+        <Titles>{titles}</Titles>
+      </TitleContainer1>
+      <ImgContainer img={img}></ImgContainer>
+      <BioTextContainer>
+        <Paragraphs>{Paragraph}</Paragraphs>
+      </BioTextContainer>
+    </BioContainer>
   );
 }
 
@@ -84,30 +91,25 @@ const Bio = () => {
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
         >
-          <BioContainer>
-            <TitleContainer1>
-              <h1>Walter</h1>
-              <h1>Gandini</h1>
-            </TitleContainer1>
+          <div>
+            {BioData.slice(0, 1).map((e, Bio, Img, Titles) => (
+              <Item
+                key={Bio}
+                Paragraph={e.SummaryBio}
+                img={e.Img}
+                titles={e.Titles}
+              />
+            ))}
+          </div>
 
-            <ImgContainer src={BioImg} />
-            <BioTextContainer>
-              <div>
-                {BioData.slice(0, 1).map((e, Bio) => (
-                  <Item key={Bio} Paragraph={e.Paragraph} />
-                ))}
-              </div>
-            </BioTextContainer>
-          </BioContainer>
           <div
             data-aos="fade-right"
             data-aos-offset="200"
             data-aos-delay="50"
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
-          </div>
+          ></div>
+          <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
         </Content>
       </>
     </div>

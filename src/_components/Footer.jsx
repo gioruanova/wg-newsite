@@ -1,7 +1,12 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
-import { ExternalLinks, NavLinksFooter } from "./Styles";
+import {
+  ExternalLinks,
+  NavLinksFooter,
+  ContainerRedesFootParagraph,
+} from "./Styles";
+import Redes from "../_components/Redes";
 
 const FooterContainer = styled.div`
   transition: 1s;
@@ -44,6 +49,7 @@ const FooterCopyright = styled.div`
   text-align: ${isMobile ? "center" : "end"};
   font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   padding-left: ${isMobile ? "" : "10rem"};
+  padding-right: ${isMobile ? "" : "0.7rem;"}
   font-weight: 500;
 `;
 
@@ -54,52 +60,70 @@ const ContainerLinks = styled.div`
   gap: 1rem;
   transition: 1s;
   
-  
-  
+`;
+
+const DivContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: ${isMobile ? "center" : "end"};
 `;
 
 const Footer = () => {
   return (
     <>
-      <FooterContainer>
-        <LogoContainer>
-          <div>Walter</div>
-          <div>Gandini</div>
-        </LogoContainer>
-        <ContainerLinks>
-          <>
-            <NavLinksFooter to="/">Home</NavLinksFooter>
-            <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
-            <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
-            <NavLinksFooter to="/plasticaymasnavigation">
-              Plastica & +
-            </NavLinksFooter>
-            <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
-            <NavLinksFooter to="/eshopnavegacion">E-Shop</NavLinksFooter>
-            <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
-            <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
-          </>
-        </ContainerLinks>
-        <FooterCopyright>
-          <div>Walter Gandini © </div>
-          <div>
-            {" "}
-            Todos los derechos reservados 2021 - {new Date().getFullYear()}
-          </div>
-          <div>
-            Diseño y Desarrollo por{" "}
-            <ExternalLinks
-              href="https://www.giorgioruanova.com/"
-              target="blank"
-              rel="noreferrer"
-              title="Giorgio Ruanova Development"
-              aria-label="Giorgio Ruanova Development"
-            >
-              Giorgio Ruanova
-            </ExternalLinks>
-          </div>
-        </FooterCopyright>
-      </FooterContainer>
+      <div>
+        <FooterContainer>
+          <LogoContainer>
+            <div>Walter</div>
+            <div>Gandini</div>
+          </LogoContainer>
+
+          <ContainerLinks>
+            <>
+              <NavLinksFooter to="/">Home</NavLinksFooter>
+              <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
+              <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
+              <NavLinksFooter to="/plasticaymasnavigation">
+                Plastica & +
+              </NavLinksFooter>
+              <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
+              <NavLinksFooter to="/eshopnavegacion">E-Shop</NavLinksFooter>
+              <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
+              <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
+            </>
+          </ContainerLinks>
+
+          <DivContainer>
+            <div>
+              <FooterCopyright>
+                <div>Walter Gandini © </div>
+                <div>
+                  {" "}
+                  Todos los derechos reservados 2021 -{" "}
+                  {new Date().getFullYear()}
+                </div>
+                <div>
+                  Diseño y Desarrollo por{" "}
+                  <ExternalLinks
+                    href="https://www.giorgioruanova.com/"
+                    target="blank"
+                    rel="noreferrer"
+                    title="Giorgio Ruanova Development"
+                    aria-label="Giorgio Ruanova Development"
+                  >
+                    Giorgio Ruanova
+                  </ExternalLinks>
+                </div>
+              </FooterCopyright>
+            </div>
+            <div>
+              <ContainerRedesFootParagraph>
+                <Redes />
+              </ContainerRedesFootParagraph>
+            </div>
+          </DivContainer>
+        </FooterContainer>
+      </div>
     </>
   );
 };

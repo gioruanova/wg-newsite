@@ -4,11 +4,12 @@ import { NavLinksTop } from "./Styles";
 
 import styled from "styled-components";
 import Icons from "./Icons";
+import Redes from "../_components/Redes";
 
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: ${isMobile ? "flex-start" : "center"};
+  justify-content: ${isMobile ? "flex-start" : "space-around"};
   ${isMobile ? "" : "gap: 2rem;"}
   align-items: ${isMobile ? "self-start" : "center"};
   width: 100%;
@@ -21,7 +22,7 @@ const NavBarContainer = styled.div`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(104, 104, 104, 0.31);
+  border: ${isMobile ? "" : "1px solid rgba(104, 104, 104, 0.31);"}
   /* From https://css.glass */
   background: rgba(33, 33, 33, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -32,6 +33,10 @@ const NavBarContainer = styled.div`
   left: 0rem;
   z-index: 9999;
   transition: 1s;
+`;
+
+const RedesMobile = styled.div`
+  margin-top: 1rem;
 `;
 
 const ContainerLogo = styled.div``;
@@ -140,6 +145,9 @@ const NavBar = () => {
                 >
                   Contacto
                 </NavLinksTop>
+                <RedesMobile>
+                  <Redes />
+                </RedesMobile>
               </LinksContainer>
             </>
           )}
@@ -160,6 +168,7 @@ const NavBar = () => {
             <NavLinksTop to="/eshopnavegacion">E-Shop</NavLinksTop>
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>
+          <Redes />
         </NavBarContainer>
       )}
     </>
