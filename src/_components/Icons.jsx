@@ -33,7 +33,7 @@ const Menu = styled(IconWrapper)`
 `;
 const IconWrapperTheme = styled.div`
   svg {
-    padding: 3px 2px 2px 3px;
+    padding: 1px 2px 2px 1px;
     display: flex;
     align-items: center;
     width: 1.5rem;
