@@ -87,6 +87,9 @@ const InputContactdrill = styled.select`
   font-family: "Cairo", sans-serif;
   -webkit-transition: all 0.2s;
   transition: 1s;
+  ::placeholder {
+    color: grey;
+  }
 `;
 
 const InputContact2 = styled.textarea`
