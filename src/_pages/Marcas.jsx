@@ -1,57 +1,57 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-import { Content } from "../_components/Styles";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Sponsors } from "../_components/Messages";
-
-const SponsorsContainer = styled.div`
-  margin-top: 4rem;
-  display: flex;
-  display: -webkit-flex;
-  flex-flow: wrap;
-  -webkit-flex-flow: wrap;
-  justify-content: center;
-  align-items: center;
-  -webkit-align-items: center;
-  gap: 1rem;
-  flex-direction: ${isMobile ? "column" : "row"};
-`;
-
-const SponsorImage = styled.img`
-  width: 70%;
-`;
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 AOS.init();
 
-function Item({ SponsorId, SponsorImg, SponsorUrl, SponsorTitle }) {
-  return (
-    <>
-      <a href={SponsorUrl} target="_blank" rel="noreferrer" title={SponsorTitle}>
-        <SponsorImage src={SponsorImg} />
-      </a>
-    </>
-  );
-}
-
 const Marcas = () => {
+  const ImgContainer = styled.img`
+    height: ${isMobile ? "5rem" : "8rem"};
+  `;
+
+  const ImgDivContainer = styled.div`
+    height: ${isMobile ? "5rem" : "8rem"};
+    margin: 4rem 0 3rem 0;
+  `;
   return (
-    <Content
-      data-aos="fade-right"
+    <div
+      data-aos="fade-left"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"
       data-aos-easing="ease-in-out"
+      data-aos-once="true"
     >
-      <>
-        <SponsorsContainer>
-          {Sponsors.map((e, SponsorId, SponsorImg, SponsorUrl, SponsorTitle) => (
-            <Item key={SponsorId} SponsorImg={e.SponsorImg} SponsorUrl={e.SponsorUrl} SponsorTitle={e.SponsorTitle} />
+      <div>
+        <Carousel indicators={false} controls={false} interval={2500}>
+          {Sponsors.map((Sponsors) => (
+            <Carousel.Item key={Sponsors.SponsorId}>
+              <ImgDivContainer>
+                {" "}
+                <a
+                  target="blank"
+                  href={Sponsors.SponsorUrl && <>Sponsors.SponsorUrl</>}
+                  title={Sponsors.SponsorTitle}
+                  rel="noreferrer"
+                >
+                  {" "}
+                  <ImgContainer
+                    src={Sponsors.SponsorImg}
+                    alt={Sponsors.SponsorTitle}
+                  />
+                </a>
+              </ImgDivContainer>
+            </Carousel.Item>
           ))}
-        </SponsorsContainer>
-      </>
-    </Content>
+        </Carousel>
+      </div>
+    </div>
   );
 };
 

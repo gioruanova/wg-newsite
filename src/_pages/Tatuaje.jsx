@@ -90,41 +90,29 @@ function Item({ paragraph, img, titles, studiotitle }) {
 
 const Tatuaje = () => {
   return (
-    <div>
-      <>
-        <Content
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div>
-            {TatuajeData.slice(0, 1).map((e, Bio) => (
-              <Item
-                key={Bio}
-                paragraph={e.ParagraphTatuajeSummary}
-                img={e.Img}
-                titles={e.Titles}
-                studiotitle={e.StudioTitle}
-              />
-            ))}
-          </div>
+    <div
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
+      <Content>
+        <div>
+          {TatuajeData.slice(0, 1).map((e, Bio) => (
+            <Item
+              key={Bio}
+              paragraph={e.ParagraphTatuajeSummary}
+              img={e.Img}
+              titles={e.Titles}
+              studiotitle={e.StudioTitle}
+            />
+          ))}
+        </div>
 
-          <div
-            data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/tatuajenavigation">
-              {" "}
-              Ver Mas{" >"}{" "}
-            </InternalLinks>
-          </div>
-        </Content>
-      </>
+        <InternalLinks to="/tatuajenavigation"> Ver Mas{" >"} </InternalLinks>
+      </Content>
     </div>
   );
 };

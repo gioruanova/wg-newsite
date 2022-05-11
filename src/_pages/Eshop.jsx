@@ -2,7 +2,7 @@ import React from "react";
 import {
   Content,
   Titles,
-  InternalLinks,
+  // InternalLinks,
   Paragraphs,
 } from "../_components/Styles";
 import AOS from "aos";
@@ -83,71 +83,53 @@ AOS.init();
 
 const Eshop = () => {
   return (
-    <Content
+    <div id="EshopDetail"
       data-aos="fade-up"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"
       data-aos-easing="ease-in-out"
+      data-aos-once="true"
     >
-      <Titles>E-Shop</Titles>
-      <PlasticContainer>
-        <ImgContainer>
-          <>
-            <ImgContainer1>
-              <p>IMG 1</p>
-            </ImgContainer1>
-            <ImgContainer2>
-              <p>IMG 2</p>
-            </ImgContainer2>
+      <Content>
+        <Titles>E-Shop</Titles>
+        <PlasticContainer>
+          <ImgContainer>
+            <>
+              <ImgContainer1>
+                <p>IMG 1</p>
+              </ImgContainer1>
+              <ImgContainer2>
+                <p>IMG 2</p>
+              </ImgContainer2>
 
-            <ImgContainer3>
-              <p>IMG 3</p>
-            </ImgContainer3>
+              <ImgContainer3>
+                <p>IMG 3</p>
+              </ImgContainer3>
 
-            <ImgContainer4>
-              <p>IMG 4</p>
-            </ImgContainer4>
+              <ImgContainer4>
+                <p>IMG 4</p>
+              </ImgContainer4>
 
-            <ImgContainer5>
-              <p>IMG 5</p>
-            </ImgContainer5>
+              <ImgContainer5>
+                <p>IMG 5</p>
+              </ImgContainer5>
 
-            <ImgContainer6>
-              <p>IMG 6</p>
-            </ImgContainer6>
-          </>
-        </ImgContainer>
-        <EshopTextContainer>
-          <div>
-            <Paragraphs>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-              perspiciatis dolores error alias quasi facilis atque, deserunt
-              architecto eius, nesciunt ex inventore quis sapiente similique
-              possimus nihil? Vel, reiciendis.Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Ab autem perspiciatis dolores error
-              alias quasi facilis atque, deserunt architecto eius, nesciunt ex
-              inventore quis sapiente similique possimus nihil? Vel,
-              reiciendis.Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Ab autem perspiciatis dolores error alias quasi facilis
-              atque, deserunt architecto eius, nesciunt ex inventore quis
-              sapiente similique possimus nihil? Vel, reiciendis.
-            </Paragraphs>
-          </div>
-        </EshopTextContainer>
-      </PlasticContainer>
-      <div
-        data-aos="fade-right"
-        data-aos-offset="200"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-        data-aos-easing="ease-in-out"
-      >
-        <InternalLinks to="/plasticaymasnavigation">
-          Ver Mas{" >"}{" "}
-        </InternalLinks>
-      </div>
-    </Content>
+              <ImgContainer6>
+                <p>IMG 6</p>
+              </ImgContainer6>
+            </>
+          </ImgContainer>
+          <EshopTextContainer>
+            <div>
+              <Paragraphs>Proximamente</Paragraphs>
+            </div>
+          </EshopTextContainer>
+        </PlasticContainer>
+
+        {/* <InternalLinks to="">Ver Mas{" >"} </InternalLinks> */}
+      </Content>
+    </div>
   );
 };
 

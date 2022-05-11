@@ -458,7 +458,7 @@ export const Sponsors = [
     SponsorId: "estampaskoi",
     SponsorTitle: "Estampas Koi",
     SponsorImg: marca2,
-    SponsorUrl: "",
+    
   },
   {
     SponsorId: "antiguaslunas",

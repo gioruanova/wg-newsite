@@ -34,6 +34,7 @@ const TitleContainer1 = styled.div`
 
   h1 {
     color: ${(props) => props.theme.mainTitlesColor};
+    font-family: ${(props) => props.theme.generalTextFont};
     font-size: ${isMobile ? "2rem" : "2.5rem;"}
     font-family: ${(props) => props.theme.generalFont};
     margin: 0;
@@ -82,36 +83,28 @@ function Item({ Paragraph, img, titles }) {
 
 const Bio = () => {
   return (
-    <div>
-      <>
-        <Content
-          data-aos="fade-right"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div>
-            {BioData.slice(0, 1).map((e, Bio, Img, Titles) => (
-              <Item
-                key={Bio}
-                Paragraph={e.SummaryBio}
-                img={e.Img}
-                titles={e.Titles}
-              />
-            ))}
-          </div>
+    <div
+      data-aos="fade-right"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
+      <Content>
+        <div>
+          {BioData.slice(0, 1).map((e, Bio, Img, Titles) => (
+            <Item
+              key={Bio}
+              Paragraph={e.SummaryBio}
+              img={e.Img}
+              titles={e.Titles}
+            />
+          ))}
+        </div>
 
-          <div
-            data-aos="fade-right"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          ></div>
-          <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
-        </Content>
-      </>
+        <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
+      </Content>
     </div>
   );
 };

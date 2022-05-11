@@ -28,7 +28,7 @@ const ContactButtons = styled.button`
   margin: 1rem;
   padding: 0.5rem;
   background-color: ${(props) => props.theme.backgroundButtons};
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   color: ${(props) => props.theme.textButtonsColor};
   border: none;
   border-radius: 0.4rem;
@@ -46,7 +46,7 @@ const ContactButtons = styled.button`
 const Paragraphs = styled.p`
 color: ${(props) => props.theme.generalTextColor};
 font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-font-family: ${(props) => props.theme.generalFont};
+font-family: ${(props) => props.theme.generalTextFont};
 font-weight: 400;  
 transition:1s;
 text-align:justify;

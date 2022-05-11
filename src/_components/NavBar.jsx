@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { NavLinksTop } from "./Styles";
+import { NavLinksTop, LogoNav, ProviNav } from "./Styles";
 
 import styled from "styled-components";
 import Icons from "./Icons";
@@ -18,7 +18,7 @@ const NavBarContainer = styled.div`
   color: ${(props) => props.theme.navigationLinksColor};
   padding: 1rem 1rem;
   // Background
-  background: rgba(45, 44, 44, 0.85);
+  background: ${(props) => props.theme.navbarBackground};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -44,7 +44,10 @@ const ContainerLogo = styled.div``;
 const LogoTitle = styled.h2`
   margin: 0;
   text-align: ${isMobile ? "center" : "end"};
-  text-transform: uppercase;
+  font-family: ${(props) => props.theme.tattooStudioTitle};
+  letter-spacing: 5px;
+  font-size: 2.5rem;
+  font-weight: 500;
 `;
 
 const LinksContainer = styled.div`
@@ -80,14 +83,6 @@ const NavBar = () => {
           {show && (
             <>
               <LinksContainer>
-                <NavLinksTop
-                  onClick={() => {
-                    setShow(!show);
-                  }}
-                  to="/"
-                >
-                  Home
-                </NavLinksTop>
                 <NavLinksTop
                   onClick={() => {
                     setShow(!show);
@@ -155,17 +150,23 @@ const NavBar = () => {
       ) : (
         <NavBarContainer className="animate__animated animate__fadeIn animate__delay-1s">
           <ContainerLogo>
-            <LogoTitle>Walter</LogoTitle>
-            <LogoTitle>Gandini</LogoTitle>
+            <LogoNav to="/">
+              <LogoTitle>
+                {" "}
+                <div>Walter</div>
+                <div>
+                  <b>Gandini</b>
+                </div>
+              </LogoTitle>
+            </LogoNav>
           </ContainerLogo>
           <LinksContainer>
-            <NavLinksTop to="/">Home</NavLinksTop>
             <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
             <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
             <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
             <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
-            <NavLinksTop to="/eshopnavegacion">E-Shop</NavLinksTop>
+            <ProviNav href="#EshopDetail">E-Shop</ProviNav>
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>
           <Redes />

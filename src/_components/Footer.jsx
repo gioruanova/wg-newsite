@@ -5,6 +5,8 @@ import {
   ExternalLinks,
   NavLinksFooter,
   ContainerRedesFootParagraph,
+  LogoNav,
+  ProviNavFoot,
 } from "./Styles";
 import Redes from "../_components/Redes";
 
@@ -21,12 +23,11 @@ const FooterContainer = styled.div`
   padding: 1.5rem 0;
   flex-wrap: wrap;
   font-weight: bold;
-  background: rgba(104, 104, 104, 0.26);
+  background: ${(props) => props.theme.navbarBackground};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(104, 104, 104, 0.31);
-  /* From https://css.glass */
   background: rgba(104, 104, 104, 0.26);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -39,15 +40,25 @@ const LogoContainer = styled.a`
   display: flex;
   flex-direction: column;
   align-items: ${isMobile ? "initial" : "end"};
-  text-transform: uppercase;
-  font-size: ${isMobile ? "2rem;" : "3rem;"};
+  line-height: 4rem;
+  text-decoration: none;
+`;
+
+const LogoTitle = styled.h2`
+  margin: 0;
+  text-align: ${isMobile ? "center" : "end"};
+  font-family: ${(props) => props.theme.tattooStudioTitle};
+  letter-spacing: 5px;
+  font-size: 3.5rem;
+  font-weight: 500;
+  text-decoration: none;
 `;
 
 const FooterCopyright = styled.div`
   display: flex;
   flex-direction: column;
   text-align: ${isMobile ? "center" : "end"};
-  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+  font-size: 0.8rem;
   padding-left: ${isMobile ? "" : "10rem"};
   padding-right: ${isMobile ? "" : "0.7rem;"}
   font-weight: 500;
@@ -74,29 +85,39 @@ const Footer = () => {
       <div>
         <FooterContainer>
           <LogoContainer>
-            <div>Walter</div>
-            <div>Gandini</div>
+            <LogoNav to="/">
+              <LogoTitle>
+                {" "}
+                <div>Walter</div>
+                <div>
+                  <b>Gandini</b>
+                </div>
+              </LogoTitle>
+            </LogoNav>
           </LogoContainer>
 
           <ContainerLinks>
             <>
-              <NavLinksFooter to="/">Home</NavLinksFooter>
-              <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
               <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
+              <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
+              <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
+              <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
               <NavLinksFooter to="/plasticaymasnavigation">
                 Plastica & +
               </NavLinksFooter>
-              <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
-              <NavLinksFooter to="/eshopnavegacion">E-Shop</NavLinksFooter>
-              <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
+              <ProviNavFoot href="#EshopDetail">E-Shop</ProviNavFoot>
               <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
             </>
           </ContainerLinks>
 
           <DivContainer>
             <div>
+              <ContainerRedesFootParagraph>
+                <Redes />
+              </ContainerRedesFootParagraph>
+            </div>
+            <div>
               <FooterCopyright>
-                <div>Walter Gandini © </div>
                 <div>
                   {" "}
                   Todos los derechos reservados 2021 -{" "}
@@ -115,11 +136,6 @@ const Footer = () => {
                   </ExternalLinks>
                 </div>
               </FooterCopyright>
-            </div>
-            <div>
-              <ContainerRedesFootParagraph>
-                <Redes />
-              </ContainerRedesFootParagraph>
             </div>
           </DivContainer>
         </FooterContainer>

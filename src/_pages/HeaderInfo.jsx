@@ -11,7 +11,8 @@ const HeaderContainer = styled.div`
   text-align: end;
   justify-content: center;
   gap: ${isMobile ? "0.5rem" : "1rem"};
-  margin-top: 2rem;
+  transition: 1s;
+  margin-top: 4rem;
 `;
 
 const MainHeaderTitle = styled.div`
@@ -25,7 +26,7 @@ const MainHeaderTitle = styled.div`
 const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-size: ${isMobile ? "2rem;" : "3rem;"};
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   margin: 0;
   text-transform: uppercase;
   transition: 1s;
@@ -43,7 +44,7 @@ const MainHeaderSubTitleContainer = styled.div`
 const MainHeaderSubTitle = styled.p`
   color: ${(props) => props.theme.generalTextColor};
   font-size: ${isMobile ? "1.5rem;" : "2rem;"}
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   margin: 0;
   font-weight: 400;
   transition: 1s;

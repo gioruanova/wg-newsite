@@ -78,7 +78,7 @@ export const StudioTitle = styled.h2`
 export const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
   font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   margin: 0;
   font-weight: 400;
     transition: 1s;
@@ -91,7 +91,7 @@ export const Paragraphs = styled.p`
 export const ParagraphsNavigation = styled.p`
 color: ${(props) => props.theme.generalTextColor};
 font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-font-family: ${(props) => props.theme.generalFont};
+font-family: ${(props) => props.theme.generalTextFont};
 font-weight: 400;  
 margin: ${isMobile ? "1rem  0;" : "1rem 1rem;"};
 transition:1s;
@@ -141,6 +141,7 @@ export const NavLinksTop = styled(Link)`
   cursor: pointer;
   text-transform: uppercase;
   font-size: ${(props) => props.theme.sizeNavigationLinks};
+  font-family: ${(props) => props.theme.navLinksFonts};
   color: ${(props) => props.theme.navigationLinksColor};
   margin: 0;
   padding: ${isMobile ? "0.5rem 0.5rem " : "0 1rem"};
@@ -148,17 +149,50 @@ export const NavLinksTop = styled(Link)`
   text-decoration:none;
   font-weight: bold;
   transition: 400ms;
-  text-shadow: -2px 1px 6px ${(props) => props.theme.navigationLinksColorBack};
+  
  
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
- 
-`;
+ `;
 
 export const NavLinksFooter = styled(NavLinksTop)`
   ${isMobile ? "" : "padding: 0 0 0 2rem;"}
   ${isMobile ? "text-align: center;" : "text-align: initial;"}
-  text-shadow: none;
+    font-size: 0.8rem;
+`;
+
+export const LogoNav = styled(Link)`
+  cursor: pointer;
+  font-size: ${(props) => props.theme.sizeNavigationLinks};
+  font-family: ${(props) => props.theme.navLinksFonts};
+  color: ${(props) => props.theme.navigationLinksColor};
+  margin: 0;
+  transition: 400ms;
+  text-decoration:none;
+  &:hover {
+    color: ${(props) => props.theme.hooverLinks};
+ `;
+
+export const ProviNav = styled.a`
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: ${(props) => props.theme.sizeNavigationLinks};
+  font-family: ${(props) => props.theme.navLinksFonts};
+  color: ${(props) => props.theme.navigationLinksColor};
+  margin: 0;
+  padding: ${isMobile ? "0.5rem 0.5rem " : "0 1rem"};
+  align-items: end;
+  text-decoration:none;
+  font-weight: bold;
+  transition: 400ms;
+    &:hover {
+    color: ${(props) => props.theme.hooverLinks};
+ `;
+
+ export const ProviNavFoot = styled(ProviNav)`
+  ${isMobile ? "" : "padding: 0 0 0 2rem;"}
+  ${isMobile ? "text-align: center;" : "text-align: initial;"}
+    font-size: 0.8rem;
 `;
 
 // ------------------------CONTAINERS AND ICONS------------------------------
@@ -168,8 +202,8 @@ const ContaininerRedes = styled.div`
   position: fixed;
   top:${isMobile ? " 15rem;" : "22rem;"}
   left: 0.2rem;
-   border-radius: 15px;
-   transition: 200ms;
+  border-radius: 15px;
+  transition: 200ms;
   background-color: ${(props) => props.theme.backgroundIcons};
   border: 3px outset ${(props) => props.theme.strokeIcons};
   align-items: center;
@@ -188,8 +222,6 @@ const ContaininerRightPanel = styled.div`
   right: 0.4rem;
   border-radius: 15px;
   transition: 1s;
-  background-color: ${(props) => props.theme.backgroundIcons};
-  border: 3px outset ${(props) => props.theme.strokeIcons};
   align-items: center;
   opacity: 50%;
   &:hover {
@@ -252,9 +284,6 @@ export const Redescontainer = () => {
 export const RightPanelContainer = () => {
   return (
     <ContaininerRightPanel className="animate__animated animate__fadeIn animate__delay-1s">
-      <InternalLinks to="/">
-        <Icons name="home" />
-      </InternalLinks>
       <a href="#TopContent" rel="noreferrer">
         <Icons name="top" />
       </a>
@@ -273,7 +302,7 @@ export const RightPanelContainer = () => {
 
 export const ContaininerTheme = styled.div`
   position: fixed;
-  top: ${isMobile ? "1.3rem" : "2.3rem"};
+  top: ${isMobile ? "1.3rem" : "3.5rem"};
   right: 1.5rem;
   z-index: 9999;
 `;
@@ -284,5 +313,5 @@ export const ContaininerTheme2 = styled.div`
 `;
 
 export const ContainerRedesFootParagraph = styled.div`
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
 `;

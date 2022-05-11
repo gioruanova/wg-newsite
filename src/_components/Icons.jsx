@@ -13,12 +13,10 @@ const IconWrapper = styled.div`
     align-items: center;
     width: ${isMobile ? "1.3rem;" : "1.8rem;"}
     height: ${isMobile ? "1.3rem;" : "1.8rem;"}
-    stroke:${(props) => props.theme.strokeIcons};
-    fill:${(props) => props.theme.fillIcons};
+    stroke:${(props) => props.theme.navigationLinksColor};
     transition:600ms;
-     &:hover{
-      fill:${(props) => props.theme.hoverFillIcons};
-      stroke:${(props) => props.theme.hoverStrokeIcons};
+    &:hover{
+      stroke:${(props) => props.theme.hooverLinks};
        
   }
 }

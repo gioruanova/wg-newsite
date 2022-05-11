@@ -25,7 +25,7 @@ const ContactButtons = styled.button`
   margin: 1rem;
   padding: 0.5rem;
   background-color: ${(props) => props.theme.backgroundButtons};
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   color: ${(props) => props.theme.textButtonsColor};
   border: none;
   border-radius: 0.4rem;
@@ -43,12 +43,13 @@ const ContactButtons = styled.button`
 const ExternalLinks = styled.a`
   color: ${(props) => props.theme.textButtonsColor};
   text-decoration: none;
+  font-family: ${(props) => props.theme.generalTextFont};
 `;
 
 const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-size: ${(props) => props.theme.sizeMaintTitles};
-  font-family: ${(props) => props.theme.generalFont};
+  font-family: ${(props) => props.theme.generalTextFont};
   margin: 1rem;
   text-transform: uppercase;
   transition: 1s;
@@ -57,7 +58,7 @@ const Titles = styled.h1`
 export const ParagraphsCards = styled.p`
 color: ${(props) => props.theme.generalTextColor};
 font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-font-family: ${(props) => props.theme.generalFont};
+font-family: ${(props) => props.theme.generalTextFont};
 font-weight: 400;  
 margin: 0 1rem 1rem 1rem;
 transition:1s;

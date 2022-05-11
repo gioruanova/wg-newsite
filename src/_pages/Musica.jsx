@@ -35,7 +35,7 @@ const TitleContainer1 = styled.div`
   h1 {
     color: ${(props) => props.theme.mainTitlesColor};
     font-size: ${isMobile ? "2rem" : "2.5rem;"}
-    font-family: ${(props) => props.theme.generalFont};
+    font-family: ${(props) => props.theme.generalTextFont};
     margin: 0;
     text-transform: uppercase;
     transition: 1s;
@@ -52,7 +52,7 @@ const BioTextContainer = styled.div`
   ${isMobile ? "grid-row: 3;" : ""}
 `;
 
-AOS.init();
+AOS.init({ duration: 1200 });
 
 function Item({ paragraph, img, titles }) {
   const ImgContainer = styled.div`
@@ -85,40 +85,27 @@ function Item({ paragraph, img, titles }) {
 
 const Musica = () => {
   return (
-    <div>
-      <>
-        <Content
-          data-aos="fade-left"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-        >
-          <div>
-            {MusicData.slice(0, 1).map((e, Bio) => (
-              <Item
-                key={Bio}
-                paragraph={e.SummaryMusic}
-                img={e.Img}
-                titles={e.Titles}
-              />
-            ))}
-          </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-          >
-            <InternalLinks to="/musicanavigation">
-              {" "}
-              Ver Mas{" >"}{" "}
-            </InternalLinks>
-          </div>
-        </Content>
-      </>
+    <div
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
+      <Content>
+        <div>
+          {MusicData.slice(0, 1).map((e, Bio) => (
+            <Item
+              key={Bio}
+              paragraph={e.SummaryMusic}
+              img={e.Img}
+              titles={e.Titles}
+            />
+          ))}
+        </div>
+        <InternalLinks to="/musicanavigation"> Ver Mas{" >"} </InternalLinks>
+      </Content>
     </div>
   );
 };

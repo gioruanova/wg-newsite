@@ -8,7 +8,6 @@ const Background = styled.div`
   overflow-y: none;
   width: 100%;
   text-align: center;
-  scroll-behavior: smooth;
   transition: 1s;
 `;
 
@@ -20,22 +19,40 @@ const LoaderComponent = styled.div`
   width: auto;
   justify-content: center;
   align-content: flex-start;
+  gap: 1rem;
 `;
 
-export const Titles = styled.h1`
-  color: White;
-  font-size: 3rem;
-  font-family: ${(props) => props.theme.generalFont};
-  margin: 0;
-  text-transform: uppercase;
+const TitleDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
 `;
 
-export const SubTitles = styled(Titles)`
+const Titles = styled.h1`
+  color: #ad9a72;
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 100;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
+const Titles1 = styled.h1`
+  color: white;
+  font-size: 5rem;
+  margin: 0;
+  font-weight: 100;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
+
+const SubTitles = styled(Titles)`
   color: White;
-  font-size: 1rem;
-  font-family: ${(props) => props.theme.generalFont};
+  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
   margin: 0;
   text-transform: uppercase;
+  font-weight: 300;
+  word-spacing: 10px;
 `;
 
 export default function LoaderInitial() {
@@ -43,7 +60,12 @@ export default function LoaderInitial() {
     <div>
       <Background className="animate__animated animate__fadeIn animate__delay-0.8s">
         <LoaderComponent>
-          <Titles>Walter Gandini</Titles>
+          <TitleDiv>
+            <Titles1>Walter</Titles1>
+            <Titles>
+              <b>Gandini</b>
+            </Titles>
+          </TitleDiv>
           <SubTitles>Musica - Tatuaje - Pintura - Plastica</SubTitles>
         </LoaderComponent>
       </Background>

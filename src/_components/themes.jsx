@@ -2,17 +2,22 @@ import { createGlobalStyle } from "styled-components";
 
 export const DarkTheme = {
   id: "DarkTheme",
-  generalFont: "'Cairo', sans-serif;",
   generalBackground: "#272A2D;",
-  colorLines: "#847A65;",
+  navbarBackground: "#2d2c2cd9;",
+  
+  generalFont: "'Cairo', sans-serif;",
+  navLinksFonts: "'Lato', sans-serif;",
 
-  mainTitlesColor: "#847A65;",
+  colorLines: "#ad9a72;",
+
+  mainTitlesColor: "#ad9a72;",
   sizeMaintTitles: "2rem;",
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#C5C5C5;",
+  generalTextFont:"'Lato', sans-serif;",
 
-  navigationLinksColor: "#847A65;",
+  navigationLinksColor: "#ad9a72;",
   navigationLinksColorBack: "black;",
   sizeNavigationLinks: "0.9rem;",
 
@@ -23,7 +28,7 @@ export const DarkTheme = {
   tattooStudioTitleColor: "#D8D8D8;",
 
   backgroundIcons: "#6d6d6d",
-  strokeIcons: "#a58959;",
+  strokeIcons: "#ad9a72;",
   fillIcons: "#d1d1d1",
   hoverStrokeIcons: "#d1d1d1;",
   hoverFillIcons: "#a58959;",
@@ -31,8 +36,12 @@ export const DarkTheme = {
 
 export const LightTheme = {
   id: "LightTheme",
-  generalFont: "'Cairo', sans-serif;",
   generalBackground: "#c0c0c0;",
+  navbarBackground: "#a6a6a630;",
+
+  generalFont: "'Cairo', sans-serif;",
+  navLinksFonts: "'Lato', sans-serif;",
+
   colorLines: "#493f2b;",
 
   mainTitlesColor: "#493f2b;",
@@ -40,6 +49,7 @@ export const LightTheme = {
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#0a0a0a;",
+  generalTextFont:"'Lato', sans-serif;",
 
   navigationLinksColor: "#493f2b;",
   navigationLinksColorBack: "white;",
