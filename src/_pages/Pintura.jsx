@@ -29,7 +29,7 @@ const TitleContainer1 = styled.div`
   text-align: ${isMobile ? "center" : "start"};
   transform: ${isMobile ? "" : "rotate(90deg);"}
   line-height: 2.5rem;
-  letter-spacing: 1.2rem;
+  ${isMobile ? "" : "letter-spacing: 1.2rem;"}
   padding-left:1rem;
 
   h1 {

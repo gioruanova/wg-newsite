@@ -29,7 +29,7 @@ const TitleContainer1 = styled.div`
   text-align: ${isMobile ? "center" : "start"};
   transform: ${isMobile ? "" : "rotate(90deg);"}
   line-height: 2.5rem;
-  letter-spacing: 1.2rem;
+  ${isMobile ? "" : "letter-spacing: 1.2rem;"}
   padding-left:1rem;
 
   h1 {
@@ -62,7 +62,7 @@ function Item({ paragraph, img, titles }) {
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 90%;
+    width: 100%;
     height: 20rem;
     margin: 1rem;
     border-radius: 5px;

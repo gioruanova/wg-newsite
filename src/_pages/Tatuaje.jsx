@@ -48,7 +48,7 @@ const TitleContainer1 = styled.div`
   text-align: ${isMobile ? "center" : "start"};
     line-height: 2.5rem;
   letter-spacing: 1.2rem;
-  padding-left:1rem;
+  ${isMobile ? "" : "letter-spacing: 1.2rem;"}
 
   h1 {
     color: ${(props) => props.theme.mainTitlesColor};
