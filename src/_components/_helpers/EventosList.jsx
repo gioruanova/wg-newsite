@@ -1,10 +1,10 @@
 import React from "react";
-import { Titles } from "../_components/Styles";
+import { Titles } from "../../_components/Styles";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import { Eventos } from "../_components/Messages";
+import { Eventos } from "../Messages";
 
 const Content = styled.div`
   width: auto;
@@ -163,7 +163,6 @@ const ProximosEventos = ({ show }) => {
           ))}
         </GridEventos>
       )}
-
     </Content>
   );
 };

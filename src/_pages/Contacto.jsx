@@ -1,8 +1,9 @@
 import React from "react";
-import { Content, Titles, Paragraphs } from "../_components/Styles";
+import { Content } from "../_components/Styles";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+import ContactForm from "../_components/ContactForm";
+
 AOS.init();
 
 const Contacto = () => {
@@ -15,14 +16,7 @@ const Contacto = () => {
       data-aos-easing="ease-in-out"
       data-aos-once="true"
     >
-      <Titles>Contacto</Titles>
-      <Paragraphs>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab autem
-        perspiciatis dolores error alias quasi facilis atque, deserunt
-        architecto eius, nesciunt ex inventore quis sapiente similique possimus
-        nihil? Vel, reiciendis.Lorem ipsum dolor sit amet consectetur,
-        adipisicing elit.
-      </Paragraphs>
+      <ContactForm />
     </Content>
   );
 };

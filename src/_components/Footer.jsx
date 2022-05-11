@@ -104,7 +104,7 @@ const Footer = () => {
               <NavLinksFooter to="/plasticaymasnavigation">
                 Plastica & +
               </NavLinksFooter>
-              <NavLinksFooter to="/">E-Shop</NavLinksFooter>
+              {/* <NavLinksFooter to="/">E-Shop</NavLinksFooter> */}
               <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
             </>
           </ContainerLinks>

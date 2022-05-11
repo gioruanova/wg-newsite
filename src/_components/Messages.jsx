@@ -412,35 +412,45 @@ export const EshopData = [
 //------------------------------------------------------------------------------------------------------
 // /PINTURA_ARRAY
 export const EshopArray = [
+  
   {
-    PlasticaImg: MuestraPlastica1,
+    EshopImage: MuestraPlastica1,
   },
   {
-    PlasticaImg: MuestraPlastica2,
+    EshopImage: MuestraPintura2,
   },
   {
-    PlasticaImg: MuestraPlastica3,
+    EshopImage: MuestraPlastica3,
   },
   {
-    PlasticaImg: MuestraPlastica4,
+    EshopImage: MuestraPintura4,
   },
   {
-    PlasticaImg: MuestraPlastica5,
+    EshopImage: MuestraPlastica5,
   },
   {
-    PlasticaImg: MuestraPlastica6,
+    EshopImage: MuestraPintura6,
   },
   {
-    PlasticaImg: MuestraPlastica7,
+    EshopImage: MuestraPlastica7,
   },
   {
-    PlasticaImg: MuestraPlastica8,
+    EshopImage: MuestraPintura8,
   },
   {
-    PlasticaImg: MuestraPlastica9,
+    EshopImage: MuestraPlastica9,
   },
   {
-    PlasticaImg: MuestraPlastica10,
+    EshopImage: MuestraPintura10,
+  },
+  {
+    EshopImage: MuestraPlastica10,
+  },
+  {
+    EshopImage: MuestraPintura11,
+  },
+  {
+    EshopImage: MuestraPlastica11,
   },
 ]
 

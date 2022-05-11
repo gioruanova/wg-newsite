@@ -71,12 +71,13 @@ const Eshop = () => {
         <div>
           {EshopArray.slice(RandomNumber2, RandomNumber).map(
             (e, EshopImage) => (
-              <Item key={EshopImage} img={e.PlasticaImg} />
+              <Item key={EshopImage} img={e.EshopImage} />
             )
           )}
         </div>
+
         <Paragraphs>
-          Proximamente estaran disponibles obras y trabajos en el E-Shop.
+          Próximamente, disponibles obras y trabajos a la venta.
         </Paragraphs>
       </Content>
     </div>

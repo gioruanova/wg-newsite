@@ -132,14 +132,14 @@ const NavBar = () => {
                 >
                   Plastica & +
                 </NavLinksTop>
-                <NavLinksTop
+                {/* <NavLinksTop
                   onClick={() => {
                     setShow(!show);
                   }}
                   to="/"
                 >
                   E-Shop
-                </NavLinksTop>
+                </NavLinksTop> */}
                 <NavLinksTop
                   onClick={() => {
                     setShow(!show);
@@ -174,7 +174,7 @@ const NavBar = () => {
             <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
             <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
-            <NavLinksTop to="/">E-Shop</NavLinksTop>
+            {/* <NavLinksTop to="/">E-Shop</NavLinksTop> */}
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>
           <Redes />
