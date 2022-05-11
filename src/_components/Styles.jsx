@@ -39,7 +39,7 @@ export const Content = styled.div`
   align-items: center;
   text-align: center;
   align-content: center;
-  padding: ${isMobile ? "4rem 0 4rem 0;" : "4rem 0 4rem 0;"};
+  padding: ${isMobile ? "4rem 1rem 4rem 0;" : "4rem 0 4rem 0;"};
 `;
 
 export const Separator = styled.hr`
