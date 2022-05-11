@@ -12,7 +12,7 @@ const BioContainer = styled.div`
   ${isMobile ? "grid-template-row: 1fr ;" : "grid-template-columns: 1fr ;"}
   justify-items: center;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
 export const Paragraphs = styled.p`
@@ -25,7 +25,22 @@ export const Paragraphs = styled.p`
     line-height: 1.5rem;
     word-break: break-word;
     word-spacing: 0.1rem;
-    text-align:center;
+    
+`;
+
+const TitleContainer1 = styled.div`
+text-align: center
+line-height: 2.5rem;
+letter-spacing: 1.2rem;
+    h1 {
+    color: ${(props) => props.theme.mainTitlesColor};
+    font-size: ${isMobile ? "2rem" : "2.5rem;"}
+    font-family: ${(props) => props.theme.generalTextFont};
+    margin: 0;
+    text-transform: uppercase;
+    transition: 1s;
+    text-align: center;
+      }
 `;
 
 AOS.init();
@@ -36,11 +51,11 @@ function Item({ img }) {
     background-image: url(${img});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     border-color: none;
-    width: 100%;
+    width: 30%;
     height: 20rem;
-    margin: 1rem;
+    margin-top: 1rem;
     border-radius: 5px;
   `;
   return (
@@ -66,7 +81,9 @@ const Eshop = () => {
       data-aos-once="true"
     >
       <Content>
-        <Titles>E-Shop</Titles>
+        <TitleContainer1>
+          <Titles>E-Shop</Titles>
+        </TitleContainer1>
 
         <div>
           {EshopArray.slice(RandomNumber2, RandomNumber).map(
