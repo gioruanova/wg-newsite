@@ -53,7 +53,7 @@ function Item({ img }) {
     background-repeat: no-repeat;
     background-size: contain;
     border-color: none;
-    width: 30%;
+    width: 100%;
     height: 20rem;
     margin-top: 1rem;
     border-radius: 5px;
