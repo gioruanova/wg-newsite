@@ -11,8 +11,8 @@ const IconWrapper = styled.div`
   svg {
     display: flex;
     align-items: center;
-    width: ${isMobile ? "1.3rem;" : "1.8rem;"}
-    height: ${isMobile ? "1.3rem;" : "1.8rem;"}
+    width: ${isMobile ? "1.8rem;" : "1.8rem;"}
+    height: ${isMobile ? "1.8rem;" : "1.8rem;"}
     stroke:${(props) => props.theme.navigationLinksColor};
     transition:600ms;
     &:hover{
@@ -33,7 +33,7 @@ const Menu = styled(IconWrapper)`
 `;
 const IconWrapperTheme = styled.div`
   svg {
-    padding: 2px 2px 2px 3px;
+    padding: 3px 2px 2px 3px;
     display: flex;
     align-items: center;
     width: 1.5rem;
@@ -56,12 +56,10 @@ svg {
   stroke:${(props) => props.theme.strokeIcons};
   
   transition:600ms;
-  
-  &:hover{
+    &:hover{
     
     stroke:${(props) => props.theme.hoverStrokeIcons};
-      
-}
+      }
 }
 `;
 

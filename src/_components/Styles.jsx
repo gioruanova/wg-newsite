@@ -219,7 +219,7 @@ const ContaininerRightPanel = styled.div`
   flex-direction: column;
   position: fixed;
   top: ${isMobile ? " 30rem;" : "50rem;"}
-  right: 0.4rem;
+  right: 0rem;
   border-radius: 15px;
   transition: 1s;
   align-items: center;
@@ -312,6 +312,4 @@ export const ContaininerTheme2 = styled.div`
   flex-direction: row;
 `;
 
-export const ContainerRedesFootParagraph = styled.div`
-  
-`;
+export const ContainerRedesFootParagraph = styled.div``;

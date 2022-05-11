@@ -56,17 +56,16 @@ AOS.init();
 
 function Item({ paragraph, img, titles }) {
   const ImgContainer = styled.div`
-    transition: 1s;
-    background-image: url(${img});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-color: none;
-    width: 100%;
-    height: 22rem;
-    margin: 1rem;
-    border-radius: 5px;
-
+  transition: 1s;
+  background-image: url(${img});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-color: none;
+  width: 100%;
+  height: 20rem;
+  margin: 1rem;
+  border-radius: 5px;
     ${isMobile ? "grid-row: 2;" : ""}
   `;
   return (

@@ -63,10 +63,9 @@ function Item({ paragraph, img, titles }) {
     background-size: cover;
     border-color: none;
     width: 100%;
-    height: 13rem;
+    height: 15rem;
     margin: 1rem;
     border-radius: 5px;
-    filter: grayscale(1);
     ${isMobile ? "grid-row: 2;" : ""}
   `;
   return (

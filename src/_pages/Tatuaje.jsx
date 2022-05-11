@@ -65,12 +65,12 @@ function Item({ paragraph, img, titles, studiotitle }) {
     background-image: url(${img});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-color: none;
     width: 100%;
     height: 20rem;
-    border-radius: 10px;
-
+    margin: 1rem;
+    border-radius: 5px;
     ${isMobile ? "grid-row: 4;" : ""}
   `;
   return (
