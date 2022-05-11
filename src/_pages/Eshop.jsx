@@ -1,90 +1,64 @@
 import React from "react";
-import {
-  Content,
-  Titles,
-  // InternalLinks,
-  Paragraphs,
-} from "../_components/Styles";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const PlasticContainer = styled.div`
+import { Content, Titles } from "../_components/Styles";
+import { EshopArray } from "../_components/Messages";
+
+const BioContainer = styled.div`
   display: grid;
-  grid-template-row: 1fr 1fr;
+  ${isMobile ? "grid-template-row: 1fr ;" : "grid-template-columns: 1fr ;"}
   justify-items: center;
   align-items: center;
+  margin-bottom: 3rem;
 `;
 
-const ImgContainer = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: ${isMobile ? "100%" : "22%"};
-  height: 15rem;
-  margin: 0 0 2rem 0;
-  ${isMobile ? "grid-row:1;" : ";"}
-`;
-
-const ImgContainer1 = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid white;
-  width: 40%;
-  height: 6rem;
-  color: white;
-  left: 1.5rem;
-  top: 6rem;
-  background-color: grey;
-`;
-
-const ImgContainer2 = styled(ImgContainer1)`
-  left: 9rem;
-  top: 6rem;
-`;
-
-const ImgContainer3 = styled(ImgContainer1)`
-  left: 5rem;
-  top: 7.5rem;
-`;
-
-const ImgContainer4 = styled(ImgContainer1)`
-  left: 0rem;
-  top: 3rem;
-`;
-
-const ImgContainer5 = styled(ImgContainer4)`
-  left: 10rem;
-  top: 3rem;
-`;
-
-const ImgContainer6 = styled(ImgContainer4)`
-  width: 50%;
-  height: 8rem;
-  left: 4rem;
-  top: 1.5rem;
-`;
-
-const EshopTextContainer = styled.div`
-  padding: ${isMobile ? "" : "0 1rem;"}
-  text-align: justify;
-  p {
-    text-align: justify;
-  }
+export const Paragraphs = styled.p`
+  color: ${(props) => props.theme.generalTextColor};
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+  font-family: ${(props) => props.theme.generalTextFont};
+  margin: 0;
+  font-weight: 400;
+    transition: 1s;
+    line-height: 1.5rem;
+    word-break: break-word;
+    word-spacing: 0.1rem;
+    text-align:center;
 `;
 
 AOS.init();
 
-const Eshop = () => {
+function Item({ img }) {
+  const ImgContainer = styled.div`
+    transition: 1s;
+    background-image: url(${img});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-color: none;
+    width: 100%;
+    height: 20rem;
+    margin: 1rem;
+    border-radius: 5px;
+  `;
   return (
-    <div id="EshopDetail"
-      data-aos="fade-up"
+    <BioContainer>
+      <ImgContainer img={img}></ImgContainer>
+    </BioContainer>
+  );
+}
+
+const Eshop = () => {
+  const RandomNumber =
+    EshopArray.length - Math.floor(Math.random() * EshopArray.length);
+  const RandomNumber2 = RandomNumber - 1;
+
+  return (
+    <div
+      id="EshopDetail"
+      data-aos="fade-right"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"
@@ -93,41 +67,17 @@ const Eshop = () => {
     >
       <Content>
         <Titles>E-Shop</Titles>
-        <PlasticContainer>
-          <ImgContainer>
-            <>
-              <ImgContainer1>
-                <p>IMG 1</p>
-              </ImgContainer1>
-              <ImgContainer2>
-                <p>IMG 2</p>
-              </ImgContainer2>
 
-              <ImgContainer3>
-                <p>IMG 3</p>
-              </ImgContainer3>
-
-              <ImgContainer4>
-                <p>IMG 4</p>
-              </ImgContainer4>
-
-              <ImgContainer5>
-                <p>IMG 5</p>
-              </ImgContainer5>
-
-              <ImgContainer6>
-                <p>IMG 6</p>
-              </ImgContainer6>
-            </>
-          </ImgContainer>
-          <EshopTextContainer>
-            <div>
-              <Paragraphs>Proximamente</Paragraphs>
-            </div>
-          </EshopTextContainer>
-        </PlasticContainer>
-
-        {/* <InternalLinks to="">Ver Mas{" >"} </InternalLinks> */}
+        <div>
+          {EshopArray.slice(RandomNumber2, RandomNumber).map(
+            (e, EshopImage) => (
+              <Item key={EshopImage} img={e.PlasticaImg} />
+            )
+          )}
+        </div>
+        <Paragraphs>
+          Proximamente estaran disponibles obras y trabajos en el E-Shop.
+        </Paragraphs>
       </Content>
     </div>
   );

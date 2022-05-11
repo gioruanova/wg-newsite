@@ -66,6 +66,7 @@ function Item({ Paragraph, img, titles }) {
     height: 20rem;
     margin: 1rem;
     border-radius: 5px;
+    
   `;
 
   return (
@@ -84,7 +85,7 @@ function Item({ Paragraph, img, titles }) {
 const Bio = () => {
   return (
     <div
-      data-aos="fade-right"
+      data-aos="fade-down"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"

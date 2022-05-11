@@ -163,9 +163,7 @@ const ProximosEventos = ({ show }) => {
           ))}
         </GridEventos>
       )}
-      {/* <div>
-        <InternalLinks to="/#"> Ver Mas{" >"} </InternalLinks>
-      </div> */}
+
     </Content>
   );
 };

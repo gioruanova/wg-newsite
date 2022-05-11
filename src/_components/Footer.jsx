@@ -6,7 +6,6 @@ import {
   NavLinksFooter,
   ContainerRedesFootParagraph,
   LogoNav,
-  ProviNavFoot,
 } from "./Styles";
 import Redes from "../_components/Redes";
 
@@ -105,7 +104,7 @@ const Footer = () => {
               <NavLinksFooter to="/plasticaymasnavigation">
                 Plastica & +
               </NavLinksFooter>
-              <ProviNavFoot href="#EshopDetail">E-Shop</ProviNavFoot>
+              <NavLinksFooter to="/">E-Shop</NavLinksFooter>
               <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
             </>
           </ContainerLinks>

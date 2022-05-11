@@ -362,7 +362,7 @@ export const PlasticaData = [
 // /PINTURA_ARRAY
 export const PlasticaSamples = [
   {
-    PinturaImg: MuestraPlastica1,
+    PlasticaImg: MuestraPlastica1,
   },
   {
     PlasticaImg: MuestraPlastica2,
@@ -410,6 +410,41 @@ export const EshopData = [
   },
 ];
 //------------------------------------------------------------------------------------------------------
+// /PINTURA_ARRAY
+export const EshopArray = [
+  {
+    PlasticaImg: MuestraPlastica1,
+  },
+  {
+    PlasticaImg: MuestraPlastica2,
+  },
+  {
+    PlasticaImg: MuestraPlastica3,
+  },
+  {
+    PlasticaImg: MuestraPlastica4,
+  },
+  {
+    PlasticaImg: MuestraPlastica5,
+  },
+  {
+    PlasticaImg: MuestraPlastica6,
+  },
+  {
+    PlasticaImg: MuestraPlastica7,
+  },
+  {
+    PlasticaImg: MuestraPlastica8,
+  },
+  {
+    PlasticaImg: MuestraPlastica9,
+  },
+  {
+    PlasticaImg: MuestraPlastica10,
+  },
+]
+
+
 //CONTACTO_INFO
 export const ContactoData = [
   {

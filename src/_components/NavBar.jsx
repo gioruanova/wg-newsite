@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { NavLinksTop, LogoNav, ProviNav } from "./Styles";
+import { NavLinksTop, LogoNav } from "./Styles";
 
 import styled from "styled-components";
 import Icons from "./Icons";
@@ -83,7 +83,7 @@ const NavBar = () => {
           {show && (
             <>
               <LinksContainer>
-              <NavLinksTop
+                <NavLinksTop
                   onClick={() => {
                     setShow(!show);
                   }}
@@ -136,7 +136,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/eshopnavegacion"
+                  to="/"
                 >
                   E-Shop
                 </NavLinksTop>
@@ -174,7 +174,7 @@ const NavBar = () => {
             <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
             <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
-            <ProviNav href="#EshopDetail">E-Shop</ProviNav>
+            <NavLinksTop to="/">E-Shop</NavLinksTop>
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>
           <Redes />
