@@ -31,25 +31,14 @@ const Menu = styled(IconWrapper)`
 
 }
 `;
-const IconWrapperDark = styled.div`
+const IconWrapperTheme = styled.div`
   svg {
+    padding: 2px 2px 2px 3px;
     display: flex;
     align-items: center;
     width: 1.5rem;
     height: 1.5rem;
     stroke: #a58959;
-    fill: ${(props) => props.theme.fillIcons};
-  }
-`;
-const IconWrapperLight = styled.div`
-  svg {
-    display: flex;
-    align-items: center;
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: #a58959;
-    stroke: #272a2d;
-    stroke-width: 1;
   }
 `;
 
@@ -153,15 +142,15 @@ export default function Icons({ name }) {
     //THEME_SELECTOR
     case "dark":
       return (
-        <IconWrapperDark>
+        <IconWrapperTheme>
           <ReactSVG src="_assets/_icons/dark.svg" />
-        </IconWrapperDark>
+        </IconWrapperTheme>
       );
     case "light":
       return (
-        <IconWrapperLight>
+        <IconWrapperTheme>
           <ReactSVG src="_assets/_icons/light.svg" />
-        </IconWrapperLight>
+        </IconWrapperTheme>
       );
     //-----------------------------------
     //MISC

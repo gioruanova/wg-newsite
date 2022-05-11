@@ -83,6 +83,14 @@ const NavBar = () => {
           {show && (
             <>
               <LinksContainer>
+              <NavLinksTop
+                  onClick={() => {
+                    setShow(!show);
+                  }}
+                  to="/"
+                >
+                  Home
+                </NavLinksTop>
                 <NavLinksTop
                   onClick={() => {
                     setShow(!show);

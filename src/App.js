@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       {show ? <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme}>
-        <GlobalStyles /> 
+        <GlobalStyles />
         <ScrollToTop />
         <DesktopLayout />
 
