@@ -144,7 +144,7 @@ export const NavLinksTop = styled(Link)`
   font-family: ${(props) => props.theme.navLinksFonts};
   color: ${(props) => props.theme.navigationLinksColor};
   margin: 0;
-  padding: ${isMobile ? "0.5rem 0.5rem " : "0 1rem"};
+  padding: ${isMobile ? "0.4rem 0.5rem " : "0 1rem"};
   align-items: end;
   text-decoration:none;
   font-weight: bold;
@@ -156,9 +156,9 @@ export const NavLinksTop = styled(Link)`
  `;
 
 export const NavLinksFooter = styled(NavLinksTop)`
-  ${isMobile ? "" : "padding: 0 0 0 2rem;"}
-  ${isMobile ? "text-align: center;" : "text-align: initial;"}
-    font-size: 0.8rem;
+padding:${isMobile ? "3rem 0.5rem " : "0 0 0 2rem;"}
+${isMobile ? "text-align: center;" : "text-align: initial;"}
+font-size: 0.8rem;
 `;
 
 export const LogoNav = styled(Link)`
@@ -189,7 +189,7 @@ export const ProviNav = styled.a`
     color: ${(props) => props.theme.hooverLinks};
  `;
 
- export const ProviNavFoot = styled(ProviNav)`
+export const ProviNavFoot = styled(ProviNav)`
   ${isMobile ? "" : "padding: 0 0 0 2rem;"}
   ${isMobile ? "text-align: center;" : "text-align: initial;"}
     font-size: 0.8rem;
@@ -313,5 +313,5 @@ export const ContaininerTheme2 = styled.div`
 `;
 
 export const ContainerRedesFootParagraph = styled.div`
-  margin: 0 0 2rem 0;
+  
 `;

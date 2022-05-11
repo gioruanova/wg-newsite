@@ -1,36 +1,165 @@
 import React from "react";
 import styled from "styled-components";
-import { Titles } from "../_components/Styles";
-import { isMobile } from "react-device-detect";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+import emailjs from "emailjs-com";
+import { Titles } from "../_components/Styles";
+import { isMobile } from "react-device-detect";
 
-export const Paragraphs = styled.p`
+const CheckboxContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
   font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   font-family: ${(props) => props.theme.generalTextFont};
-  margin: 0 0 0;
-  font-weight: 400;
+    font-weight: 400;
     transition: 1s;
     line-height: 1.5rem;
     word-break: break-word;
     word-spacing: 0.1rem;
-    text-align:justify;
+    text-align:center;
     padding:0;
 `;
 
-export const MainContent = styled.div`
+const MainContent = styled.div`
   width: auto;
   transition: 1s;
   align-items: center;
   text-align: center;
   align-content: center;
-  margin: ${isMobile ? "0 2rem 0 2rem;" : "0 20rem 0 20rem;"};
+  margin: ${isMobile ? "0 1rem 0 rem;" : "0 20rem 0 20rem;"};
+`;
+
+const FormText = styled.p`
+  color: ${(props) => props.theme.generalTextColor};
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+  font-family: ${(props) => props.theme.generalTextFont};
+  margin: 0 0 0 0;
+  font-weight: 400;
+    transition: 1s;
+    line-height: 1.5rem;
+    word-break: break-word;
+    word-spacing: 0.1rem;
+    text-align:center;
+    padding:0;
+`;
+
+const FormContact = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const InputContact = styled.input`
+  width: 100%;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 7px;
+  padding-left: 0.5rem;
+  height: 35px;
+  transition: 1s;
+  ::placeholder {
+    color: grey;
+  }
+`;
+
+const Checkbox = styled.input`
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 7px;
+  padding-left: 0.5rem;
+  transition: 1s;
+`;
+
+const InputContactdrill = styled.select`
+  background-color: white !important;
+  width: 100%;
+  height: 35px;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 7px;
+  padding-left: 0.5rem;
+  font-family: "Cairo", sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: 1s;
+`;
+
+const InputContact2 = styled.textarea`
+  width: ${isMobile ? "100%" : "20rem"};
+  margin: 0.5rem 0 0 0;
+  border: none;
+  border-radius: 7px;
+  padding-left: 0.5rem;
+`;
+
+const InputContactMessage = styled(InputContact2)`
+  resize: none;
+  height: 12rem;
+  margin-bottom: 1rem;
+  transition: 1s;
+  ::placeholder {
+    color: grey;
+  }
+`;
+const OptionField = styled.option`
+  height: 10rem;
+  ::placeholder {
+    color: grey;
+  }
+`;
+
+const ButtonContact = styled.button`
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background-color: ${(props) => props.theme.backgroundButtons};
+  font-family: ${(props) => props.theme.generalTextFont};
+  color: ${(props) => props.theme.textButtonsColor};
+  border: none;
+  border-radius: 7px;
+  text-transform: uppercase;
+  transition: 400ms;
+  &:hover {
+    cursor: pointer;
+    background-color: ${(props) => props.theme.colorLines};
+  }
+  &:active {
+    background-color: white;
+  }
+`;
+
+const GridForm = styled.div`
+  display: flex;
+  flex-direction: ${isMobile ? "column" : "row"};
+  justify-content: center;
+  gap: ${isMobile ? "" : "1rem"};
 `;
 
 AOS.init();
 
 const ContactForm = () => {
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_g2q042e", //*aca va el service id (en email services) emailjs  - old >  service_s5ifb5k
+        "template_acc12fo", //*aca va el template(en email templates) id emailjs template_acc12fo - old > template_8em7vxc
+        e.target,
+        "83AbtDKdOqoZPDZVt" //*aca va el User ID del API KEY (dentro de integration) id emailjs - old > VTH5mH3vXrPPAKkdB
+      )
+      .then((result) => {
+        e.target.reset();
+        alert("Mensaje enviado exitosamente!");
+      })
+      .catch((error) => alert("Error en el envio"));
+  }
   return (
     <MainContent>
       <Titles>Contacto</Titles>
@@ -39,9 +168,90 @@ const ContactForm = () => {
         clases de música, y suscribite al newsletter para participar de sorteos
         y recibir novedades sobre exposiciones, eventos y más.
       </Paragraphs>
-      <div>
-        <h1>Form Conntacto</h1>
-      </div>
+      <FormText>* campos mandatorios</FormText>
+      <FormContact id="form-contacto" onSubmit={sendEmail}>
+        <GridForm>
+          <div>
+            <div>
+              <InputContact
+                type="text"
+                name="name"
+                id="namecontact"
+                placeholder="Nombre*"
+                required
+              ></InputContact>
+            </div>
+
+            <div>
+              <InputContact
+                type="email"
+                name="email"
+                placeholder="E-Mail*"
+                id="email"
+                required
+              ></InputContact>
+            </div>
+            <div>
+              <InputContact
+                type="tel"
+                name="whatsapp"
+                placeholder="Whatsapp"
+                id="phoneField"
+              ></InputContact>
+            </div>
+
+            <div>
+              <InputContactdrill
+                type="text"
+                name="subject"
+                id="subject"
+                required
+              >
+                <OptionField disabled selected>
+                  --Tipo de consulta--
+                </OptionField>
+                <OptionField className="Special">
+                  Walter Gandini en vivo | 13/05 | Sorteo
+                </OptionField>
+                <OptionField className="Special">
+                  Turnos Semana Sailor | 13/05 - 20/05 |
+                </OptionField>
+                <OptionField>Clases de armónica</OptionField>
+                <OptionField>Turnos Tattoo</OptionField>
+                <OptionField>Musica</OptionField>
+                <OptionField>Pintura</OptionField>
+                <OptionField>Plastica</OptionField>
+                <OptionField>Otros</OptionField>
+              </InputContactdrill>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <InputContactMessage
+                rows="6"
+                placeholder="Mensaje (recorda ingresar el código si se trata de alguna promo o evento)*"
+                id="message"
+                name="message"
+                required
+              ></InputContactMessage>
+            </div>
+          </div>
+        </GridForm>
+        <CheckboxContainer>
+          <Checkbox
+            name="checkbox"
+            type="checkbox"
+            value="se ha solicitado la suscripcion al newsletter y"
+          ></Checkbox>
+          <FormText>Suscripción al newsletter </FormText>
+        </CheckboxContainer>
+        <div>
+          <ButtonContact type="submit" value="Submit Form">
+            Enviar
+          </ButtonContact>
+        </div>
+      </FormContact>
     </MainContent>
   );
 };
