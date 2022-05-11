@@ -62,7 +62,7 @@ function Item({ paragraph, img, titles }) {
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 100%;
+    width: 90%;
     height: 20rem;
     margin: 1rem;
     border-radius: 5px;
