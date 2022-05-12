@@ -172,6 +172,7 @@ export const MusicArray = [
     isReverseImg: true,
   },
   {
+    Titles: "Musica",
     MusicImg: MusicImg2,
     MusicParagraph:
       "Edito 2 discos, en el año 1997 forma su sexteto con el cual recorre todo el circuito local y el interior, paralelamente es contratado por la famosa cerveza americana “MILLER” para actuar en los eventos conocidos como las “Miller Blues Nigths”. En 1999 es el encargado de cerrar el milenio en el ciclo “Jazzologia” junto a su banda.",

@@ -5,7 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { Content, Titles } from "../_components/Styles";
-import { EshopArray } from "../_components/Messages";
+import { GalleryArray } from "../_components/DataArray";
 
 const BioContainer = styled.div`
   display: grid;
@@ -52,7 +52,7 @@ function Item({ img }) {
 
 const Eshop = () => {
   const RandomNumber =
-    EshopArray.length - Math.floor(Math.random() * EshopArray.length);
+    GalleryArray.length - Math.floor(Math.random() * GalleryArray.length);
   const RandomNumber2 = RandomNumber - 1;
 
   return (
@@ -71,9 +71,9 @@ const Eshop = () => {
         </>
 
         <div>
-          {EshopArray.slice(RandomNumber2, RandomNumber).map(
-            (e, EshopImage) => (
-              <Item key={EshopImage} img={e.EshopImage} />
+          {GalleryArray.slice(RandomNumber2, RandomNumber).map(
+            (e, GalleryImg) => (
+              <Item key={GalleryImg} img={e.GalleryImg} />
             )
           )}
         </div>

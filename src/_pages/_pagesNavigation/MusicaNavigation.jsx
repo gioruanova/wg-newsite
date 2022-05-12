@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-import { MusicData } from "../../_components/Messages";
+import { MusicArray } from "../../_components/DataArray";
 import {
   MainContent,
   ContainerRedesFootParagraph,
@@ -281,12 +281,12 @@ const MusicaNavigation = () => {
     <MainContent className="animate__animated animate__fadeIn animate__slower">
       <>
         <MainContainer>
-          {MusicData.slice(1).map((e, MusicParagraph) => (
+          {MusicArray.slice(1).map((e, MusicParagraph) => (
             <MainMusicBio
               key={MusicParagraph}
-              paragraph={e.Paragraph}
+              paragraph={e.MusicParagraph}
               isReverseImg={e.isReverseImg}
-              img={e.Img}
+              img={e.MusicImg}
               titles={e.Titles}
             />
           ))}
@@ -391,7 +391,7 @@ const MusicaNavigation = () => {
 
       <Titles>Musicos principales</Titles>
       <ContainerMemberCards>
-        {MusicData.slice(6).map((e, Name) => (
+        {MusicArray.slice(5).map((e, Name) => (
           <BandMembers
             key={Name}
             paragraphmember={e.ParagraphMember}

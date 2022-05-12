@@ -5,6 +5,7 @@ import Header from "./Header";
 import ProximosEventos from "./ProximosEventos";
 
 import Bio from "./Bio";
+import BannerSeparator from "./BannerSeparator";
 import ArtSection from "./ArtSection";
 
 import Contacto from "./Contacto";
@@ -19,6 +20,7 @@ const Home = () => {
         <Header />
         <ProximosEventos />
         <Bio />
+        <BannerSeparator/>
         <ArtSection />
         <Contacto />
         <Separator />
