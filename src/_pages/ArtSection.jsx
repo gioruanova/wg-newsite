@@ -13,18 +13,18 @@ const Container = styled.div`
   display: flex;
   flex-direction: ${isMobile ? "column" : "row-reverse"};
   gap: 1rem;
-
   p {
     width: ${isMobile ? "100%" : "85%"};
   }
   margin: 2rem 0 2rem 0;
 `;
+
 const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 400ms;
-  padding: 1rem;
+  
 
   &:hover {
     cursor: pointer;

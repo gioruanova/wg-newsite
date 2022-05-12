@@ -29,7 +29,7 @@ const Home = () => {
         <ProximosEventos />
 
         <Bio />
-        <Separator />
+        
         <ArtSection/>
         {/* <Separator />
         <Musica />

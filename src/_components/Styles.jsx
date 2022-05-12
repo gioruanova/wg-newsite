@@ -145,7 +145,7 @@ export const InternalLinks = styled(Link)`
   font-weight: 600;
   transition: 1s;
   cursor: pointer;
-  
+
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
@@ -211,7 +211,7 @@ const ContaininerRightPanel = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: ${isMobile ? " 30rem;" : "50rem;"}
+  top: ${isMobile ? " 30rem;" : "55rem;"}
   right: 0rem;
   border-radius: 15px;
   transition: 1s;
@@ -277,9 +277,6 @@ export const Redescontainer = () => {
 export const RightPanelContainer = () => {
   return (
     <ContaininerRightPanel className="animate__animated animate__fadeIn animate__delay-1s">
-      <a href="#TopContent" rel="noreferrer">
-        <Icons name="top" />
-      </a>
       <a
         href="https://api.whatsapp.com/send?phone=5491157001186&text=Hola%20Walter,%20te%20contactaba%20para%20una%20consulta"
         rel="noreferrer"

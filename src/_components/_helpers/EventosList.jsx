@@ -7,7 +7,7 @@ import { EventsArray } from "../DataArray";
 
 export const Titles = styled.h1`
   color: white;
-  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-size: ${isMobile ? "1.5rem" : "1.8rem"};
   font-family: ${(props) => props.theme.generalFont};
   background-color: ${(props) => props.theme.mainTitlesColor};
   text-transform: uppercase;
