@@ -4,9 +4,10 @@ import { isMobile } from "react-device-detect";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Sponsors } from "../_components/Messages";
+
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SponsorArray } from "../_components/DataArray";
 
 AOS.init();
 
@@ -17,7 +18,7 @@ const Marcas = () => {
 
   const ImgDivContainer = styled.div`
     height: ${isMobile ? "5rem" : "8rem"};
-    margin: 4rem 0 3rem 0;
+    margin: 3rem 0 0rem 0;
   `;
   return (
     <div
@@ -30,20 +31,20 @@ const Marcas = () => {
     >
       <div>
         <Carousel indicators={false} controls={false} interval={2500}>
-          {Sponsors.map((Sponsors) => (
-            <Carousel.Item key={Sponsors.SponsorId}>
+          {SponsorArray.map((SponsorArray) => (
+            <Carousel.Item key={SponsorArray.SponsorId}>
               <ImgDivContainer>
                 {" "}
                 <a
                   target="blank"
-                  href={Sponsors.SponsorUrl && <>Sponsors.SponsorUrl</>}
-                  title={Sponsors.SponsorTitle}
+                  href={SponsorArray.SponsorUrl && <>SponsorArray.SponsorUrl</>}
+                  title={SponsorArray.SponsorTitle}
                   rel="noreferrer"
                 >
                   {" "}
                   <ImgContainer
-                    src={Sponsors.SponsorImg}
-                    alt={Sponsors.SponsorTitle}
+                    src={SponsorArray.SponsorImg}
+                    alt={SponsorArray.SponsorTitle}
                   />
                 </a>
               </ImgDivContainer>

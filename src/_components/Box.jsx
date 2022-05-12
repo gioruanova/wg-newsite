@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ContactButtons = styled.button`
   width: 10rem;
   height: auto;
-  margin: 0 0 4rem 0;
+  margin: 0 0 1rem 0;
   padding: 0.5rem;
   background-color: transparent;
   border: none;

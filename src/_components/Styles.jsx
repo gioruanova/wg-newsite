@@ -39,11 +39,10 @@ export const Content = styled.div`
   align-items: center;
   text-align: center;
   align-content: center;
-  padding: ${isMobile ? "4rem 0 4rem 0;" : "4rem 0 4rem 0;"};
+  padding: ${isMobile ? "5rem 0 5rem 0;" : "5rem 0 5rem 0;"};
 `;
 
 export const Separator = styled.hr`
-  height: 2px;
   background-color: ${(props) => props.theme.colorLines};
   border: none;
   transition: 1s;
@@ -81,7 +80,7 @@ export const Paragraphs = styled.p`
   font-family: ${(props) => props.theme.generalTextFont};
   margin: 0;
   font-weight: 400;
-    transition: 1s;
+    transition: 400ms;
     line-height: 1.5rem;
     word-break: break-word;
     word-spacing: 0.1rem;
@@ -125,9 +124,7 @@ export const ExternalLinks = styled.a`
   color: ${(props) => props.theme.navigationLinksColor};
   font-size: 0.8rem;
   font-family: ${(props) => props.theme.generalFont};
-  margin: 0;
   font-weight: 300;
-
   text-decoration: none;
   font-weight: 600;
   transition: 1s;
@@ -143,13 +140,12 @@ export const InternalLinks = styled(Link)`
   color: ${(props) => props.theme.navigationLinksColor};
   font-size: ${(props) => props.theme.sizeGeneralText};
   font-family: ${(props) => props.theme.generalFont};
-  margin: 0;
   font-weight: 300;
   text-decoration: none;
   font-weight: 600;
   transition: 1s;
   cursor: pointer;
-  text-transform: uppercase;
+  
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
@@ -191,28 +187,6 @@ export const LogoNav = styled(Link)`
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
  `;
-
-export const ProviNav = styled.a`
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: ${(props) => props.theme.sizeNavigationLinks};
-  font-family: ${(props) => props.theme.navLinksFonts};
-  color: ${(props) => props.theme.navigationLinksColor};
-  margin: 0;
-  padding: ${isMobile ? "0.5rem 0.5rem " : "0 1rem"};
-  align-items: end;
-  text-decoration:none;
-  font-weight: bold;
-  transition: 400ms;
-    &:hover {
-    color: ${(props) => props.theme.hooverLinks};
- `;
-
-export const ProviNavFoot = styled(ProviNav)`
-  ${isMobile ? "" : "padding: 0 0 0 2rem;"}
-  ${isMobile ? "text-align: center;" : "text-align: initial;"}
-    font-size: 0.8rem;
-`;
 
 // ------------------------CONTAINERS AND ICONS------------------------------
 const ContaininerRedes = styled.div`

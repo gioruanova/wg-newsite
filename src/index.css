@@ -75,3 +75,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+.Special {
+  background-color: rgb(197, 188, 105);
+}

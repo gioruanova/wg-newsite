@@ -1,18 +1,19 @@
 import React from "react";
-import { Titles } from "../../_components/Styles";
 
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import { Eventos } from "../Messages";
+import { EventsArray } from "../DataArray";
 
-const Content = styled.div`
-  width: auto;
+export const Titles = styled.h1`
+  color: white;
+  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-family: ${(props) => props.theme.generalFont};
+  background-color: ${(props) => props.theme.mainTitlesColor};
+  text-transform: uppercase;
   transition: 1s;
-  align-items: center;
-  text-align: center;
-  align-content: center;
-  padding: ${isMobile ? "4rem 0 2rem 0;" : "4rem 0 2rem 0;"};
+  width: 100%;
+  border-radius: 0.2rem;
 `;
 
 const GridEventos = styled.div`
@@ -22,6 +23,7 @@ const GridEventos = styled.div`
   flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
+  margin: 3rem 0 2rem 0;
 `;
 const EventoContainer = styled.div`
   display: flex;
@@ -105,6 +107,7 @@ function Item({
   EventContent1,
   EventContent2,
   EventContent3,
+  title,
 }) {
   return (
     <>
@@ -130,11 +133,10 @@ function Item({
 
 const ProximosEventos = ({ show }) => {
   return (
-    <Content className="animate__animated animate__fadeIn animate__delay-0.5s">
-      <Titles>Proximos Eventos</Titles>
+    <div className="animate__animated animate__fadeIn animate__delay-0.5s">
       {(show && (
         <GridEventos>
-          {Eventos.map((e, Eventos) => (
+          {EventsArray.map((e, Eventos) => (
             <Item
               key={Eventos}
               EventDate={e.EventDate}
@@ -144,12 +146,13 @@ const ProximosEventos = ({ show }) => {
               EventContent1={e.EventContent1}
               EventContent2={e.EventContent2}
               EventContent3={e.EventContent3}
+              title={e.Title}
             />
           ))}
         </GridEventos>
       )) || (
         <GridEventos>
-          {Eventos.slice(0, 1).map((e, Eventos) => (
+          {EventsArray.slice(0, 2).map((e, Eventos) => (
             <Item
               key={Eventos}
               EventDate={e.EventDate}
@@ -163,7 +166,7 @@ const ProximosEventos = ({ show }) => {
           ))}
         </GridEventos>
       )}
-    </Content>
+    </div>
   );
 };
 

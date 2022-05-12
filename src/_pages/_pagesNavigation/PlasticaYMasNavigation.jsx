@@ -29,7 +29,7 @@ const ContactButtons = styled.button`
   width: auto;
   height: auto;
   margin: 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   background-color: ${(props) => props.theme.backgroundButtons};
   font-family: ${(props) => props.theme.generalTextFont};
   color: ${(props) => props.theme.textButtonsColor};

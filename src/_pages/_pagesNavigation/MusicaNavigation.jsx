@@ -4,13 +4,23 @@ import { isMobile } from "react-device-detect";
 import { MusicData } from "../../_components/Messages";
 import {
   MainContent,
-  Separator,
   ContainerRedesFootParagraph,
   InternalLinks,
 } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
 
 // ------------------------------------------------------------
+
+export const Titles = styled.h1`
+  color: white;
+  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-family: ${(props) => props.theme.generalFont};
+  background-color: ${(props) => props.theme.mainTitlesColor};
+  text-transform: uppercase;
+  transition: 1s;
+  width: 100%;
+  border-radius: 0.2rem;
+`;
 
 const ContainerButtons = styled.div`
   display: flex;
@@ -24,10 +34,10 @@ const ContainerButtons = styled.div`
 `;
 
 const ContactButtons = styled.button`
-  width: 10rem;
+  width: auto;
   height: auto;
   margin: 0 1rem 1rem 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   background-color: ${(props) => props.theme.backgroundButtons};
   font-family: ${(props) => props.theme.generalTextFont};
   color: ${(props) => props.theme.textButtonsColor};
@@ -49,15 +59,6 @@ const ExternalLinks = styled.a`
   color: ${(props) => props.theme.textButtonsColor};
   text-decoration: none;
   font-family: ${(props) => props.theme.generalTextFont};
-`;
-
-const Titles = styled.h1`
-  color: ${(props) => props.theme.mainTitlesColor};
-  font-size: ${(props) => props.theme.sizeMaintTitles};
-  font-family: ${(props) => props.theme.generalTextFont};
-  margin: 1rem;
-  text-transform: uppercase;
-  transition: 1s;
 `;
 
 export const ParagraphsCards = styled.p`
@@ -298,7 +299,7 @@ const MusicaNavigation = () => {
       <ContainerRedesFootParagraph>
         <Redes />
       </ContainerRedesFootParagraph>
-      <Separator />
+
       <Titles>Trabajos</Titles>
       <ContainerMultimedia>
         <MultimediaYouTube>
@@ -378,7 +379,7 @@ const MusicaNavigation = () => {
           </div>
         </MultimediaSpotify>
       </ContainerMultimedia>
-      <Separator />
+
       <Titles>Musicos principales</Titles>
       <ContainerMemberCards>
         {MusicData.slice(6).map((e, Name) => (

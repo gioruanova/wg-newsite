@@ -68,7 +68,6 @@ import MuestraPlastica12 from "../_images/_plastica/_muestras/11.jpg";
 import MuestraPlastica13 from "../_images/_plastica/_muestras/12.jpg";
 
 import HeaderImg from "../_images/HeaderImg.jpeg";
-import MusicSection from "../_images/MusicSection.jpg";
 
 import marca1 from "../_images/_marcas/sponsor_antiguaslunas.png";
 import marca2 from "../_images/_marcas/sponsor_estampaskoi.png";
@@ -412,7 +411,6 @@ export const EshopData = [
 //------------------------------------------------------------------------------------------------------
 // /PINTURA_ARRAY
 export const EshopArray = [
-  
   {
     EshopImage: MuestraPlastica1,
   },
@@ -452,8 +450,7 @@ export const EshopArray = [
   {
     EshopImage: MuestraPlastica11,
   },
-]
-
+];
 
 //CONTACTO_INFO
 export const ContactoData = [
@@ -493,7 +490,6 @@ export const ImgsSection = [
     BioImg1: BioImg1,
     BioImg2: BioImg2,
     BioImg3: BioImg3,
-    MusicSection1: MusicSection,
   },
 ];
 //------------------------------------------------------------------------------------------------------
@@ -503,7 +499,6 @@ export const Sponsors = [
     SponsorId: "estampaskoi",
     SponsorTitle: "Estampas Koi",
     SponsorImg: marca2,
-    
   },
   {
     SponsorId: "antiguaslunas",

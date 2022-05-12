@@ -12,6 +12,9 @@ import Contacto from "../_pages/Contacto";
 
 import BioNavigation from "../_pages/_pagesNavigation/BioNavigation";
 import MusicaNavigation from "../_pages/_pagesNavigation/MusicaNavigation";
+import ArtNavigation from "../_pages/_pagesNavigation/ArtNavigation";
+
+
 import PinturaNavigation from "../_pages/_pagesNavigation/PinturaNavigation";
 import TatuajeNavigation from "../_pages/_pagesNavigation/TatuajeNavigation";
 import PlasticaYMasNavigation from "../_pages/_pagesNavigation/PlasticaYMasNavigation";
@@ -34,6 +37,9 @@ export default function RoutesData() {
 
       <Route path="bionavigation" element={<BioNavigation />} />
       <Route path="musicanavigation" element={<MusicaNavigation />} />
+      <Route path="artnavigation" element={<ArtNavigation />} />
+
+
       <Route path="tatuajenavigation" element={<TatuajeNavigation />} />
       <Route path="pinturanavigation" element={<PinturaNavigation />} />
       <Route

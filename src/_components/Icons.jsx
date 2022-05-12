@@ -152,7 +152,7 @@ export default function Icons({ name }) {
       );
     //-----------------------------------
     //MISC
-    case "showmore":
+    case "more":
       return (
         <IconWrapper>
           <ReactSVG src="_assets/_icons/plus.svg" />

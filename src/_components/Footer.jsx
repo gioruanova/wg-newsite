@@ -35,7 +35,7 @@ const FooterContainer = styled.div`
   padding: ${isMobile ? "3rem 2rem;" : "3rem 20rem;"};
 `;
 
-const LogoContainer = styled.a`
+const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: ${isMobile ? "initial" : "end"};
@@ -99,11 +99,12 @@ const Footer = () => {
             <>
               <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
               <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
-              <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
+              <NavLinksFooter to="/artnavigation">Tatuaje & +</NavLinksFooter>
+              {/* <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
               <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
               <NavLinksFooter to="/plasticaymasnavigation">
                 Plastica & +
-              </NavLinksFooter>
+              </NavLinksFooter> */}
               {/* <NavLinksFooter to="/">E-Shop</NavLinksFooter> */}
               <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
             </>

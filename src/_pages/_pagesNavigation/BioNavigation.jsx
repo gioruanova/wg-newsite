@@ -1,21 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-import { BioData } from "../../_components/Messages";
+
+import { BioArray } from "../../_components/DataArray";
+
 import {
   MainContent,
-  Titles,
   ParagraphsNavigation,
   ContainerRedesFootParagraph,
 } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
 // ------------------------------------------------------------
 
-function Item({ paragraph, img, isReverseImg, titles }) {
+export const Titles = styled.h1`
+  color: white;
+  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-family: ${(props) => props.theme.generalFont};
+  background-color: ${(props) => props.theme.mainTitlesColor};
+  text-transform: uppercase;
+  transition: 1s;
+  width: 100%;
+  border-radius: 0.2rem;
+`;
+
+function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {
   const ContainerBio = styled.div`
     display: flex;
     align-items: center;
-    ${isReverseImg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
+    ${isreverseimg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
     justify-content:center;
     width: 100%;
   `;
@@ -30,7 +42,7 @@ function Item({ paragraph, img, isReverseImg, titles }) {
   `;
 
   const ImgContainer = styled.div`
-    background-image: url(${img});
+    background-image: url(${bioimg});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -39,25 +51,25 @@ function Item({ paragraph, img, isReverseImg, titles }) {
     height: 10rem;
     margin: 1rem;
     border-radius: 5px;
-    filter: grayscale(1);
+    filter: sepia(0.8);
   `;
 
   return (
     <>
-      {titles && <Titles>{titles}</Titles>}
+      {biotitle && <Titles>{biotitle}</Titles>}
       {isMobile ? (
         <ContainerBioResponsive>
-          {paragraph && (
-            <ParagraphsNavigation>{paragraph}</ParagraphsNavigation>
+          {bioparagraph && (
+            <ParagraphsNavigation>{bioparagraph}</ParagraphsNavigation>
           )}
-          {img && <ImgContainer img={img}></ImgContainer>}
+          {bioimg && <ImgContainer img={bioimg}></ImgContainer>}
         </ContainerBioResponsive>
       ) : (
         <ContainerBio>
-          {paragraph && (
-            <ParagraphsNavigation>{paragraph}</ParagraphsNavigation>
+          {bioparagraph && (
+            <ParagraphsNavigation>{bioparagraph}</ParagraphsNavigation>
           )}
-          {img && <ImgContainer img={img}></ImgContainer>}
+          {bioimg && <ImgContainer img={bioimg}></ImgContainer>}
         </ContainerBio>
       )}
     </>
@@ -74,16 +86,16 @@ const BioNavigation = () => {
   `;
 
   return (
-    <MainContent className="animate__animated animate__fadeIn animate__slower">
+    <MainContent className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
       <>
         <MainContainer>
-          {BioData.slice(1).map((e, Bio, isReverseImg, Img, Titles) => (
+          {BioArray.slice(1).map((e, Bio) => (
             <Item
               key={Bio}
-              paragraph={e.Paragraph}
-              isReverseImg={e.isReverseImg}
-              img={e.Img}
-              titles={e.Titles}
+              bioparagraph={e.BioParagraph}
+              isreverseimg={e.isReverseImg}
+              bioimg={e.BioImg}
+              biotitle={e.BioTitle}
             />
           ))}
         </MainContainer>

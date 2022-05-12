@@ -111,27 +111,35 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
+                  to="/artnavigation"
+                >
+                  Tatuaje & +
+                </NavLinksTop>
+                {/* <NavLinksTop
+                  onClick={() => {
+                    setShow(!show);
+                  }}
                   to="/tatuajenavigation"
                 >
                   Tatuaje
-                </NavLinksTop>
+                </NavLinksTop> */}
 
-                <NavLinksTop
+                {/* <NavLinksTop
                   onClick={() => {
                     setShow(!show);
                   }}
                   to="/pinturanavigation"
                 >
                   Pintura
-                </NavLinksTop>
-                <NavLinksTop
+                </NavLinksTop> */}
+                {/* <NavLinksTop
                   onClick={() => {
                     setShow(!show);
                   }}
                   to="/plasticaymasnavigation"
                 >
                   Plastica & +
-                </NavLinksTop>
+                </NavLinksTop> */}
                 {/* <NavLinksTop
                   onClick={() => {
                     setShow(!show);
@@ -171,9 +179,10 @@ const NavBar = () => {
           <LinksContainer>
             <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
             <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
-            <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
+            <NavLinksTop to="/artnavigation">Tatuaje & +</NavLinksTop>
+            {/* <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
             <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
-            <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop>
+            <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop> */}
             {/* <NavLinksTop to="/">E-Shop</NavLinksTop> */}
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>

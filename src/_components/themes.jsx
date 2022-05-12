@@ -4,7 +4,7 @@ export const DarkTheme = {
   id: "DarkTheme",
   generalBackground: "#272A2D;",
   navbarBackground: "#2d2c2cd9;",
-  
+
   generalFont: "'Cairo', sans-serif;",
   navLinksFonts: "'Lato', sans-serif;",
 
@@ -15,7 +15,7 @@ export const DarkTheme = {
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#C5C5C5;",
-  generalTextFont:"'Lato', sans-serif;",
+  generalTextFont: "'Lato', sans-serif;",
 
   navigationLinksColor: "#ad9a72;",
   navigationLinksColorBack: "black;",
@@ -32,6 +32,7 @@ export const DarkTheme = {
   fillIcons: "#d1d1d1",
   hoverStrokeIcons: "#d1d1d1;",
   hoverFillIcons: "#a58959;",
+  hoverBox: "border: 1px solid #ad9a72;",
 };
 
 export const LightTheme = {
@@ -49,7 +50,7 @@ export const LightTheme = {
   sizeSubtitles: "1.2rem;",
 
   generalTextColor: "#0a0a0a;",
-  generalTextFont:"'Lato', sans-serif;",
+  generalTextFont: "'Lato', sans-serif;",
 
   navigationLinksColor: "#493f2b;",
   navigationLinksColorBack: "white;",
@@ -66,6 +67,7 @@ export const LightTheme = {
   fillIcons: "#d1d1d1;",
   hoverStrokeIcons: "#d1d1d1;",
   hoverFillIcons: "#a58959;",
+  hoverBox: "border: 1px solid #493f2b;",
 };
 
 export const GlobalStyles = createGlobalStyle`

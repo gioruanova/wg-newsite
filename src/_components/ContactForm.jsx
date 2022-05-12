@@ -1,12 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-
+import { isMobile } from "react-device-detect";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import emailjs from "emailjs-com";
-import { Titles } from "../_components/Styles";
-import { isMobile } from "react-device-detect";
 
+const Titles = styled.h1`
+  color: white;
+  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-family: ${(props) => props.theme.generalFont};
+  background-color: ${(props) => props.theme.mainTitlesColor};
+  text-transform: uppercase;
+  transition: 1s;
+  width: 100%;
+  border-radius: 0.2rem;
+`;
 const CheckboxContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -24,6 +32,13 @@ const Paragraphs = styled.p`
     word-spacing: 0.1rem;
     text-align:center;
     padding:0;
+`;
+
+const InputName = styled.label`
+  color: ${(props) => props.theme.generalTextColor};
+  width: 100%;
+  text-align: ${isMobile ? "center" : "center"};
+  transition: 0.5s;
 `;
 
 const MainContent = styled.div`
@@ -53,6 +68,7 @@ const FormContact = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 3rem 0 4rem 0;
 `;
 
 const InputContact = styled.input`
@@ -102,7 +118,7 @@ const InputContact2 = styled.textarea`
 
 const InputContactMessage = styled(InputContact2)`
   resize: none;
-  height: 12rem;
+  height: 16rem;
   margin-bottom: 1rem;
   transition: 1s;
   ::placeholder {
@@ -142,6 +158,7 @@ const GridForm = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   gap: ${isMobile ? "" : "1rem"};
+  margin-top: 1rem;
 `;
 
 AOS.init();
@@ -164,98 +181,102 @@ const ContactForm = () => {
       .catch((error) => alert("Error en el envio"));
   }
   return (
-    <MainContent>
+    <>
       <Titles>Contacto</Titles>
-      <Paragraphs>
-        Realiza tu consulta cotización, reserva de turnos, compra de obras,
-        clases de música, y suscribite al newsletter para participar de sorteos
-        y recibir novedades sobre exposiciones, eventos y más.
-      </Paragraphs>
-      <FormText>* campos mandatorios</FormText>
-      <FormContact id="form-contacto" onSubmit={sendEmail}>
-        <GridForm>
+      <MainContent>
+        <FormContact id="form-contacto" onSubmit={sendEmail}>
+          <Paragraphs>
+            Realiza tu consulta cotización, reserva de turnos, compra de obras,
+            clases de música, y suscribite al newsletter para participar de
+            sorteos y recibir novedades sobre exposiciones, eventos y más.
+          </Paragraphs>
+          <GridForm>
+            <div>
+              <div>
+                <InputName>Nombre</InputName>
+                <InputContact
+                  type="text"
+                  name="name"
+                  id="namecontact"
+                  placeholder="Nombre*"
+                  required
+                ></InputContact>
+              </div>
+
+              <div>
+                <InputName>Email</InputName>
+                <InputContact
+                  type="email"
+                  name="email"
+                  placeholder="E-Mail*"
+                  id="email"
+                  required
+                ></InputContact>
+              </div>
+              <div>
+                <InputName>Whatsapp</InputName>
+                <InputContact
+                  type="tel"
+                  name="whatsapp"
+                  placeholder="Whatsapp"
+                  id="phoneField"
+                ></InputContact>
+              </div>
+
+              <div>
+                <InputName>Tipo de consulta</InputName>
+                <InputContactdrill
+                  type="text"
+                  name="subject"
+                  id="subject"
+                  required
+                >
+                  <OptionField className="Special">
+                    Walter Gandini en vivo | 13/05 | Sorteo
+                  </OptionField>
+                  <OptionField className="Special">
+                    Turnos Semana Sailor | 13/05 - 20/05 |{" "}
+                  </OptionField>
+                  <OptionField>Clases de armónica</OptionField>
+                  <OptionField>Turnos Tattoo</OptionField>
+                  <OptionField>Musica</OptionField>
+                  <OptionField>Pintura</OptionField>
+                  <OptionField>Plastica</OptionField>
+                  <OptionField>Otros</OptionField>
+                </InputContactdrill>
+              </div>
+            </div>
+
+            <div>
+              <div>
+                <InputName>Mensaje</InputName>
+                <InputContactMessage
+                  rows="6"
+                  placeholder="Mensaje (recorda ingresar el código si se trata de alguna promo o evento)*"
+                  id="message"
+                  name="message"
+                  required
+                ></InputContactMessage>
+              </div>
+            </div>
+          </GridForm>
+          <CheckboxContainer>
+            <Checkbox
+              name="checkbox"
+              type="checkbox"
+              value="se ha solicitado la suscripcion al newsletter y"
+            ></Checkbox>
+            <FormText>Suscripción al newsletter </FormText>
+          </CheckboxContainer>
           <div>
-            <div>
-              <InputContact
-                type="text"
-                name="name"
-                id="namecontact"
-                placeholder="Nombre*"
-                required
-              ></InputContact>
-            </div>
-
-            <div>
-              <InputContact
-                type="email"
-                name="email"
-                placeholder="E-Mail*"
-                id="email"
-                required
-              ></InputContact>
-            </div>
-            <div>
-              <InputContact
-                type="tel"
-                name="whatsapp"
-                placeholder="Whatsapp"
-                id="phoneField"
-              ></InputContact>
-            </div>
-
-            <div>
-              <InputContactdrill
-                type="text"
-                name="subject"
-                id="subject"
-                required
-              >
-                <OptionField disabled selected>
-                  --Tipo de consulta--
-                </OptionField>
-                <OptionField className="Special">
-                  Walter Gandini en vivo | 13/05 | Sorteo
-                </OptionField>
-                <OptionField className="Special">
-                  Turnos Semana Sailor | 13/05 - 20/05 |
-                </OptionField>
-                <OptionField>Clases de armónica</OptionField>
-                <OptionField>Turnos Tattoo</OptionField>
-                <OptionField>Musica</OptionField>
-                <OptionField>Pintura</OptionField>
-                <OptionField>Plastica</OptionField>
-                <OptionField>Otros</OptionField>
-              </InputContactdrill>
-            </div>
+            <ButtonContact type="submit" value="Submit Form">
+              Enviar
+            </ButtonContact>
+            <FormText>* campos mandatorios</FormText>
           </div>
-
-          <div>
-            <div>
-              <InputContactMessage
-                rows="6"
-                placeholder="Mensaje (recorda ingresar el código si se trata de alguna promo o evento)*"
-                id="message"
-                name="message"
-                required
-              ></InputContactMessage>
-            </div>
-          </div>
-        </GridForm>
-        <CheckboxContainer>
-          <Checkbox
-            name="checkbox"
-            type="checkbox"
-            value="se ha solicitado la suscripcion al newsletter y"
-          ></Checkbox>
-          <FormText>Suscripción al newsletter </FormText>
-        </CheckboxContainer>
-        <div>
-          <ButtonContact type="submit" value="Submit Form">
-            Enviar
-          </ButtonContact>
-        </div>
-      </FormContact>
-    </MainContent>
+        </FormContact>
+      </MainContent>
+    </>
   );
 };
 
