@@ -19,6 +19,10 @@ const ContainerButtons = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  p {
+    text-align: center;
+  }
 `;
 
 const ContactButtons = styled.button`
@@ -51,7 +55,15 @@ transition:1s;
 text-align:justify;
 `;
 
-function Item({ paragraph, img, isReverseImg, titles, buyoption, urlbuy,sellername }) {
+function Item({
+  paragraph,
+  img,
+  isReverseImg,
+  titles,
+  buyoption,
+  urlbuy,
+  sellername,
+}) {
   const ContainerBio = styled.div`
     transition: 1s;
     display: flex;
@@ -78,8 +90,8 @@ function Item({ paragraph, img, isReverseImg, titles, buyoption, urlbuy,sellerna
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 19rem;
-    height: 19rem;
+    width: 100%;
+    height: 20rem;
     margin: 1rem;
     border-radius: 5px;
   `;
@@ -92,9 +104,16 @@ function Item({ paragraph, img, isReverseImg, titles, buyoption, urlbuy,sellerna
           <> {img && <ImgContainer img={img}></ImgContainer>}</>
           <> {paragraph && <Paragraphs>{paragraph}</Paragraphs>}</>
           {buyoption && (
-            <ExternalLinks href={urlbuy} target="_blank" rel="noreferrer" title={sellername}>
+            <ExternalLinks
+              href={urlbuy}
+              target="_blank"
+              rel="noreferrer"
+              title={sellername}
+            >
               <ContainerButtons>
-                <Paragraphs>Obras dispnibles en</Paragraphs>
+                <div>
+                  <Paragraphs>Obras disponibles en:</Paragraphs>
+                </div>
                 <ContactButtons>Buenos Aires Fine Arts</ContactButtons>
               </ContainerButtons>
             </ExternalLinks>
@@ -108,12 +127,19 @@ function Item({ paragraph, img, isReverseImg, titles, buyoption, urlbuy,sellerna
               <ParagraphsNavigation>{paragraph}</ParagraphsNavigation>
             )}
             {buyoption && (
-            <ExternalLinks href={urlbuy} target="_blank" rel="noreferrer" title={sellername}>
-            <ContainerButtons>
-              <Paragraphs>Obras dispnibles en</Paragraphs>
-              <ContactButtons>Buenos Aires Fine Arts</ContactButtons>
-            </ContainerButtons>
-          </ExternalLinks>
+              <ExternalLinks
+                href={urlbuy}
+                target="_blank"
+                rel="noreferrer"
+                title={sellername}
+              >
+                <ContainerButtons>
+                  <div>
+                    <Paragraphs>Obras disponibles en:</Paragraphs>
+                  </div>
+                  <ContactButtons>Buenos Aires Fine Arts</ContactButtons>
+                </ContainerButtons>
+              </ExternalLinks>
             )}
           </>
         </ContainerBio>

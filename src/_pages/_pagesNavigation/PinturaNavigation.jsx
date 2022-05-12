@@ -18,6 +18,10 @@ const ContainerButtons = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  p {
+    text-align: center;
+  }
 `;
 
 const ContactButtons = styled.button`
@@ -85,7 +89,7 @@ function Item({
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 19rem;
+    width: 100%;
     height: 19rem;
     margin: 1rem;
     border-radius: 5px;
@@ -106,7 +110,9 @@ function Item({
               title={sellername}
             >
               <ContainerButtons>
-                <Paragraphs>Obras dispnibles en</Paragraphs>
+              <div>
+                  <Paragraphs>Obras disponibles en:</Paragraphs>
+                </div>
                 <ContactButtons>Buenos Aires Fine Arts</ContactButtons>
               </ContainerButtons>
             </ExternalLinks>
@@ -128,7 +134,9 @@ function Item({
               title={sellername}
             >
               <ContainerButtons>
-                <Paragraphs>Obras dispnibles en</Paragraphs>
+              <div>
+                  <Paragraphs>Obras disponibles en:</Paragraphs>
+                </div>
                 <ContactButtons>Buenos Aires Fine Arts</ContactButtons>
               </ContainerButtons>
             </ExternalLinks>

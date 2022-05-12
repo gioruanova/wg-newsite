@@ -24,7 +24,7 @@ const BioContainer = styled.div`
   margin-bottom: 3rem;
 `;
 
-const BioTextContainer = styled.div`
+const TatooTextContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${isMobile ? "" : "0 2rem 0 2rem;"} p {
@@ -34,11 +34,11 @@ const BioTextContainer = styled.div`
   ${isMobile ? "grid-row: 3;" : ""}
 `;
 
-export const Titles = styled.h1`
+const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-size: ${(props) => props.theme.sizeMaintTitles};
   font-family: ${(props) => props.theme.generalFont};
-  margin: 0 0 2rem 0;
+  margin: 0 0 4rem 0;
   text-transform: uppercase;
   transition: 1s;
 `;
@@ -62,14 +62,14 @@ function Item({ paragraph, img, titles, studiotitle }) {
   return (
     <BioContainer>
       {img && <ImgContainer img={img}></ImgContainer>}
-      <BioTextContainer>
+      <TatooTextContainer>
         <>
           <Titles>{titles}</Titles>
         </>
         <StudioTitle>{studiotitle}</StudioTitle>
 
         <Paragraphs>{paragraph}</Paragraphs>
-      </BioTextContainer>
+      </TatooTextContainer>
     </BioContainer>
   );
 }

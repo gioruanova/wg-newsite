@@ -14,7 +14,7 @@ import { PlasticaData } from "../_components/Messages";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-const BioContainer = styled.div`
+const PlasticaContainer = styled.div`
   display: grid;
   ${isMobile
     ? "grid-template-row: 9fr 4fr 1fr;"
@@ -25,7 +25,7 @@ const BioContainer = styled.div`
   margin-bottom: 3rem;
 `;
 
-const BioTextContainer = styled.div`
+const PlasticaTextContainer = styled.div`
   padding: ${isMobile ? "" : "0 2rem;"} p {
 
   }
@@ -51,15 +51,15 @@ function Item({ paragraph, img, titles }) {
     ${isMobile ? "grid-row: 2;" : ""}
   `;
   return (
-    <BioContainer>
+    <PlasticaContainer>
       <TitleContainerBox>
         <Titles>{titles}</Titles>
       </TitleContainerBox>
       <ImgContainer img={img}></ImgContainer>
-      <BioTextContainer>
+      <PlasticaTextContainer>
         <Paragraphs>{paragraph}</Paragraphs>
-      </BioTextContainer>
-    </BioContainer>
+      </PlasticaTextContainer>
+    </PlasticaContainer>
   );
 }
 

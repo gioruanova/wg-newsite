@@ -17,16 +17,21 @@ const ContainerButtons = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
+  p {
+    text-align: center;
+  }
 `;
 
 const ContactButtons = styled.button`
   width: 10rem;
   height: auto;
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
   padding: 0.5rem;
   background-color: ${(props) => props.theme.backgroundButtons};
   font-family: ${(props) => props.theme.generalTextFont};
   color: ${(props) => props.theme.textButtonsColor};
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   border: none;
   border-radius: 0.4rem;
   text-transform: uppercase;
@@ -279,6 +284,14 @@ const MusicaNavigation = () => {
       </>
       <ContainerButtons>
         <InternalLinks to="/contactnavigation">
+          <div>
+            {" "}
+            <Paragraphs>
+              Comenza tus clases y obtene importantes beneficios con el código
+              {"   "}
+              <b>JediBluesMaster</b>
+            </Paragraphs>
+          </div>
           <ContactButtons>Reserva tu clase</ContactButtons>
         </InternalLinks>
       </ContainerButtons>

@@ -34,6 +34,7 @@ const ContactButtons = styled.button`
   border-radius: 0.4rem;
   text-transform: uppercase;
   transition: 400ms;
+  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
   &:hover {
     cursor: pointer;
     background-color: ${(props) => props.theme.colorLines};
@@ -79,7 +80,7 @@ function Item({ paragraph, img, isReverseImg, titles, studiotitle }) {
     background-repeat: no-repeat;
     background-size: cover;
     border-color: none;
-    width: 19rem;
+    width: 20rem;
     height: 19rem;
     margin: 1rem;
     border-radius: 5px;
