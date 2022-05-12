@@ -10,41 +10,19 @@ import ArtSection from "./ArtSection";
 import Contacto from "./Contacto";
 import Marcas from "./Marcas";
 
-// import Musica from "./Musica";
-// import Tatuaje from "./Tatuaje";
-
-// import Pintura from "./Pintura";
-// import PlasticaYMas from "./PlasticaYMas";
 // import Eshop from "./Eshop";
-
-
-
 
 const Home = () => {
   return (
     <MainContentHome>
       <Content>
         <Header />
-   
         <ProximosEventos />
-
         <Bio />
-        
-        <ArtSection/>
-        {/* <Separator />
-        <Musica />
-        <Separator />
-        <Tatuaje />
-        <Separator />
-        <Pintura />
-        <Separator />
-        <PlasticaYMas />
-        <Separator />
-        <Eshop />
-        <Separator /> */}
+        <ArtSection />
         <Contacto />
         <Separator />
-        <Marcas/>
+        <Marcas />
       </Content>
     </MainContentHome>
   );

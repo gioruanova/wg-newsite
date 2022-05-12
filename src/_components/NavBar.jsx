@@ -115,31 +115,7 @@ const NavBar = () => {
                 >
                   Tatuaje & +
                 </NavLinksTop>
-                {/* <NavLinksTop
-                  onClick={() => {
-                    setShow(!show);
-                  }}
-                  to="/tatuajenavigation"
-                >
-                  Tatuaje
-                </NavLinksTop> */}
 
-                {/* <NavLinksTop
-                  onClick={() => {
-                    setShow(!show);
-                  }}
-                  to="/pinturanavigation"
-                >
-                  Pintura
-                </NavLinksTop> */}
-                {/* <NavLinksTop
-                  onClick={() => {
-                    setShow(!show);
-                  }}
-                  to="/plasticaymasnavigation"
-                >
-                  Plastica & +
-                </NavLinksTop> */}
                 {/* <NavLinksTop
                   onClick={() => {
                     setShow(!show);
@@ -180,9 +156,7 @@ const NavBar = () => {
             <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
             <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
             <NavLinksTop to="/artnavigation">Tatuaje & +</NavLinksTop>
-            {/* <NavLinksTop to="/tatuajenavigation">Tatuaje</NavLinksTop>
-            <NavLinksTop to="/pinturanavigation">Pintura</NavLinksTop>
-            <NavLinksTop to="/plasticaymasnavigation">Plastica & +</NavLinksTop> */}
+
             {/* <NavLinksTop to="/">E-Shop</NavLinksTop> */}
             <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
           </LinksContainer>

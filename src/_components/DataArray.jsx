@@ -223,8 +223,10 @@ export const MusicArray = [
 export const GalleryArray = [
   {
     ImgMain: ArtGalleryImg,
-    ArtGalleryParagraph: "lalalalallalala",
-    GAlleryTitle: "Galeria de trabajos",
+    ArtGalleryParagraph:
+      "Otro aspecto de su formación es su trabajo en la pintura, plastica y tatuaje. A lo largo de los años ha desarrollado un arte propio en estas 3 areas, siendo destacable y reconocido su estilo y tipo de trabajo. Impulsado principalmente por el arte oriental y tatmbien tradicional, ha logrado la fusion artistica de estos 2 estilos generando su  propia marca e identidad en el arte que plasma en cada obra. ",
+    GAlleryTitle: "Tatuaje, Pintura & +",
+    StudioTitle: "Ganesha Art Tattoo Studio",
   },
   {
     GalleryImg: GallerySample1,

@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import { GalleryArray } from "../DataArray";
 
-
 // ------------------------------------------------------------
 
 function Item({ galleryartimg }) {
@@ -17,11 +16,15 @@ function Item({ galleryartimg }) {
     width: 100%;
     height: 10rem;
     border-radius: 5px;
-    cursor: pointer;
+    margin-top: 2rem;
   `;
 
   return (
-    <>{galleryartimg && <ImgContainer galleryartimg={galleryartimg}></ImgContainer>}</>
+    <>
+      {galleryartimg && (
+        <ImgContainer galleryartimg={galleryartimg}></ImgContainer>
+      )}
+    </>
   );
 }
 

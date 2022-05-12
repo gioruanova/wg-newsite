@@ -100,11 +100,6 @@ const Footer = () => {
               <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
               <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
               <NavLinksFooter to="/artnavigation">Tatuaje & +</NavLinksFooter>
-              {/* <NavLinksFooter to="/tatuajenavigation">Tatuaje</NavLinksFooter>
-              <NavLinksFooter to="/pinturanavigation">Pintura</NavLinksFooter>
-              <NavLinksFooter to="/plasticaymasnavigation">
-                Plastica & +
-              </NavLinksFooter> */}
               {/* <NavLinksFooter to="/">E-Shop</NavLinksFooter> */}
               <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
             </>
