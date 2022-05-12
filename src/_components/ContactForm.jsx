@@ -36,6 +36,8 @@ const Paragraphs = styled.p`
 
 const InputName = styled.label`
   color: ${(props) => props.theme.generalTextColor};
+  font-family: ${(props) => props.theme.generalTextFont};
+  font-size: ${isMobile ? "0.7rem;" : "0.8rem;"}
   width: 100%;
   text-align: ${isMobile ? "center" : "center"};
   transition: 0.5s;
@@ -72,6 +74,8 @@ const FormContact = styled.form`
 `;
 
 const InputContact = styled.input`
+  font-family: ${(props) => props.theme.generalTextFont};
+  font-size: ${isMobile ? "0.7rem;" : "0.8rem;"}
   width: 100%;
   margin: 0.5rem 0;
   border: none;
@@ -94,6 +98,7 @@ const Checkbox = styled.input`
 
 const InputContactdrill = styled.select`
   background-color: white !important;
+  font-size: ${isMobile ? "0.7rem;" : "0.8rem;"}
   width: 100%;
   height: 35px;
   margin: 0.5rem 0;
@@ -109,6 +114,8 @@ const InputContactdrill = styled.select`
 `;
 
 const InputContact2 = styled.textarea`
+  font-family: ${(props) => props.theme.generalTextFont};
+  font-size: ${isMobile ? "0.7rem;" : "0.8rem;"}
   width: ${isMobile ? "100%" : "20rem"};
   margin: 0.5rem 0 0 0;
   border: none;
