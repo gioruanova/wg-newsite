@@ -4,24 +4,23 @@ import Box from "../_components/Box";
 import styled from "styled-components";
 
 import { EventsArray } from "../_components/DataArray";
+import { isMobile } from "react-device-detect";
 
 export const Titles = styled.h1`
   color: white;
-  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-size: ${isMobile ? "1.5rem" : "1.8rem"};
   font-family: ${(props) => props.theme.generalFont};
   background-color: ${(props) => props.theme.mainTitlesColor};
   text-transform: uppercase;
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 `;
 
 function Item({ title }) {
-  return (
-    <>
-      <Titles>{title}</Titles>
-    </>
-  );
+  return <>{title && <Titles>{title}</Titles>}</>;
 }
 
 const ProximosEventos = () => {

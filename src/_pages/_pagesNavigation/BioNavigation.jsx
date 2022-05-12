@@ -14,13 +14,15 @@ import Redes from "../../_components/Redes";
 
 export const Titles = styled.h1`
   color: white;
-  font-size: ${(props) => props.theme.sizeMaintTitles};
+  font-size: ${isMobile ? "1.5rem" : "1.8rem"};
   font-family: ${(props) => props.theme.generalFont};
   background-color: ${(props) => props.theme.mainTitlesColor};
   text-transform: uppercase;
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 `;
 
 function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {

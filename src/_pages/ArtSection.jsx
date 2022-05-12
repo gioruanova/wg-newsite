@@ -50,6 +50,8 @@ const Titles = styled.h1`
   transition: 400ms;
   width: ${isMobile ? "100%" : "85%"};
   border-radius: 0.2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 `;
 
 const Paragraphs = styled.p`

@@ -35,6 +35,8 @@ const Titles = styled.h1`
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
 `;
 
 export const StudioTitle = styled.h2`
@@ -45,6 +47,7 @@ export const StudioTitle = styled.h2`
   margin: 0 0 1rem 0;
   text-align: center;
   transition: 1s;
+
 `;
 
 AOS.init();
