@@ -6,13 +6,16 @@ import "aos/dist/aos.css";
 import Icons from "../_components/Icons";
 import { ExternalLinks } from "../_components/Styles";
 
-const SeparadorBanner = styled.h1`
+const SeparadorBanner = styled.div`
   color: ${(props) => props.theme.mainTitlesColor};
+  &:hover {
+    color: white;
+  }
+  transition: 400ms;
   font-size: ${isMobile ? "1rem" : "1.8rem"};
   font-family: ${(props) => props.theme.generalFont};
   background-color: #5b5b5b85;
   text-transform: initial;
-  
   width: 100%;
   height: 5rem;
   border-radius: 05rem;
@@ -21,14 +24,12 @@ const SeparadorBanner = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 1s;
+  border: 0px solid;
+  transition: 400ms;
   &:hover {
-    border: 1px solid ${(props) => props.theme.hooverLinks};
-    h1 {
-      color: ${(props) => props.theme.hooverLinks};
-    }
+    border: 2px solid ${(props) => props.theme.hooverLinks};
+  }
   &:hover {
-
     svg {
       stroke: ${(props) => props.theme.hoverStrokeIcons};
     }
