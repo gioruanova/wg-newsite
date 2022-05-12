@@ -85,7 +85,7 @@ const Pintura = () => {
             />
           ))}
         </div>
-        <InternalLinks to="/pinturanavigation"> Ver Mas{" >"} </InternalLinks>
+        <InternalLinks to="/pinturanavigation"> Ver Más{" >"} </InternalLinks>
       </Content>
     </div>
   );

@@ -37,7 +37,7 @@ export default function Box({ title, content, children, show }) {
           </div>
 
           <ContactButtons onClick={() => setCollapsed(!collapsed)}>
-            {(collapsed && <> Ver Menos{" >"} </>) || <> Ver Mas{" >"} </>}
+            {(collapsed && <> Ver Menos{" >"} </>) || <> Ver Más{" >"} </>}
           </ContactButtons>
         </>
       )}

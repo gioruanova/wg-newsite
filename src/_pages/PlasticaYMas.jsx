@@ -86,7 +86,7 @@ const PlasticaYMas = () => {
         </div>
         <InternalLinks to="/plasticaymasnavigation">
           {" "}
-          Ver Mas{" >"}{" "}
+          Ver Más{" >"}{" "}
         </InternalLinks>
       </Content>
     </div>

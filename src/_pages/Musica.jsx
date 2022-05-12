@@ -85,7 +85,7 @@ const Musica = () => {
             />
           ))}
         </div>
-        <InternalLinks to="/musicanavigation"> Ver Mas{" >"} </InternalLinks>
+        <InternalLinks to="/musicanavigation"> Ver Más{" >"} </InternalLinks>
       </Content>
     </div>
   );

@@ -71,7 +71,7 @@ function Item({ titles, bioimg, bioparagraph, nombre }) {
 
         <Paragraphs>{bioparagraph}</Paragraphs>
       </BioContainer>
-      <InternalLinks to="/bionavigation"> Ver Mas{" >"} </InternalLinks>
+      <InternalLinks to="/bionavigation"> Ver Más{" >"} </InternalLinks>
     </Container>
   );
 }

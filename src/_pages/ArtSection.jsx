@@ -85,7 +85,7 @@ function Item({ arttitle, artimg, artparagraph, urlnav }) {
         <Titles>{arttitle}</Titles>
         <ImgContainer img={artimg} />
         <Paragraphs>{artparagraph}</Paragraphs>
-        Ver Mas{" >"}
+        Ver Más{" >"}
       </ContainerCard>
     </InternalLinks>
   );

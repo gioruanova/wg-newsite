@@ -97,7 +97,7 @@ const Tatuaje = () => {
           ))}
         </div>
 
-        <InternalLinks to="/tatuajenavigation"> Ver Mas{" >"} </InternalLinks>
+        <InternalLinks to="/tatuajenavigation"> Ver Más{" >"} </InternalLinks>
       </Content>
     </div>
   );
