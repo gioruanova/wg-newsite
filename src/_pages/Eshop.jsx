@@ -28,21 +28,6 @@ export const Paragraphs = styled.p`
     
 `;
 
-const TitleContainer1 = styled.div`
-text-align: center
-line-height: 2.5rem;
-${isMobile ? "" : "letter-spacing: 1.2rem;"}
-    h1 {
-    color: ${(props) => props.theme.mainTitlesColor};
-    font-size: ${isMobile ? "2rem" : "2.5rem;"}
-    font-family: ${(props) => props.theme.generalTextFont};
-    margin: 0;
-    text-transform: uppercase;
-    transition: 1s;
-    text-align: center;
-      }
-`;
-
 AOS.init();
 
 function Item({ img }) {
@@ -81,9 +66,9 @@ const Eshop = () => {
       data-aos-once="true"
     >
       <Content>
-        <TitleContainer1>
+        <>
           <Titles>E-Shop</Titles>
-        </TitleContainer1>
+        </>
 
         <div>
           {EshopArray.slice(RandomNumber2, RandomNumber).map(

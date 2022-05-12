@@ -43,20 +43,6 @@ export const Titles = styled.h1`
   transition: 1s;
 `;
 
-const TitleContainer1 = styled.div`
-  justify-content: center;
-  text-align: ${isMobile ? "center" : "start"};
-    line-height: 2.5rem;
-  letter-spacing: 1.2rem;
-  ${isMobile ? "" : "letter-spacing: 1.2rem;"}
-
-  h1 {
-    color: ${(props) => props.theme.mainTitlesColor};
-    font-size: ${isMobile ? "2rem" : "2.5rem;"}
-    font-family: ${(props) => props.theme.generalFont};
-    text-transform: uppercase;
-    transition: 1s;`;
-
 AOS.init();
 
 function Item({ paragraph, img, titles, studiotitle }) {
@@ -77,9 +63,9 @@ function Item({ paragraph, img, titles, studiotitle }) {
     <BioContainer>
       {img && <ImgContainer img={img}></ImgContainer>}
       <BioTextContainer>
-        <TitleContainer1>
+        <>
           <Titles>{titles}</Titles>
-        </TitleContainer1>
+        </>
         <StudioTitle>{studiotitle}</StudioTitle>
 
         <Paragraphs>{paragraph}</Paragraphs>

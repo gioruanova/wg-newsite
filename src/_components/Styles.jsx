@@ -55,7 +55,7 @@ export const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-size: ${(props) => props.theme.sizeMaintTitles};
   font-family: ${(props) => props.theme.generalFont};
-  margin: 0 0 2rem 0;
+  margin: ${isMobile ? "0 0 4rem 0;" : "0 0 2rem 0;"}
   text-transform: uppercase;
   transition: 1s;
 `;
@@ -99,6 +99,25 @@ text-align:justify;
 line-height: 1.5rem;
 word-break: break-word;
 word-spacing: 0.1rem;
+`;
+
+export const TitleContainerBox = styled.div`
+  justify-content: center;
+  text-align: ${isMobile ? "center" : "start"};
+  transform: ${isMobile ? "" : "rotate(-90deg);"}
+  line-height: 2.5rem;
+  ${isMobile ? "" : "letter-spacing: 1.2rem;"}
+  
+  h1 {
+    color: ${(props) => props.theme.mainTitlesColor};
+    font-family: ${(props) => props.theme.generalTextFont};
+    font-size: ${isMobile ? "2rem" : "2.5rem;"}
+    font-family: ${(props) => props.theme.generalFont};
+    margin: ${isMobile ? "0 0 4rem 0;" : "0 0 2rem 0;"}
+    text-transform: uppercase;
+    transition: 1s;
+    
+  }
 `;
 
 // -------------------------LINKS-------------------------
