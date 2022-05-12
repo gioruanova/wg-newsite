@@ -79,7 +79,7 @@ function Item({ titles, bioimg, bioparagraph, nombre }) {
 const Bio = () => {
   return (
     <div
-      data-aos="fade-left"
+      data-aos="fade-in"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"

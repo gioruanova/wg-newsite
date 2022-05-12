@@ -26,12 +26,19 @@ function Item({ title }) {
 
 const ProximosEventos = () => {
   return (
-    <>
+    <div
+      data-aos="fade-left"
+      data-aos-offset="200"
+      data-aos-delay="100"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
       {EventsArray.map((e, Eventos) => (
         <Item key={Eventos} title={e.Title} />
       ))}
       <Box content={EventosList} button />
-    </>
+    </div>
   );
 };
 

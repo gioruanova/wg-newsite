@@ -9,7 +9,7 @@ AOS.init();
 const Contacto = () => {
   return (
     <div
-      data-aos="fade-right"
+      data-aos="fade-left"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"

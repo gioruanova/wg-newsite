@@ -133,7 +133,7 @@ function Item({
 
 const ProximosEventos = ({ show }) => {
   return (
-    <div className="animate__animated animate__fadeIn animate__delay-0.5s">
+    <div className="animate__animated animate__fadeIn animate__delay-1s">
       {(show && (
         <GridEventos>
           {EventsArray.map((e, Eventos) => (

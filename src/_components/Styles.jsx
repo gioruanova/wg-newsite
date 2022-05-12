@@ -211,7 +211,7 @@ const ContaininerRightPanel = styled.div`
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: ${isMobile ? " 30rem;" : "55rem;"}
+  top: ${isMobile ? " 30rem;" : "60rem;"}
   right: 0rem;
   border-radius: 15px;
   transition: 1s;

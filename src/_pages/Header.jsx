@@ -117,7 +117,7 @@ function Item({
 const Header = () => {
   return (
     <div
-      data-aos="fade-rightt"
+      data-aos="fade-in"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"
