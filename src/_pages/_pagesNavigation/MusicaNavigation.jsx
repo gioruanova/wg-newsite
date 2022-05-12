@@ -11,8 +11,9 @@ import Redes from "../../_components/Redes";
 
 // ------------------------------------------------------------
 
-export const Titles = styled.h1`
+const Titles = styled.h1`
   color: white;
+  transition: 1s;
   font-size: ${(props) => props.theme.sizeMaintTitles};
   font-family: ${(props) => props.theme.generalFont};
   background-color: ${(props) => props.theme.mainTitlesColor};
@@ -20,6 +21,10 @@ export const Titles = styled.h1`
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
+`;
+
+const BandMembersName = styled(Titles)`
+  border-radius: 0rem;
 `;
 
 const ContainerButtons = styled.div`
@@ -67,8 +72,8 @@ font-size: ${isMobile ? "0.8rem;" : "1rem;"}
 font-family: ${(props) => props.theme.generalTextFont};
 font-weight: 400;  
 margin: 0 1rem 1rem 1rem;
-transition:1s;
 text-align:justify;
+transition: 1s;
 `;
 
 export const Paragraphs = styled.p`
@@ -156,7 +161,7 @@ function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
     height: 10rem;
     margin: 1rem;
     border-radius: 5px;
-    filter: grayscale(1);
+    filter: sepia(0.7);
   `;
 
   return (
@@ -186,7 +191,7 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
     border-radius: 0.5rem;
     margin: 1rem;
     height: 100%;
-    filter: grayscale(1);
+
     transition: 400ms;
     h2 {
       transition: 40ms;
@@ -212,6 +217,10 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
     width: 100%;
     height: 15rem;
     border-radius: 5px 5px 0 0;
+    filter: sepia(0.9);
+    &:hover {
+      filter: none;
+    }
   `;
 
   const HashContainer = styled.h2`
@@ -242,7 +251,7 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
                 <HashContainer>{hash}</HashContainer>
               </ImgContainer>
             )}
-            {name && <Titles>{name}</Titles>}
+            {name && <BandMembersName>{name}</BandMembersName>}
             {paragraphmember && (
               <ParagraphsCards>{paragraphmember}</ParagraphsCards>
             )}

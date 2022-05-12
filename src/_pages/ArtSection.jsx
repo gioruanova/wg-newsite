@@ -24,12 +24,14 @@ const ContainerCard = styled.div`
   flex-direction: column;
   align-items: center;
   transition: 400ms;
-  
 
   &:hover {
     cursor: pointer;
+
     div {
       filter: none;
+      box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
+        rgb(48 48 48 / 93%) 2px 2px 9px;
     }
     h1 {
       background-color: ${(props) => props.theme.generalBackground};
