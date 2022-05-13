@@ -58,7 +58,7 @@ const BannerSeparator = () => {
         >
           <SeparadorBanner>
             {" "}
-            Convertite en Sponsor en Patreon
+            Se Sponsor en Patreon
             <Icons name="patreon" />
           </SeparadorBanner>
         </ExternalLinks>
