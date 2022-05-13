@@ -41,6 +41,11 @@ const HeaderContainer = styled.div`
   align-items: center;
 `;
 
+const HeaderContainerMobile = styled.div`
+  margin: 2rem 0 2rem 0;
+
+`;
+
 AOS.init();
 function Item({
   title1,
@@ -70,13 +75,13 @@ function Item({
       
       {isMobile ? (
         <>
-          <div>
+          <HeaderContainerMobile>
             {" "}
             <Titles>{title1}</Titles>
             <Titles>
               <b>{title2}</b>
             </Titles>
-          </div>
+          </HeaderContainerMobile>
 
           <HeaderContainer>
             <TitlesContainer>
