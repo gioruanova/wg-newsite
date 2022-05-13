@@ -67,7 +67,7 @@ function Item({
 
   return (
     <>
-      $
+      
       {isMobile ? (
         <>
           <div>
