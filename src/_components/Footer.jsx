@@ -19,20 +19,21 @@ const FooterContainer = styled.div`
   color: ${(props) => props.theme.navigationLinksColor};
   top: 0;
   width: auto;
-  padding: 1.5rem 0;
+
   flex-wrap: wrap;
   font-weight: bold;
-  background: ${(props) => props.theme.navbarBackground};
+  
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(104, 104, 104, 0.31);
-  background: rgba(104, 104, 104, 0.26);
+  background: ${(props) => props.theme.navbarBackground};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-top: 1px solid ${(props) => props.theme.colorLines};
   padding: ${isMobile ? "3rem 2rem;" : "3rem 20rem;"};
+  padding: 1.5rem 15rem 1rem 15rem;
 `;
 
 const LogoContainer = styled.div`

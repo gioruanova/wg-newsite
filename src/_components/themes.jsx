@@ -38,7 +38,7 @@ export const DarkTheme = {
 export const LightTheme = {
   id: "LightTheme",
   generalBackground: "#c0c0c0;",
-  navbarBackground: "#a6a6a630;",
+  navbarBackground: "#cbc8c8d4;",
 
   generalFont: "'Cairo', sans-serif;",
   navLinksFonts: "'Lato', sans-serif;",

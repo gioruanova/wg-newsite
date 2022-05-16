@@ -13,18 +13,16 @@ const NavBarContainer = styled.div`
   ${isMobile ? "" : "gap: 2rem;"}
   align-items: ${isMobile ? "self-start" : "center"};
   width: 100%;
-  background-color: white;
   height: auto;
   color: ${(props) => props.theme.navigationLinksColor};
-  padding: 1rem 1rem;
+
   // Background
-  background: ${(props) => props.theme.navbarBackground};
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 1px solid ${(props) => props.theme.colorLines};
   /* From https://css.glass */
-  background: rgba(33, 33, 33, 0.26);
+  background: ${(props) => props.theme.navbarBackground};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11px);
   -webkit-backdrop-filter: blur(5px);
@@ -33,6 +31,7 @@ const NavBarContainer = styled.div`
   left: 0rem;
   z-index: 9999;
   transition: 1s;
+  padding: 1rem 15rem 1rem 15rem;
 `;
 
 const RedesMobile = styled.div`
