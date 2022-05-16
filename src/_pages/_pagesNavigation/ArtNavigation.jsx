@@ -70,7 +70,7 @@ function Item({
     background-size: cover;
     border-color: none;
     width: 100%;
-    height: 25rem;
+    height: 20rem;
     border-radius: 5px;
     filter: sepia(0.8);
     margin: 1rem 0;

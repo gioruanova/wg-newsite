@@ -68,7 +68,7 @@ function Item({ titles, bioimg, bioparagraph, urlnav, urlnavigation }) {
     display: flex;
     flex-direction: column;
     align-items: ${isMobile ? "center" : "baseline"};
-    gap: ${isMobile ? "2rem" : "4rem"};
+    gap: 2rem;
   `;
 
   return (
