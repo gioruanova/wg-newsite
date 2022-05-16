@@ -2,14 +2,17 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import { MusicArray } from "../../_components/DataArray";
-import {
-  MainContent,
-  ContainerRedesFootParagraph,
-  InternalLinks,
-} from "../../_components/Styles";
+import { MainContent, InternalLinks } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
+import BandMemberArray from "../../_components/_helpers/BandMemberArray";
+
+import MultimediaContent from "../../_components/_helpers/MultimediaContent";
 
 // ------------------------------------------------------------
+
+const ContainerRedesFootParagraph = styled.div`
+  margin: 2rem 0;
+`;
 
 const Titles = styled.h1`
   color: white;
@@ -21,12 +24,8 @@ const Titles = styled.h1`
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 2rem 0;
   padding: 0.5rem;
-`;
-
-const BandMembersName = styled(Titles)`
-  border-radius: 0rem;
 `;
 
 const ContainerButtons = styled.div`
@@ -34,9 +33,19 @@ const ContainerButtons = styled.div`
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   p {
     text-align: center;
+    color: ${(props) => props.theme.navigationLinksColor};
+  }
+  &:hover {
+    p {
+      color: ${(props) => props.theme.hooverLinks};
+    }
+    button {
+      cursor: pointer;
+      background-color: ${(props) => props.theme.colorLines};
+    }
   }
 `;
 
@@ -53,86 +62,31 @@ const ContactButtons = styled.button`
   border-radius: 0.4rem;
   text-transform: uppercase;
   transition: 400ms;
-  &:hover {
-    cursor: pointer;
-    background-color: ${(props) => props.theme.colorLines};
-  }
+  
   &:active {
     background-color: white;
   }
+  
 `;
 
-const ExternalLinks = styled.a`
-  color: ${(props) => props.theme.textButtonsColor};
-  text-decoration: none;
-  font-family: ${(props) => props.theme.generalTextFont};
-`;
-
-export const ParagraphsCards = styled.p`
-color: ${(props) => props.theme.generalTextColor};
-font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-font-family: ${(props) => props.theme.generalTextFont};
-font-weight: 400;  
-margin: 0 1rem 1rem 1rem;
-text-align:justify;
-transition: 1s;
-`;
-
-export const Paragraphs = styled.p`
+const Paragraphs = styled.p`
 color: ${(props) => props.theme.generalTextColor};
 font-size: ${isMobile ? "0.8rem;" : "1rem;"}
 font-family: ${(props) => props.theme.generalFont};
 font-weight: 400;  
 transition:1s;
 text-align:justify;
+
 `;
 
-const ContainerMultimedia = styled.div`
-  display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin: 2rem 0;
-`;
-const MultimediaSpotify = styled.div`
-  flex-direction: column;
-  display: flex;
-  gap: ${isMobile ? "" : "5rem"};
-`;
-
-const SpotifyFrame = styled.iframe`
-  border-radius: 1rem 0 1rem 0;
-  border: none;
-  margin: 1rem 1rem;
-  transition: 0.5s;
-  width: 15rem;
-  &:hover {
-    box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
-      rgb(48 48 48 / 93%) 2px 2px 9px;
-    cursor: pointer;
-  }
-`;
-const MultimediaYouTube = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`;
-
-const YoutubeFrame = styled.iframe`
-  margin-top: 0 !important;
-  border: none;
-  border-radius: 1rem 0 1rem 0;
-  margin: 1rem;
-  transition: 0.5s;
-
-  &:hover {
-    box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
-      rgb(48 48 48 / 93%) 2px 2px 9px;
-  }
-`;
-
-function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
+function MainMusicBio({
+  paragraph,
+  img,
+  isReverseImg,
+  titles,
+  musicsubtitle1,
+  musicsubtitle2,
+}) {
   const ContainerBio = styled.div`
     transition: 1s;
     display: flex;
@@ -140,6 +94,7 @@ function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
     ${isReverseImg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
     justify-content:center;
     width: 100%;
+    gap: 1rem;
   `;
 
   const ContainerBioResponsive = styled.div`
@@ -150,6 +105,7 @@ function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
     justify-content: center;
     width: 100%;
     height: 100%;
+    gap: 1rem;
   `;
 
   const ImgContainer = styled.div`
@@ -161,7 +117,7 @@ function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
     border-color: none;
     width: 100%;
     height: 10rem;
-    margin: 1rem;
+    margin: 1rem 0;
     border-radius: 5px;
     filter: sepia(0.7);
   `;
@@ -180,86 +136,8 @@ function MainMusicBio({ paragraph, img, isReverseImg, titles }) {
           {img && <ImgContainer img={img}></ImgContainer>}
         </ContainerBio>
       )}
-    </>
-  );
-}
-
-function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
-  const MemberCards = styled.div`
-    display: flex;
-    flex-direction: column;
-    width: ${isMobile ? "auto" : "20rem"};
-    border: 2px solid ${(props) => props.theme.colorLines};
-    border-radius: 0.5rem;
-    margin: 1rem;
-    height: 100%;
-
-    transition: 400ms;
-    h2 {
-      transition: 40ms;
-      visibility: hidden;
-    }
-    &:hover {
-      box-shadow: rgb(57 57 57 / 49%) 13px 12px 9px,
-        rgb(48 48 48 / 93%) 2px 2px 9px;
-      filter: none;
-      h2 {
-        visibility: inherit;
-      }
-    }
-  `;
-
-  const ImgContainer = styled.div`
-    transition: 400ms;
-    background-image: url(${memberimg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-color: none;
-    width: 100%;
-    height: 15rem;
-    border-radius: 5px 5px 0 0;
-    filter: sepia(0.9);
-    &:hover {
-      filter: none;
-    }
-  `;
-
-  const HashContainer = styled.h2`
-  transition: 400ms;
-    margin: 0;
-    color: ${(props) => props.theme.textButtonsColor};
-    font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-    font-family: ${(props) => props.theme.generalFont};
-    text-align: initial;
-    padding-left: 0.5rem;
-    background-color: ${(props) => props.theme.colorLines};
-    
-  `;
-
-  return (
-    <>
-      <>
-        <ExternalLinks
-          href={instagram}
-          rel="noreferrer"
-          target="_blank"
-          title="Instagram"
-          aria-label="Instagram"
-        >
-          <MemberCards>
-            {ImgContainer && (
-              <ImgContainer img={memberimg}>
-                <HashContainer>{hash}</HashContainer>
-              </ImgContainer>
-            )}
-            {name && <BandMembersName>{name}</BandMembersName>}
-            {paragraphmember && (
-              <ParagraphsCards>{paragraphmember}</ParagraphsCards>
-            )}
-          </MemberCards>
-        </ExternalLinks>
-      </>
+      {musicsubtitle1 && <Titles>{musicsubtitle1}</Titles>}
+      {musicsubtitle2 && <Titles>{musicsubtitle2}</Titles>}
     </>
   );
 }
@@ -271,6 +149,7 @@ const MusicaNavigation = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
   `;
 
   const ContainerMemberCards = styled.div`
@@ -280,10 +159,10 @@ const MusicaNavigation = () => {
   `;
 
   return (
-    <MainContent className="animate__animated animate__fadeIn animate__slower">
+    <MainContent className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
       <>
         <MainContainer>
-          {MusicArray.slice(1).map((e, MusicParagraph) => (
+          {MusicArray.map((e, MusicParagraph) => (
             <MainMusicBio
               key={MusicParagraph}
               paragraph={e.MusicParagraph}
@@ -299,7 +178,7 @@ const MusicaNavigation = () => {
           <div>
             {" "}
             <Paragraphs>
-              Comenza tus clases y obtene importantes beneficios con el código
+              Comenza tus clases y obtene beneficios con el código
               {"   "}
               <b>JediBluesMaster</b>
             </Paragraphs>
@@ -311,98 +190,22 @@ const MusicaNavigation = () => {
         <Redes />
       </ContainerRedesFootParagraph>
 
-      <Titles>Trabajos</Titles>
-      <ContainerMultimedia>
-        <MultimediaYouTube>
-          <div>
-            {" "}
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/jSslwVYbfSE"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-          <div>
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/PGiMwP9ZMIs"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-          <div>
-            {" "}
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/videoseries?list=PLH7ws52_WwFfXTqrXvKEfz0H_2RdtghDw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-        </MultimediaYouTube>
+      {MusicArray.map((e, ArtGalleryParagraph) => (
+        <MainMusicBio
+          key={ArtGalleryParagraph}
+          musicsubtitle1={e.MusicSubtitle1}
+        />
+      ))}
+      <MultimediaContent />
 
-        <MultimediaSpotify>
-          <div>
-            {" "}
-            <SpotifyFrame
-              src="https://open.spotify.com/embed/album/51ph64ekAVHPHXSoEzikNq"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Lucky"
-            />
-          </div>
-          <div>
-            {" "}
-            <SpotifyFrame
-              src="https://open.spotify.com/embed/album/5qfTNvCIzd7a0fGo7Cnhrr"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Phonke"
-            />
-          </div>
-          <div>
-            <SpotifyFrame
-              id="Clases"
-              src="https://open.spotify.com/embed/album/6g7cHeNcuaDCXE2bZI8NsH"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Princess Lula"
-            />
-          </div>
-        </MultimediaSpotify>
-      </ContainerMultimedia>
-
-      <Titles>Musicos principales</Titles>
+      {MusicArray.map((e, ArtGalleryParagraph) => (
+        <MainMusicBio
+          key={ArtGalleryParagraph}
+          musicsubtitle2={e.MusicSubtitle2}
+        />
+      ))}
       <ContainerMemberCards>
-        {MusicArray.slice(5).map((e, Name) => (
-          <BandMembers
-            key={Name}
-            paragraphmember={e.ParagraphMember}
-            name={e.Name}
-            memberimg={e.MemberImg}
-            instagram={e.Instagram}
-            hash={e.Hash}
-          />
-        ))}
+        <BandMemberArray />
       </ContainerMemberCards>
     </MainContent>
   );

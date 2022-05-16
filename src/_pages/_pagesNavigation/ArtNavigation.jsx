@@ -5,13 +5,21 @@ import { isMobile } from "react-device-detect";
 import { GalleryArray } from "../../_components/DataArray";
 import ArtGrid from "../../_components/_helpers/ArtGrid";
 
-import {
-  MainContent,
-  ParagraphsNavigation,
-  StudioTitle,
-} from "../../_components/Styles";
+import { MainContent, StudioTitle } from "../../_components/Styles";
 
 // ------------------------------------------------------------
+
+const ParagraphsNavigation = styled.p`
+color: ${(props) => props.theme.generalTextColor};
+font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+font-family: ${(props) => props.theme.generalTextFont};
+font-weight: 400;  
+transition:1s;
+text-align:justify;
+line-height: 1.5rem;
+word-break: break-word;
+word-spacing: 0.1rem;
+`;
 
 const Titles = styled.h1`
   color: white;
@@ -22,7 +30,7 @@ const Titles = styled.h1`
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 2rem 0;
   padding: 0.5rem;
 `;
 
@@ -44,6 +52,7 @@ const ExternalLinks = styled.a`
 
 const ContainerButtons = styled.div`
   display: flex;
+
   flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
@@ -80,9 +89,7 @@ function Item({
   artgallerytitle,
   artgalleryimg,
   artgalleryparagraph,
-  sponsorname,
-  sponsorimg,
-  sponsorurl,
+  gallerysubtitle,
 }) {
   const ContainerBio = styled.div`
     display: flex;
@@ -92,6 +99,7 @@ function Item({
     div {
       width: 50%;
     }
+    gap: 2rem;
   `;
 
   const ContainerBioResponsive = styled.div`
@@ -111,9 +119,9 @@ function Item({
     border-color: none;
     width: 100%;
     height: 25rem;
-    margin: 1rem;
     border-radius: 5px;
     filter: sepia(0.8);
+    margin: 1rem 0;
   `;
 
   return (
@@ -139,6 +147,7 @@ function Item({
           {artgalleryimg && <ImgContainer img={artgalleryimg}></ImgContainer>}
         </ContainerBio>
       )}
+      {gallerysubtitle && <Titles>{gallerysubtitle}</Titles>}
     </>
   );
 }
@@ -150,7 +159,8 @@ const BioNavigation = () => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
+     
   `;
 
   return (
@@ -169,26 +179,31 @@ const BioNavigation = () => {
               sponsorurl={e.SponsorUrl}
             />
           ))}
+
+          <ExternalLinks
+            href="http://www.buenosairesfinearts.com/"
+            target="_blank"
+            rel="noreferrer"
+            title="Buenos Aires Fine Arts"
+            aria-label="Buenos Aires Fine Arts"
+          >
+            <div>
+              <ContainerButtons>
+                <ParagraphsNavigation>
+                  Obras disponibles en Galeria
+                </ParagraphsNavigation>
+
+                <ContactButtons> Buenos Aires Fine Artes</ContactButtons>
+              </ContainerButtons>
+            </div>
+          </ExternalLinks>
+          {GalleryArray.slice(0, 3).map((e, ArtGalleryParagraph) => (
+            <Item
+              key={ArtGalleryParagraph}
+              gallerysubtitle={e.GallerySubTitle}
+            />
+          ))}
         </MainContainer>
-
-        <ExternalLinks
-          href="http://www.buenosairesfinearts.com/"
-          target="_blank"
-          rel="noreferrer"
-          title="Buenos Aires Fine Arts"
-          aria-label="Buenos Aires Fine Arts"
-        >
-          <div>
-            <ContainerButtons>
-              <ParagraphsNavigation>
-                Obras disponibles en Galeria
-              </ParagraphsNavigation>
-
-              <ContactButtons> Buenos Aires Fine Artes</ContactButtons>
-            </ContainerButtons>
-          </div>
-        </ExternalLinks>
-        <Titles> Galeria de trabajos</Titles>
         <ArtGrid />
       </>
     </MainContent>

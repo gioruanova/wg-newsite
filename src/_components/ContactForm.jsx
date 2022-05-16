@@ -25,7 +25,7 @@ const CheckboxContainer = styled.div`
 
 const Paragraphs = styled.p`
   color: ${(props) => props.theme.generalTextColor};
-  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+  font-size: ${isMobile ? "0.7rem;" : "0.9rem;"}
   font-family: ${(props) => props.theme.generalTextFont};
     font-weight: 400;
     transition: 1s;

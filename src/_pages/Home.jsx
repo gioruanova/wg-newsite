@@ -20,7 +20,7 @@ const Home = () => {
         <Header />
         <ProximosEventos />
         <Bio />
-        <BannerSeparator/>
+        <BannerSeparator />
         <ArtSection />
         <Contacto />
         <Separator />

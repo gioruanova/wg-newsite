@@ -170,9 +170,10 @@ export const MusicArray = [
     MusicParagraph:
       "Walter Gandini a estado recorriendo la ruta del blues desde mediados de los '80 participando de bandas del medio local. En 1993 firma contrato con la mundialmente conocida marca de armónicas “Lee Oskar”, y a partir del año '94 forma parte del trio “The Acoustic Blues”, con esta formación participo de festivales de jazz de todo el país y del exterior. ",
     isReverseImg: true,
+    MusicSubtitle1:"Trabajos",
+    MusicSubtitle2:"Musicos",
   },
   {
-    Titles: "Musica",
     MusicImg: MusicImg2,
     MusicParagraph:
       "Edito 2 discos, en el año 1997 forma su sexteto con el cual recorre todo el circuito local y el interior, paralelamente es contratado por la famosa cerveza americana “MILLER” para actuar en los eventos conocidos como las “Miller Blues Nigths”. En 1999 es el encargado de cerrar el milenio en el ciclo “Jazzologia” junto a su banda.",
@@ -225,9 +226,10 @@ export const GalleryArray = [
   {
     ImgMain: ArtGalleryImg,
     ArtGalleryParagraph:
-      "Otro aspecto de su formación es su trabajo en la pintura, plastica y tatuaje. A lo largo de los años ha desarrollado un arte propio en estas 3 areas, siendo destacable y reconocido su estilo y tipo de trabajo. Impulsado principalmente por el arte oriental y tatmbien tradicional, ha logrado la fusion artistica de estos 2 estilos generando su  propia marca e identidad en el arte que plasma en cada obra. ",
+      "Otro aspecto de su formación es su trabajo en la pintura, plastica y tatuaje. A lo largo de los años ha desarrollado un arte propio en estas 3 areas, siendo destacable y reconocido su estilo y tipo de trabajo. Impulsado principalmente por el arte oriental y tatmbien tradicional, ha logrado la fusion artistica de estos 2 estilos generando su  propia marca e identidad en el arte que plasma en cada obra. Dentro de Ganesha Art Tattoo Studio, podran ver todo su trabajo en sus distintas areas.",
     GAlleryTitle: "Tatuaje, Pintura & +",
     StudioTitle: "Ganesha Art Tattoo Studio",
+    GallerySubTitle: "Galeria de trabajos",
   },
   {
     GalleryImg: GallerySample1,
@@ -364,14 +366,12 @@ export const GalleryArray = [
 
 export const EventsArray = [
   {
-    Title: "Proximos Eventos",
+    Title: "Novedades",
     EventDate: "13/05 al 20/05",
-    EventName: "Semana Sailor",
-    EventLocation: "25% off en Tattoo",
-    EventTime: "",
-    EventContent1: "Reservá tu turno desde la página",
-    EventContent2: "con el codigo 'SailorTattoo",
-    EventContent3: "y recibís un 5% de descuento adicional",
+    EventName:
+      "Semana Sailor - 25% off en Tattoo. Reservá tu turno desde la página y recibís un 5% de descuento adicional",
+    EventTime: "Codigo promocional:",
+    EventContent1: "SailorTattoo",
   },
 
   {
@@ -386,7 +386,8 @@ export const EventsArray = [
 
   {
     EventDate: "Clases de Armonica",
-    EventName: "Tecnica, lectura, ejercicios",
+    EventName:
+      "Técnica, teoría, improvisación, escalas, arpegios, tcnica de bloque, efectos",
     EventTime: "Codigo promocional:",
     EventContent1: "jedibluesmaster",
   },

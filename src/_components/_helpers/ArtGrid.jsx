@@ -16,7 +16,6 @@ function Item({ galleryartimg }) {
     width: 100%;
     height: 10rem;
     border-radius: 5px;
-    margin-top: 2rem;
   `;
 
   return (
@@ -31,10 +30,11 @@ function Item({ galleryartimg }) {
 const ArtGrid = () => {
   const ContainerTattoo = styled.div`
     display: grid;
-    gap: 2rem;
-    ${isMobile
-      ? "grid-template-columns: 1fr 1fr;"
-      : "grid-template-columns: 1fr 1fr 1fr 1fr 1fr;"}
+    gap: 1rem;
+    margin: ${isMobile ? " 0 1rem;" : " 0 10rem;"}
+      ${isMobile
+        ? "grid-template-columns: 1fr 1fr;"
+        : "grid-template-columns: 1fr 1fr 1fr 1fr ;"};
   `;
 
   return (

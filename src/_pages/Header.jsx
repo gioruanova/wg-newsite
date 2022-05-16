@@ -34,7 +34,7 @@ const TitlesContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  margin: 2rem 0 2rem 0;
+  margin: 4rem 0 2rem 0;
   display: flex;
   flex-direction: row;
   justify-content: center;

@@ -4,15 +4,28 @@ import { isMobile } from "react-device-detect";
 
 import { BioArray } from "../../_components/DataArray";
 
-import {
-  MainContent,
-  ParagraphsNavigation,
-  ContainerRedesFootParagraph,
-} from "../../_components/Styles";
+import { MainContent } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
 // ------------------------------------------------------------
 
-export const Titles = styled.h1`
+const ParagraphsNavigation = styled.p`
+color: ${(props) => props.theme.generalTextColor};
+font-size: ${isMobile ? "0.8rem;" : "1rem;"}
+font-family: ${(props) => props.theme.generalTextFont};
+font-weight: 400;  
+transition:1s;
+text-align:justify;
+line-height: 1.5rem;
+word-break: break-word;
+word-spacing: 0.1rem;
+margin: 0;
+`;
+
+const ContainerRedesFootParagraph = styled.div`
+  margin: 2rem 0;
+`;
+
+const Titles = styled.h1`
   color: white;
   font-size: ${isMobile ? "1.5rem" : "1.8rem"};
   font-family: ${(props) => props.theme.generalFont};
@@ -21,7 +34,7 @@ export const Titles = styled.h1`
   transition: 1s;
   width: 100%;
   border-radius: 0.2rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 2rem 0;
   padding: 0.5rem;
 `;
 
@@ -32,6 +45,7 @@ function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {
     ${isreverseimg ? "flex-direction: row-reverse;" : "flex-direction:row;"}
     justify-content:center;
     width: 100%;
+    gap: 1rem;
   `;
 
   const ContainerBioResponsive = styled.div`
@@ -41,6 +55,7 @@ function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {
     justify-content: center;
     width: 100%;
     height: 100%;
+    gap: 1rem;
   `;
 
   const ImgContainer = styled.div`
@@ -51,7 +66,7 @@ function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {
     border-color: none;
     width: 100%;
     height: 10rem;
-    margin: 1rem;
+    margin: 1rem 0;
     border-radius: 5px;
     filter: sepia(0.8);
   `;
