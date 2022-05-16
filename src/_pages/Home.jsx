@@ -15,7 +15,7 @@ import Marcas from "./Marcas";
 
 const Home = () => {
   return (
-    <MainContentHome>
+    <MainContentHome className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
       <Content>
         <Header />
         <ProximosEventos />

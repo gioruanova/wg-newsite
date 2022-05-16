@@ -43,7 +43,6 @@ const HeaderContainer = styled.div`
 
 const HeaderContainerMobile = styled.div`
   margin: 2rem 0 2rem 0;
-
 `;
 
 AOS.init();
@@ -72,7 +71,6 @@ function Item({
 
   return (
     <>
-      
       {isMobile ? (
         <>
           <HeaderContainerMobile>
@@ -122,29 +120,25 @@ function Item({
 const Header = () => {
   return (
     <div
-    data-aos="fade-in"
-    data-aos-offset="200"
-    data-aos-delay="800"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-once="true"
+      data-aos="fade-in"
+      data-aos-offset="200"
+      data-aos-delay="1300"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
     >
-      <>
-        <>
-          {HeaderArray.map((e, HeaderId) => (
-            <Item
-              key={HeaderId}
-              title1={e.HeaderTitle1}
-              title2={e.HeaderTitle2}
-              headerimg={e.HeaderImg}
-              headersubTitle1={e.HeaderSubTitle1}
-              headersubTitle2={e.HeaderSubTitle2}
-              headersubTitle3={e.HeaderSubTitle3}
-              headersubTitle4={e.HeaderSubTitle4}
-            />
-          ))}
-        </>
-      </>
+      {HeaderArray.map((e, HeaderId) => (
+        <Item
+          key={HeaderId}
+          title1={e.HeaderTitle1}
+          title2={e.HeaderTitle2}
+          headerimg={e.HeaderImg}
+          headersubTitle1={e.HeaderSubTitle1}
+          headersubTitle2={e.HeaderSubTitle2}
+          headersubTitle3={e.HeaderSubTitle3}
+          headersubTitle4={e.HeaderSubTitle4}
+        />
+      ))}
     </div>
   );
 };

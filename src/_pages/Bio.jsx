@@ -23,7 +23,7 @@ const BioContainer = styled.div`
     width: ${isMobile ? "100%" : "40%"};
   }
   justify-content: center;
-  margin: 3rem 0 2rem 0;
+  margin: ${isMobile ? "0.5rem 0 2rem 0;" : "3rem 0 2rem 0;"}
 `;
 
 const Titles = styled.h1`

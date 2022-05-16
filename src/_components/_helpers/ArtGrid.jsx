@@ -11,10 +11,10 @@ function Item({ galleryartimg }) {
     background-image: url(${galleryartimg});
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-color: none;
     width: 100%;
-    height: 10rem;
+    height: 15rem;
     border-radius: 5px;
   `;
 

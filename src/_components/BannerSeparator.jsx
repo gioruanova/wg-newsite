@@ -40,6 +40,7 @@ const BannerText = styled.h1`
   font-family: ${(props) => props.theme.generalFont};
   margin: 0;
   text-transform: initial;
+  padding: ${isMobile ? "" : "0 0 5px 0;"};
 `;
 
 AOS.init();
@@ -47,7 +48,7 @@ AOS.init();
 const BannerSeparator = () => {
   return (
     <div
-      data-aos="fade-down"
+      data-aos="fade-in"
       data-aos-offset="200"
       data-aos-delay="50"
       data-aos-duration="1000"

@@ -1,5 +1,9 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import styled from "styled-components";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Background = styled.div`
   background-color: #1b1b1b;
@@ -30,7 +34,7 @@ const TitleDiv = styled.div`
 
 const Titles = styled.h1`
   color: #ad9a72;
-  font-size: 5rem;
+  font-size: ${isMobile ? "4.5rem" : "5rem"};
   margin: 0;
   font-weight: 100;
   font-family: "Updock", cursive;
@@ -38,7 +42,7 @@ const Titles = styled.h1`
 `;
 const Titles1 = styled.h1`
   color: white;
-  font-size: 5rem;
+  font-size: ${isMobile ? "4.5rem" : "5rem"};
   margin: 0;
   font-weight: 100;
   font-family: "Updock", cursive;
@@ -47,7 +51,7 @@ const Titles1 = styled.h1`
 
 const SubTitles = styled(Titles)`
   color: White;
-  font-size: 1.2rem;
+  font-size: ${isMobile ? "0.8rem;" : "1.2rem;"}
   font-family: "Lato", sans-serif;
   margin: 0;
   text-transform: uppercase;
@@ -55,18 +59,35 @@ const SubTitles = styled(Titles)`
   word-spacing: 10px;
 `;
 
+AOS.init();
 export default function LoaderInitial() {
   return (
     <div>
-      <Background className="animate__animated animate__fadeIn animate__slower">
+      <Background className="animate__animated animate__fadeIn ">
         <LoaderComponent>
-          <TitleDiv>
+          <TitleDiv
+            data-aos="fade-left"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
             <Titles1>Walter</Titles1>
             <Titles>
               <b>Gandini</b>
             </Titles>
           </TitleDiv>
-          <SubTitles>Musica - Tatuaje - Pintura - Plastica</SubTitles>
+          <SubTitles
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
+            Musica - Tatuaje - Pintura - Plastica
+          </SubTitles>
         </LoaderComponent>
       </Background>
     </div>
