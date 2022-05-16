@@ -95,7 +95,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/bionavigation"
+                  to="/biographysite"
                 >
                   Bio
                 </NavLinksTop>
@@ -103,7 +103,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/musicanavigation"
+                  to="/musicsite"
                 >
                   Musica
                 </NavLinksTop>
@@ -111,7 +111,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/artnavigation"
+                  to="/artsite"
                 >
                   Tatuaje & +
                 </NavLinksTop>
@@ -120,7 +120,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/"
+                  to="/eshopsite"
                 >
                   E-Shop
                 </NavLinksTop> */}
@@ -128,7 +128,7 @@ const NavBar = () => {
                   onClick={() => {
                     setShow(!show);
                   }}
-                  to="/contactnavigation"
+                  to="/contactsite"
                 >
                   Contacto
                 </NavLinksTop>
@@ -153,12 +153,12 @@ const NavBar = () => {
             </LogoNav>
           </ContainerLogo>
           <LinksContainer>
-            <NavLinksTop to="/bionavigation">Bio</NavLinksTop>
-            <NavLinksTop to="/musicanavigation">Musica</NavLinksTop>
-            <NavLinksTop to="/artnavigation">Tatuaje & +</NavLinksTop>
+            <NavLinksTop to="/biographysite">Bio</NavLinksTop>
+            <NavLinksTop to="/musicsite">Musica</NavLinksTop>
+            <NavLinksTop to="/artsite">Tatuaje & +</NavLinksTop>
 
-            {/* <NavLinksTop to="/">E-Shop</NavLinksTop> */}
-            <NavLinksTop to="/contactnavigation">Contacto</NavLinksTop>
+            {/* <NavLinksTop to="/eshopsite">E-Shop</NavLinksTop> */}
+            <NavLinksTop to="/contactsite">Contacto</NavLinksTop>
           </LinksContainer>
           <Redes />
         </NavBarContainer>

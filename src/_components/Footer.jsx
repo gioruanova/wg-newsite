@@ -97,11 +97,11 @@ const Footer = () => {
 
           <ContainerLinks>
             <>
-              <NavLinksFooter to="/bionavigation">Bio</NavLinksFooter>
-              <NavLinksFooter to="/musicanavigation">Musica</NavLinksFooter>
-              <NavLinksFooter to="/artnavigation">Tatuaje & +</NavLinksFooter>
+              <NavLinksFooter to="/biographysite">Bio</NavLinksFooter>
+              <NavLinksFooter to="/musicsite">Musica</NavLinksFooter>
+              <NavLinksFooter to="/artsite">Tatuaje & +</NavLinksFooter>
               {/* <NavLinksFooter to="/">E-Shop</NavLinksFooter> */}
-              <NavLinksFooter to="/contactnavigation">Contacto</NavLinksFooter>
+              <NavLinksFooter to="/contactsite">Contacto</NavLinksFooter>
             </>
           </ContainerLinks>
 

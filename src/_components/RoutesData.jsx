@@ -24,12 +24,12 @@ export default function RoutesData() {
 
       <Route path="contacto" element={<Contacto />} />
 
-      <Route path="bionavigation" element={<BioNavigation />} />
-      <Route path="musicanavigation" element={<MusicaNavigation />} />
-      <Route path="artnavigation" element={<ArtNavigation />} />
+      <Route path="biographysite" element={<BioNavigation />} />
+      <Route path="musicsite" element={<MusicaNavigation />} />
+      <Route path="artsite" element={<ArtNavigation />} />
 
-      <Route path="eshopnavegacion" element={<EshopNavegacion />} />
-      <Route path="contactnavigation" element={<ContactNavigation />} />
+      <Route path="eshopsite" element={<EshopNavegacion />} />
+      <Route path="contactsite" element={<ContactNavigation />} />
     </Routes>
   );
 }

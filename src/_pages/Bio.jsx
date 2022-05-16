@@ -17,13 +17,13 @@ const BioContainer = styled.div`
   align-items: center;
   gap: 1rem;
   p {
-    width: ${isMobile ? "100%" : "50%"};
+    width: ${isMobile ? "100%" : "100%"};
   }
   div {
-    width: ${isMobile ? "100%" : "40%"};
+    width: ${isMobile ? "100%" : "100%"};
   }
   justify-content: center;
-  margin: ${isMobile ? "0.5rem 0 2rem 0;" : "3rem 0 2rem 0;"}
+  margin: ${isMobile ? "0.5rem 0 0.5rem 0;" : "3rem 3rem 0 3rem;"};
 `;
 
 const Titles = styled.h1`
@@ -47,22 +47,28 @@ export const StudioTitle = styled.h2`
   margin: 0 0 1rem 0;
   text-align: center;
   transition: 1s;
-
 `;
 
 AOS.init();
-function Item({ titles, bioimg, bioparagraph, nombre }) {
+function Item({ titles, bioimg, bioparagraph, urlnav, urlnavigation }) {
   const ImgContainer = styled.div`
     transition: 1s;
     background-image: url(${bioimg});
-    background-position: ${isMobile ? "0rem -6.5rem;" : "0rem -12rem;"}
+    background-position: ${isMobile ? "0rem -6.5rem;" : "0rem -14rem;"}
     background-repeat: no-repeat;
     background-size: cover;
     width:40%;
-    height: 10rem;
+    height: 17rem;
     border-radius: 0.2rem;
     overflow: hidden;
     filter: sepia(0.9);
+  `;
+
+  const ContainerBioText = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: ${isMobile ? "center" : "baseline"};
+    gap: ${isMobile ? "2rem" : "4rem"};
   `;
 
   return (
@@ -70,11 +76,15 @@ function Item({ titles, bioimg, bioparagraph, nombre }) {
       <Titles>{titles}</Titles>
 
       <BioContainer>
-        <ImgContainer img={bioimg}></ImgContainer>
+        <div>
+          <ImgContainer img={bioimg}></ImgContainer>
+        </div>
 
-        <Paragraphs>{bioparagraph}</Paragraphs>
+        <ContainerBioText>
+          <Paragraphs>{bioparagraph}</Paragraphs>
+          <InternalLinks to={urlnav}> {urlnavigation}</InternalLinks>
+        </ContainerBioText>
       </BioContainer>
-      <InternalLinks to="/bionavigation"> Seguir leyendo{" >"} </InternalLinks>
     </Container>
   );
 }
@@ -99,6 +109,8 @@ const Bio = () => {
               bioparagraph={e.BioParagraph}
               isreverseimg={e.isReverseImg}
               nombre={e.Nombre}
+              urlnavigation={e.Navigation}
+              urlnav={e.UrlNav}
             />
           ))}
         </div>
