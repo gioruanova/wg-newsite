@@ -31,7 +31,7 @@ const FooterContainer = styled.div`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-top: 1px solid ${(props) => props.theme.colorLines};
+  border-top: 2px solid ${(props) => props.theme.colorLines};
   padding: ${isMobile ? "3rem 2rem;" : "3rem 20rem;"};
   padding: 1.5rem 15rem 1rem 15rem;
 `;

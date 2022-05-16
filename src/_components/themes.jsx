@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const DarkTheme = {
   id: "DarkTheme",
   generalBackground: "#272A2D;",
-  navbarBackground: "#2d2c2cd9;",
+  navbarBackground: "#272a2de6;",
 
   generalFont: "'Cairo', sans-serif;",
   navLinksFonts: "'Lato', sans-serif;",
@@ -38,7 +38,7 @@ export const DarkTheme = {
 export const LightTheme = {
   id: "LightTheme",
   generalBackground: "#c0c0c0;",
-  navbarBackground: "#cbc8c8d4;",
+  navbarBackground: "#c0c0c0ba;",
 
   generalFont: "'Cairo', sans-serif;",
   navLinksFonts: "'Lato', sans-serif;",
