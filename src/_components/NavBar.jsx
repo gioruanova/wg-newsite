@@ -17,7 +17,7 @@ const NavBarContainer = styled.div`
   color: ${(props) => props.theme.navigationLinksColor};
 
   // Background
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border-bottom: 2px solid ${(props) => props.theme.colorLines};
@@ -31,7 +31,7 @@ const NavBarContainer = styled.div`
   left: 0rem;
   z-index: 9999;
   transition: 1s;
-  padding: 1rem 15rem 1rem 15rem;
+  ${isMobile ? "padding: 1rem" : "padding: 1rem 15rem 1rem 15rem;"}
 `;
 
 const RedesMobile = styled.div`
