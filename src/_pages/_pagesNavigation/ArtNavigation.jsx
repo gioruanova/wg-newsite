@@ -82,10 +82,10 @@ function Item({
       {isMobile ? (
         <ContainerBioResponsive>
           {studiotitle && <StudioTitle>{studiotitle}</StudioTitle>}
+          {artgalleryimg && <ImgContainer img={artgalleryimg}></ImgContainer>}
           {artgalleryparagraph && (
             <ParagraphsNavigation>{artgalleryparagraph}</ParagraphsNavigation>
           )}
-          {artgalleryimg && <ImgContainer img={artgalleryimg}></ImgContainer>}
         </ContainerBioResponsive>
       ) : (
         <ContainerBio>

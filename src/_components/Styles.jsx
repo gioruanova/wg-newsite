@@ -66,7 +66,7 @@ export const SubTitles = styled(Titles)`
 
 export const StudioTitle = styled.h2`
   color: ${(props) => props.theme.tattooStudioTitleColor};
-  font-size: ${isMobile ? "2.2rem" : "3rem"};
+  font-size: ${isMobile ? "2rem" : "3rem"};
   font-family: ${(props) => props.theme.tattooStudioTitle};
   font-weight: 500;
   margin: 0 0 1rem 0;

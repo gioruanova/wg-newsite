@@ -14,7 +14,7 @@ function Item({ galleryartimg }) {
     background-size: cover;
     border-color: none;
     width: 100%;
-    height: 15rem;
+    height: ${isMobile ? "10rem" : "15rem"};
     border-radius: 5px;
   `;
 
