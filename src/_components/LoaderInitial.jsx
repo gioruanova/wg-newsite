@@ -56,7 +56,7 @@ const SubTitles = styled(Titles)`
   margin: 0;
   text-transform: uppercase;
   font-weight: 300;
-  word-spacing: 10px;
+  word-spacing: ${isMobile ? "5px" : "10px"};
 `;
 
 AOS.init();

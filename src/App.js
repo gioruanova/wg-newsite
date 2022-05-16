@@ -16,7 +16,7 @@ function App() {
   setTimeout(() => {
     setShow(true);
 
-  }, 2500);
+  }, 2500000);
 
   const [theme, setTheme] = useState("dark");
   const themeToggler = () => {
