@@ -20,10 +20,10 @@ const BioContainer = styled.div`
     width: ${isMobile ? "100%" : "50%"};
   }
   div {
-    width: ${isMobile ? "100%" : "30%"};
+    width: ${isMobile ? "100%" : "40%"};
   }
   justify-content: center;
-  margin: 1rem 0 2rem 0;
+  margin: 3rem 0 2rem 0;
 `;
 
 const Titles = styled.h1`
@@ -55,11 +55,11 @@ function Item({ titles, bioimg, bioparagraph, nombre }) {
   const ImgContainer = styled.div`
     transition: 1s;
     background-image: url(${bioimg});
-    background-position: center;
+    background-position: ${isMobile ? "0rem -6.5rem;" : "0rem -12rem;"}
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 30rem;
+    width:40%;
+    height: 10rem;
     border-radius: 0.2rem;
     overflow: hidden;
     filter: sepia(0.9);
@@ -74,7 +74,7 @@ function Item({ titles, bioimg, bioparagraph, nombre }) {
 
         <Paragraphs>{bioparagraph}</Paragraphs>
       </BioContainer>
-      <InternalLinks to="/bionavigation"> Ver Más{" >"} </InternalLinks>
+      <InternalLinks to="/bionavigation"> Seguir leyendo{" >"} </InternalLinks>
     </Container>
   );
 }

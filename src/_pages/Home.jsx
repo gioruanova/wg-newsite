@@ -5,7 +5,7 @@ import Header from "./Header";
 import ProximosEventos from "./ProximosEventos";
 
 import Bio from "./Bio";
-import BannerSeparator from "./BannerSeparator";
+import BannerSeparator from "../_components/BannerSeparator";
 import ArtSection from "./ArtSection";
 
 import Contacto from "./Contacto";

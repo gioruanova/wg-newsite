@@ -2,9 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import { MusicArray } from "../../_components/DataArray";
-import { MainContent, InternalLinks } from "../../_components/Styles";
+import { MainContent } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
 import BandMemberArray from "../../_components/_helpers/BandMemberArray";
+import BotonClasesLink from "../../_components/BotonClasesLink";
 
 import MultimediaContent from "../../_components/_helpers/MultimediaContent";
 
@@ -26,47 +27,6 @@ const Titles = styled.h1`
   border-radius: 0.2rem;
   margin: 0.5rem 0 2rem 0;
   padding: 0.5rem;
-`;
-
-const ContainerButtons = styled.div`
-  display: flex;
-  flex-direction: ${isMobile ? "column" : "row"};
-  justify-content: center;
-  align-items: center;
-  margin: 2rem 0;
-  p {
-    text-align: center;
-    color: ${(props) => props.theme.navigationLinksColor};
-  }
-  &:hover {
-    p {
-      color: ${(props) => props.theme.hooverLinks};
-    }
-    button {
-      cursor: pointer;
-      background-color: ${(props) => props.theme.colorLines};
-    }
-  }
-`;
-
-const ContactButtons = styled.button`
-  width: auto;
-  height: auto;
-  margin: 0 1rem 1rem 1rem;
-  padding: 0.5rem 0.8rem;
-  background-color: ${(props) => props.theme.backgroundButtons};
-  font-family: ${(props) => props.theme.generalTextFont};
-  color: ${(props) => props.theme.textButtonsColor};
-  font-size: ${isMobile ? "0.8rem;" : "1rem;"}
-  border: none;
-  border-radius: 0.4rem;
-  text-transform: uppercase;
-  transition: 400ms;
-  
-  &:active {
-    background-color: white;
-  }
-  
 `;
 
 const Paragraphs = styled.p`
@@ -173,19 +133,7 @@ const MusicaNavigation = () => {
           ))}
         </MainContainer>
       </>
-      <ContainerButtons>
-        <InternalLinks to="/contactnavigation">
-          <div>
-            {" "}
-            <Paragraphs>
-              Comenza tus clases y obtene beneficios con el código
-              {"   "}
-              <b>JediBluesMaster</b>
-            </Paragraphs>
-          </div>
-          <ContactButtons>Reserva tu clase</ContactButtons>
-        </InternalLinks>
-      </ContainerButtons>
+      <BotonClasesLink />
       <ContainerRedesFootParagraph>
         <Redes />
       </ContainerRedesFootParagraph>

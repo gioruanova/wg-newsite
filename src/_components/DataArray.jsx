@@ -434,6 +434,7 @@ export const ArtArray = [
       "Con mas de 30 años de trayectoria en la ruta del blues, Walter Gandini ha participado de diferentes agrupaciones del medio local, como tambien proyectos solistas. Siendo respaldado y acompañado por grandes marcas como Lee Oskar, Waltetr a transitado a traves de diferentes proyectos con presentaciones en diversos festivales y auditorios. Con 4 discos editados y constantes participaciones en conocidos eventos, continua recorriendo la ruta de la musica presentando sus diferentes materiales y nuevos desarrollos.",
     ArtImg: MusicImg4,
     UrlNav: "/musicanavigation",
+    Navigation:"Conocer trabajos >",
   },
   {
     ArtTitle: "Tatuaje,  Pintura & +",
@@ -441,5 +442,6 @@ export const ArtArray = [
       "A lo largo de los años ha desarrollado un arte propio en estas 3 areas, siendo destacable y reconocido su estilo y tipo de trabajo. Impulsado principalmente por el arte oriental y tatmbien tradicional, ha logrado la fusion artistica de estos 2 estilos generando su  propia marca e identidad en el arte que plasma en cada obra. Desde obras tradicionales haciendo recordar a la llegada del arte del tatuaje a america, como tambien la fuerte inspiracion del arte oriental creando piezas unicas y personalizadas, dando identidad y pertenencia a cada linea plasmada. ",
     ArtImg: BioImg6,
     UrlNav: "/artnavigation",
+    Navigation:"Ver obras >",
   },
 ];

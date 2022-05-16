@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Icons from "../_components/Icons";
-import { ExternalLinks } from "../_components/Styles";
+import Icons from "./Icons";
+import { ExternalLinks } from "./Styles";
 
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

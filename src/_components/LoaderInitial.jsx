@@ -58,7 +58,7 @@ const SubTitles = styled(Titles)`
 export default function LoaderInitial() {
   return (
     <div>
-      <Background className="animate__animated animate__fadeIn animate__delay-0.8s">
+      <Background className="animate__animated animate__fadeIn animate__slower">
         <LoaderComponent>
           <TitleDiv>
             <Titles1>Walter</Titles1>

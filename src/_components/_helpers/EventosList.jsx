@@ -152,18 +152,39 @@ const ProximosEventos = ({ show }) => {
         </GridEventos>
       )) || (
         <GridEventos>
-          {EventsArray.slice(0, 2).map((e, Eventos) => (
-            <Item
-              key={Eventos}
-              EventDate={e.EventDate}
-              EventName={e.EventName}
-              EventLocation={e.EventLocation}
-              EventTime={e.EventTime}
-              EventContent1={e.EventContent1}
-              EventContent2={e.EventContent2}
-              EventContent3={e.EventContent3}
-            />
-          ))}
+          {isMobile ? (
+            <>
+              {" "}
+              {EventsArray.slice(0, 1).map((e, Eventos) => (
+                <Item
+                  key={Eventos}
+                  EventDate={e.EventDate}
+                  EventName={e.EventName}
+                  EventLocation={e.EventLocation}
+                  EventTime={e.EventTime}
+                  EventContent1={e.EventContent1}
+                  EventContent2={e.EventContent2}
+                  EventContent3={e.EventContent3}
+                />
+              ))}
+            </>
+          ) : (
+            <>
+              {" "}
+              {EventsArray.slice(0, 2).map((e, Eventos) => (
+                <Item
+                  key={Eventos}
+                  EventDate={e.EventDate}
+                  EventName={e.EventName}
+                  EventLocation={e.EventLocation}
+                  EventTime={e.EventTime}
+                  EventContent1={e.EventContent1}
+                  EventContent2={e.EventContent2}
+                  EventContent3={e.EventContent3}
+                />
+              ))}
+            </>
+          )}
         </GridEventos>
       )}
     </div>

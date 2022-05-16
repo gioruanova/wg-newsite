@@ -17,7 +17,7 @@ const ContactButtons = styled.button`
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
-  text-transform: uppercase;
+  
   &:hover {
     color: ${(props) => props.theme.hooverLinks};
   }
@@ -37,7 +37,7 @@ export default function Box({ title, content, children, show }) {
           </div>
 
           <ContactButtons onClick={() => setCollapsed(!collapsed)}>
-            {(collapsed && <> Ver Menos{" >"} </>) || <> Ver Más{" >"} </>}
+            {(collapsed && <> Ver menos{" >"} </>) || <> Ver más{" >"} </>}
           </ContactButtons>
         </>
       )}

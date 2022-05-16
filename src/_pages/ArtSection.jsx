@@ -68,7 +68,7 @@ const Paragraphs = styled.p`
 `;
 
 AOS.init();
-function Item({ arttitle, artimg, artparagraph, urlnav }) {
+function Item({ arttitle, artimg, artparagraph, urlnav, navigation }) {
   const ImgContainer = styled.div`
     transition: 400ms;
     background-image: url(${artimg});
@@ -89,7 +89,7 @@ function Item({ arttitle, artimg, artparagraph, urlnav }) {
         <Titles>{arttitle}</Titles>
         <ImgContainer img={artimg} />
         <Paragraphs>{artparagraph}</Paragraphs>
-        Ver Más{" >"}
+        {navigation}
       </ContainerCard>
     </InternalLinks>
   );
@@ -114,6 +114,7 @@ const ArtSection = () => {
               artimg={e.ArtImg}
               artparagraph={e.ArtParagraph}
               urlnav={e.UrlNav}
+              navigation={e.Navigation}
             />
           ))}
         </Container>
