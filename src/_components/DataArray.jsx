@@ -229,6 +229,7 @@ export const GalleryArray = [
     GAlleryTitle: "Tatuaje, Pintura & +",
     StudioTitle: "Ganesha Art Tattoo Studio",
     GallerySubTitle: "Galeria de trabajos",
+    GalleryImg: GallerySample43,
   },
   {
     GalleryImg: GallerySample1,
@@ -356,9 +357,7 @@ export const GalleryArray = [
   {
     GalleryImg: GallerySample42,
   },
-  {
-    GalleryImg: GallerySample43,
-  },
+  
 ];
 
 // ----------------------------EVENTOSARRAY----------------------------

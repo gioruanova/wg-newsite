@@ -34,18 +34,16 @@ const ArtGrid = () => {
   return (
     <ContainerTattoo>
       <ImageGrid variant="masonry" cols={4} gap={15}>
-        {GalleryArray.slice(1)
-          .sort(() => Math.random() - 0.5)
-          .map((GalleryArray) => (
-            <ImageSelector key={GalleryArray.GalleryImg}>
-              <img
-                src={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format`}
-                srcSet={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                alt={GalleryArray.GalleryImg}
-                loading="lazy"
-              />
-            </ImageSelector>
-          ))}
+        {GalleryArray.sort(() => Math.random() - 0.5).map((GalleryArray) => (
+          <ImageSelector key={GalleryArray.GalleryImg}>
+            <img
+              src={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format`}
+              srcSet={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              alt={GalleryArray.GalleryImg}
+              loading="lazy"
+            />
+          </ImageSelector>
+        ))}
       </ImageGrid>
     </ContainerTattoo>
   );
