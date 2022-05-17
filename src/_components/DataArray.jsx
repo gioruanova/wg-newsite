@@ -201,7 +201,7 @@ export const MusicArray = [
   },
 
   {
-    Name: "Hernan 'Bocha' Rodriguez",
+    Name: "Hernan Rodriguez",
     MemberImg: BandMember1,
     Hash: "@herbanar",
     Instagram: "https://www.instagram.com/herbanar/",
