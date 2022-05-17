@@ -36,7 +36,7 @@ const Titles = styled.h1`
   color: #ad9a72;
   font-size: ${isMobile ? "4.5rem" : "5rem"};
   margin: 0;
-  font-weight: 100;
+  font-weight: 500;
   font-family: "Updock", cursive;
   color: ${(props) => props.theme.mainTitlesColor};
 `;

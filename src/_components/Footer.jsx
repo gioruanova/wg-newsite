@@ -64,7 +64,7 @@ const DivContainer = styled.div`
 const TitleLogo1 = styled.h1`
   transition: 1s;
   color: white;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   font-weight: 100;
   font-family: "Updock", cursive;
@@ -73,7 +73,7 @@ const TitleLogo1 = styled.h1`
 const TitleLogo2 = styled.h1`
   transition: 1s;
   color: #ad9a72;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin: 0;
   font-weight: 400;
   font-family: "Updock", cursive;
