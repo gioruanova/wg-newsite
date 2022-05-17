@@ -20,28 +20,25 @@ const ArtGrid = () => {
   `;
 
   const ImageSelector = styled(ImageListItem)`
+  transition: 900ms;
     border-radius: 0.2rem;
-  `;
-
-  const ImgContainer = styled.img`
-    transition: 400ms;
-    filter: sepia(0.9);
-    width: 100%;
+    filter: ${isMobile ? "" : "sepia(0.9);"}
     &:hover {
-      cursor: pointer;
-      filter: none;
-      border: 2px solid ${(props) => props.theme.colorLines};
-    }
+        cursor:pointer;
+        filter: none;
+        border: 2px solid ${(props) => props.theme.colorLines};
+
+      }
   `;
 
   return (
     <ContainerTattoo>
-      <ImageGrid variant="masonry" cols={4} gap={10}>
+      <ImageGrid variant="masonry" cols={4} gap={15}>
         {GalleryArray.slice(1)
           .sort(() => Math.random() - 0.5)
           .map((GalleryArray) => (
             <ImageSelector key={GalleryArray.GalleryImg}>
-              <ImgContainer
+              <img
                 src={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format`}
                 srcSet={`${GalleryArray.GalleryImg}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 alt={GalleryArray.GalleryImg}
