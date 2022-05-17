@@ -31,7 +31,7 @@ const EventoContainer = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   border: 2px solid ${(props) => props.theme.mainTitlesColor};
-  border-radius: 10px;
+  border-radius: 0.2rem;
   padding: 1rem;
   transition: 400ms;
   width: ${isMobile ? "100%" : "30%"};
