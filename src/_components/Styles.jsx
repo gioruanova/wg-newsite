@@ -201,11 +201,9 @@ const ContaininerRedes = styled.div`
   background-color: ${(props) => props.theme.backgroundIcons};
   border: 3px outset ${(props) => props.theme.strokeIcons};
   align-items: center;
-  opacity: 50%;
+  
   transition: 1s;
-  &:hover {
-    opacity: 100%;
-  }
+  
 `;
 
 const ContaininerRightPanel = styled.div`
@@ -217,10 +215,7 @@ const ContaininerRightPanel = styled.div`
   border-radius: 15px;
   transition: 1s;
   align-items: center;
-  opacity: 50%;
-  &:hover {
-    opacity: 100%;
-  }
+
 `;
 
 export const Redescontainer = () => {
