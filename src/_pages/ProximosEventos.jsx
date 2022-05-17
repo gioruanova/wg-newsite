@@ -6,6 +6,7 @@ import EventosList from "../_components/_helpers/EventosList";
 import Box from "../_components/Box";
 import { EventsArray } from "../_components/DataArray";
 
+
 // ------------------------------------------------------------
 
 export const Titles = styled.h1`

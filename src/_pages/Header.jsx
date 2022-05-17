@@ -26,6 +26,23 @@ const SubTitles = styled.p`
   letter-spacing: ${isMobile ? "" : "7px"};
   margin: 0;
   transition: 1s;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 3s linear infinite;
+
+  @keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
 `;
 
 const TitlesContainer = styled.div`

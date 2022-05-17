@@ -31,6 +31,24 @@ const TitleDiv = styled.div`
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  transition: 1s;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 2s linear infinite;
+
+  @keyframes shine {
+    from {
+      -webkit-mask-position: 150%;
+    }
+    to {
+      -webkit-mask-position: -50%;
+    }
+  }
 `;
 
 const Titles = styled.h1`
@@ -48,6 +66,7 @@ const Titles1 = styled.h1`
   font-weight: 100;
   font-family: "Updock", cursive;
   color: ${(props) => props.theme.mainTitlesColor};
+  
 `;
 
 const SubTitles = styled(Titles)`
@@ -58,6 +77,7 @@ const SubTitles = styled(Titles)`
   text-transform: uppercase;
   font-weight: 300;
   word-spacing: ${isMobile ? "5px" : "10px"};
+  
 `;
 
 AOS.init();
