@@ -12,7 +12,7 @@ const ContainerContent = styled.div`
 const Titles = styled.h1`
   color: white;
   transition: 1s;
-  font-size: ${isMobile ? "1.5rem" : "1.2rem"};
+  font-size: ${isMobile ? "1rem" : "1.2rem"};
   font-family: ${(props) => props.theme.generalFont};
   background-color: ${(props) => props.theme.mainTitlesColor};
   text-transform: uppercase;
