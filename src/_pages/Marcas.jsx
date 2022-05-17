@@ -1,13 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-
+import { Carousel } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Carousel } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { SponsorArray } from "../_components/DataArray";
+
+// ------------------------------------------------------------
 
 AOS.init();
 

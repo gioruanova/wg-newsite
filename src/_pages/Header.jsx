@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 
 import { HeaderArray } from "../_components/DataArray";
 
+// ------------------------------------------------------------
+
 const Titles = styled.h1`
   color: ${(props) => props.theme.mainTitlesColor};
   font-family: ${(props) => props.theme.tattooStudioTitle};

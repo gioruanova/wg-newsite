@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { isMobile } from "react-device-detect";
-import { NavLinksTop, LogoNav } from "./Styles";
-
 import styled from "styled-components";
+
+import { NavLinksTop, LogoNav } from "./Styles";
 import Icons from "./Icons";
 import Redes from "../_components/Redes";
+
+// ------------------------------------------------------------
 
 const NavBarContainer = styled.div`
   display: flex;

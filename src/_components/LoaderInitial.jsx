@@ -1,9 +1,10 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+// ------------------------------------------------------------
 
 const Background = styled.div`
   background-color: #1b1b1b;

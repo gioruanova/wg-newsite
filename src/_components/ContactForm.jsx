@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import { isMobile } from "react-device-detect";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { isMobile } from "react-device-detect";
+
 import emailjs from "emailjs-com";
+
+// ------------------------------------------------------------
 
 const Titles = styled.h1`
   color: white;

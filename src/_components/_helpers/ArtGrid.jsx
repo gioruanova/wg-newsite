@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
+
 import { GalleryArray } from "../DataArray";
+
 
 // ------------------------------------------------------------
 

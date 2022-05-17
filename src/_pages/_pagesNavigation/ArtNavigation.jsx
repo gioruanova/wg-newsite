@@ -4,9 +4,7 @@ import { isMobile } from "react-device-detect";
 
 import { GalleryArray } from "../../_components/DataArray";
 import ArtGrid from "../../_components/_helpers/ArtGrid";
-
 import { MainContent, StudioTitle } from "../../_components/Styles";
-
 import BotonGalleriaLink from "../../_components/BotonGalleriaLink";
 
 // ------------------------------------------------------------

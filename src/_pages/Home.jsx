@@ -1,5 +1,4 @@
 import React from "react";
-import { Content, MainContentHome, Separator } from "../_components/Styles";
 
 import Header from "./Header";
 import ProximosEventos from "./ProximosEventos";
@@ -10,8 +9,11 @@ import ArtSection from "./ArtSection";
 
 import Contacto from "./Contacto";
 import Marcas from "./Marcas";
-
 // import Eshop from "./Eshop";
+
+import { Content, MainContentHome, Separator } from "../_components/Styles";
+
+// ------------------------------------------------------------
 
 const Home = () => {
   return (

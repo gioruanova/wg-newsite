@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
 import { BioArray } from "../../_components/DataArray";
-
 import { MainContent } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
+
 // ------------------------------------------------------------
 
 const ParagraphsNavigation = styled.p`

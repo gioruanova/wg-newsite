@@ -70,86 +70,84 @@ const YoutubeFrame = styled.iframe`
 
 const MultimediaContent = () => {
   return (
-    <>
-      <ContainerMultimedia>
-        <MultimediaYouTube>
-          <div>
-            {" "}
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/jSslwVYbfSE"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-          <div>
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/PGiMwP9ZMIs"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-          <div>
-            {" "}
-            <YoutubeFrame
-              width="240"
-              height="150"
-              src="https://www.youtube.com/embed/videoseries?list=PLH7ws52_WwFfXTqrXvKEfz0H_2RdtghDw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen="1"
-            />
-          </div>
-        </MultimediaYouTube>
+    <ContainerMultimedia>
+      <MultimediaYouTube>
+        <div>
+          {" "}
+          <YoutubeFrame
+            width="240"
+            height="150"
+            src="https://www.youtube.com/embed/jSslwVYbfSE"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="1"
+          />
+        </div>
+        <div>
+          <YoutubeFrame
+            width="240"
+            height="150"
+            src="https://www.youtube.com/embed/PGiMwP9ZMIs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="1"
+          />
+        </div>
+        <div>
+          {" "}
+          <YoutubeFrame
+            width="240"
+            height="150"
+            src="https://www.youtube.com/embed/videoseries?list=PLH7ws52_WwFfXTqrXvKEfz0H_2RdtghDw"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="1"
+          />
+        </div>
+      </MultimediaYouTube>
 
-        <MultimediaSpotify>
-          <div>
-            {" "}
-            <SpotifyFrame
-              src="https://open.spotify.com/embed/album/51ph64ekAVHPHXSoEzikNq"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Lucky"
-            />
-          </div>
-          <div>
-            {" "}
-            <SpotifyFrame
-              src="https://open.spotify.com/embed/album/5qfTNvCIzd7a0fGo7Cnhrr"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Phonke"
-            />
-          </div>
-          <div>
-            <SpotifyFrame
-              id="Clases"
-              src="https://open.spotify.com/embed/album/6g7cHeNcuaDCXE2bZI8NsH"
-              width="300"
-              height="80"
-              frameborder="0"
-              allowtransparency="true"
-              allow="encrypted-media"
-              title="Princess Lula"
-            />
-          </div>
-        </MultimediaSpotify>
-      </ContainerMultimedia>
-    </>
+      <MultimediaSpotify>
+        <div>
+          {" "}
+          <SpotifyFrame
+            src="https://open.spotify.com/embed/album/51ph64ekAVHPHXSoEzikNq"
+            width="300"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            title="Lucky"
+          />
+        </div>
+        <div>
+          {" "}
+          <SpotifyFrame
+            src="https://open.spotify.com/embed/album/5qfTNvCIzd7a0fGo7Cnhrr"
+            width="300"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            title="Phonke"
+          />
+        </div>
+        <div>
+          <SpotifyFrame
+            id="Clases"
+            src="https://open.spotify.com/embed/album/6g7cHeNcuaDCXE2bZI8NsH"
+            width="300"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+            title="Princess Lula"
+          />
+        </div>
+      </MultimediaSpotify>
+    </ContainerMultimedia>
   );
 };
 

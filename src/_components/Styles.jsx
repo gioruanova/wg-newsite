@@ -1,6 +1,7 @@
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+
 import Icons from "../_components/Icons";
 
 // -----------------LAYOUTS-----------------

@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import { Content, Titles } from "../_components/Styles";
 import { GalleryArray } from "../_components/DataArray";
 
+// ------------------------------------------------------------
+
 const BioContainer = styled.div`
   display: grid;
   ${isMobile ? "grid-template-row: 1fr ;" : "grid-template-columns: 1fr ;"}

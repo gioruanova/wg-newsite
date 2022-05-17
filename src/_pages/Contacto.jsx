@@ -4,6 +4,8 @@ import "aos/dist/aos.css";
 
 import ContactForm from "../_components/ContactForm";
 
+// ------------------------------------------------------------
+
 AOS.init();
 
 const Contacto = () => {

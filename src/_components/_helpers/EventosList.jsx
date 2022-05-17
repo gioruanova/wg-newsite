@@ -1,10 +1,10 @@
 import React from "react";
-
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
 import { EventsArray } from "../DataArray";
 
+// ------------------------------------------------------------
 export const Titles = styled.h1`
   color: white;
   font-size: ${isMobile ? "1.5rem" : "1.8rem"};

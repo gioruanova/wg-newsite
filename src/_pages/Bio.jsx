@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import { InternalLinks, Paragraphs } from "../_components/Styles";
 import { BioArray } from "../_components/DataArray";
 
+// ------------------------------------------------------------
+
 const Container = styled.div`
   margin-bottom: 2rem;
 `;

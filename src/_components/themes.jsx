@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+// ------------------------------------------------------------
+
 export const DarkTheme = {
   id: "DarkTheme",
   generalBackground: "#272A2D;",

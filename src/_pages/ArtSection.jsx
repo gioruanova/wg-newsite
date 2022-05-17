@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { InternalLinks } from "../_components/Styles";
-
 import { ArtArray } from "../_components/DataArray";
+
+// ------------------------------------------------------------
 
 const Container = styled.div`
   display: flex;

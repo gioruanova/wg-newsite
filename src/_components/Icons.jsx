@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { ReactSVG } from "react-svg";
 import { isMobile } from "react-device-detect";
 
+// ------------------------------------------------------------
+
 const IconWrapper = styled.div`
   padding: ${isMobile ? "0.5rem 0.4rem;" : "0.3rem 0.5rem;"}
   &:hover{

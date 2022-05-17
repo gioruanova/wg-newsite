@@ -1,6 +1,7 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
 import styled from "styled-components";
+
 import {
   ExternalLinks,
   NavLinksFooter,
@@ -8,6 +9,8 @@ import {
   LogoNav,
 } from "./Styles";
 import Redes from "../_components/Redes";
+
+// ------------------------------------------------------------
 
 const FooterContainer = styled.div`
   transition: 1s;

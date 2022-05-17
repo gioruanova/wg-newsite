@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
+
 import { MusicArray } from "../DataArray";
 
 // ------------------------------------------------------------
-
-const ContainerContent = styled.div`
-  margin: 2rem 0;
-`;
 
 const Titles = styled.h1`
   color: white;
@@ -108,24 +105,22 @@ function BandMembers({ name, memberimg, instagram, hash }) {
 
   return (
     <>
-      <ContainerContent>
-        <ExternalLinks
-          href={instagram}
-          rel="noreferrer"
-          target="_blank"
-          title="Instagram"
-          aria-label="Instagram"
-        >
-          <MemberCards>
-            {ImgContainer && (
-              <ImgContainer img={memberimg}>
-                <HashContainer>{hash}</HashContainer>
-              </ImgContainer>
-            )}
-            {name && <BandMembersName>{name}</BandMembersName>}
-          </MemberCards>
-        </ExternalLinks>
-      </ContainerContent>
+      <ExternalLinks
+        href={instagram}
+        rel="noreferrer"
+        target="_blank"
+        title="Instagram"
+        aria-label="Instagram"
+      >
+        <MemberCards>
+          {ImgContainer && (
+            <ImgContainer img={memberimg}>
+              <HashContainer>{hash}</HashContainer>
+            </ImgContainer>
+          )}
+          {name && <BandMembersName>{name}</BandMembersName>}
+        </MemberCards>
+      </ExternalLinks>
     </>
   );
 }
@@ -133,17 +128,15 @@ function BandMembers({ name, memberimg, instagram, hash }) {
 const BandMemberArray = () => {
   return (
     <>
-      <>
-        {MusicArray.slice(5).map((e, Name) => (
-          <BandMembers
-            key={Name}
-            name={e.Name}
-            memberimg={e.MemberImg}
-            instagram={e.Instagram}
-            hash={e.Hash}
-          />
-        ))}
-      </>
+      {MusicArray.slice(5).map((e, Name) => (
+        <BandMembers
+          key={Name}
+          name={e.Name}
+          memberimg={e.MemberImg}
+          instagram={e.Instagram}
+          hash={e.Hash}
+        />
+      ))}
     </>
   );
 };

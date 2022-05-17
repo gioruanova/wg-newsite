@@ -1,10 +1,12 @@
 import React from "react";
+import styled from "styled-components";
+import { isMobile } from "react-device-detect";
+
 import EventosList from "../_components/_helpers/EventosList";
 import Box from "../_components/Box";
-import styled from "styled-components";
-
 import { EventsArray } from "../_components/DataArray";
-import { isMobile } from "react-device-detect";
+
+// ------------------------------------------------------------
 
 export const Titles = styled.h1`
   color: white;
