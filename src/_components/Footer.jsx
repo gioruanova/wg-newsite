@@ -33,25 +33,7 @@ const FooterContainer = styled.div`
   -webkit-backdrop-filter: blur(5px);
   border-top: 2px solid ${(props) => props.theme.colorLines};
   padding: ${isMobile ? "3rem 2rem;" : "3rem 20rem;"};
-  padding: ${isMobile ? "" : "1.5rem 15rem 1rem 15rem;"};
-`;
-
-const LogoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: ${isMobile ? "initial" : "end"};
-  line-height: 4rem;
-  text-decoration: none;
-`;
-
-const LogoTitle = styled.h2`
-  margin: 0;
-  text-align: ${isMobile ? "center" : "end"};
-  font-family: ${(props) => props.theme.tattooStudioTitle};
-  letter-spacing: 5px;
-  font-size: 3.5rem;
-  font-weight: 500;
-  text-decoration: none;
+  padding: ${isMobile ? "" : "2rem 15rem 2rem 15rem;"};
 `;
 
 const FooterCopyright = styled.div`
@@ -79,22 +61,44 @@ const DivContainer = styled.div`
   align-items: ${isMobile ? "center" : "end"};
 `;
 
+const TitleLogo1 = styled.h1`
+  transition: 1s;
+  color: white;
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 100;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
+const TitleLogo2 = styled.h1`
+  transition: 1s;
+  color: #ad9a72;
+  font-size: 3.5rem;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
+const TitleDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 const Footer = () => {
   return (
     <>
       <div>
         <FooterContainer>
-          <LogoContainer>
-            <LogoNav to="/">
-              <LogoTitle>
-                {" "}
-                <div>Walter</div>
-                <div>
+          <LogoNav to="/">
+            <TitleDiv>
+              <TitleDiv>
+                <TitleLogo1>Walter</TitleLogo1>
+                <TitleLogo2>
                   <b>Gandini</b>
-                </div>
-              </LogoTitle>
-            </LogoNav>
-          </LogoContainer>
+                </TitleLogo2>
+              </TitleDiv>
+            </TitleDiv>
+          </LogoNav>
 
           <ContainerLinks>
             <>

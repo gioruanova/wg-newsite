@@ -20,7 +20,7 @@ const NavBarContainer = styled.div`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border-bottom: 2px solid ${(props) => props.theme.colorLines};
+  border-bottom: 1px solid ${(props) => props.theme.colorLines};
   /* From https://css.glass */
   background: ${(props) => props.theme.navbarBackground};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -39,6 +39,31 @@ const RedesMobile = styled.div`
 `;
 
 const ContainerLogo = styled.div``;
+
+const TitleDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  
+`;
+
+const TitleLogo1 = styled.h1`
+  transition: 1s;
+  color: white;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 100;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
+const TitleLogo2 = styled.h1`
+  transition: 1s;
+  color: #ad9a72;
+  font-size: 3rem;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Updock", cursive;
+  color: ${(props) => props.theme.mainTitlesColor};
+`;
 
 const LogoTitle = styled.h2`
   margin: 0;
@@ -143,11 +168,12 @@ const NavBar = () => {
           <ContainerLogo>
             <LogoNav to="/">
               <LogoTitle>
-                {" "}
-                <div>Walter</div>
-                <div>
-                  <b>Gandini</b>
-                </div>
+                <TitleDiv>
+                  <TitleLogo1>Walter</TitleLogo1>
+                  <TitleLogo2>
+                    <b>Gandini</b>
+                  </TitleLogo2>
+                </TitleDiv>
               </LogoTitle>
             </LogoNav>
           </ContainerLogo>

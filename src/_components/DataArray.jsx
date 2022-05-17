@@ -23,7 +23,7 @@ import MusicImg2 from "../_images/_music/MusicImg2.jpg";
 import MusicImg3 from "../_images/_music/MusicImg3.jpg";
 import MusicImg4 from "../_images/_music/MusicImg4.PNG";
 import MusicImg5 from "../_images/_music/MusicImg5.JPG";
-import BandMember1 from "../_images/_music/Integrante1.jpg";
+import BandMember1 from "../_images/_music/Integrante1.JPG";
 import BandMember2 from "../_images/_music/Integrante2.jpg";
 import BandMember3 from "../_images/_music/Integrante3.jpg";
 
@@ -201,15 +201,15 @@ export const MusicArray = [
   },
 
   {
-    Name: "Bocha",
+    Name: "Hernan 'Bocha' Rodriguez",
     MemberImg: BandMember1,
-    ParagraphMember: "Texto sobre integrante 1 ",
+    ParagraphMember: "",
     Hash: "@herbanar",
     Instagram: "https://www.instagram.com/herbanar/",
   },
   {
-    Name: "Juanchi",
-    ParagraphMember: "Texto sobre integrante 2 ",
+    Name: "Juan Martinez",
+    ParagraphMember: "",
     MemberImg: BandMember2,
     Hash: "@juanchmar",
     Instagram: "https://www.instagram.com/juanchmar/",
@@ -217,7 +217,7 @@ export const MusicArray = [
   {
     Name: "Batero",
     MemberImg: BandMember3,
-    ParagraphMember: "Texto sobre integrante 3 ",
+    ParagraphMember: "",
     Hash: "@batero",
     Instagram: "https://www.instagram.com/",
   },
@@ -369,30 +369,48 @@ export const GalleryArray = [
 export const EventsArray = [
   {
     Title: "Novedades",
+    EventName: "Semana Sailor",
     EventDate: "13/05 al 20/05",
-    EventName:
-      "Semana Sailor - 25% off en Tattoo. Reservá tu turno desde la página y recibís un 5% de descuento adicional",
-    EventTime: "Codigo promocional:",
-    EventContent1: "SailorTattoo",
+    EventContent1: "25% off en Tattoo. ",
+    EventContent2:
+      "Reservá tu turno desde la página y recibís un 5% de descuento adicional",
+    PromoCodeAvailable: true,
+    PromoCode: "SailorTattoo",
   },
 
   {
+    EventName: "W. Gandini en vivo",
     EventDate: "13/05",
-    EventName: "en vivo en Antiguas Lunas",
-    EventLocation: "Belgrano",
-    EventTime: "12hs",
-    EventContent1: "registrandote desde la página participás de",
+    EventTime: "Medianoche",
+    EventLocation: "Antiguas Lunas",
+    EventContent1: "Registrandote desde la página participás de",
     EventContent2: "2 pintas +",
     EventContent3: "porción de papas",
+    PromoCodeAvailable: false,
+    PromoCode: "SailorTattoo",
   },
 
   {
-    EventDate: "Clases de Armonica",
-    EventName:
-      "Técnica, teoría, improvisación, escalas, arpegios, tcnica de bloque, efectos",
-    EventTime: "Codigo promocional:",
-    EventContent1: "jedibluesmaster",
+    EventName: "Clases de Armonica",
+    EventContent1: "Técnica, teoría, improvisación,",
+    EventContent2: "escalas, arpegios, tcnica de bloque, efectos",
+    EventContent3: "porción de papas",
+    PromoCodeAvailable: true,
+    PromoCode: "jedibluesmaster",
   },
+
+  // EVENT SAMPLE
+  //   {
+  //     EventName: "Clases de Armonica",
+  //     EventTime: "",
+  //     EventLocation: "",
+  //     EventLocation: "",
+  //     EventContent1: "Técnica, teoría, improvisación,",
+  //     EventContent2: "escalas, arpegios, tcnica de bloque, efectos",
+  //     EventContent3: "porción de papas",
+  //     PromoCodeAvailable: true,
+  //     PromoCode: "jedibluesmaster",
+  //   },
 ];
 
 // ----------------------------SPONSORARRAY----------------------------

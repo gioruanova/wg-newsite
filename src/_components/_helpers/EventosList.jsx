@@ -28,104 +28,111 @@ const GridEventos = styled.div`
 const EventoContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.5rem;
   border: 2px solid ${(props) => props.theme.mainTitlesColor};
   border-radius: 10px;
   padding: 1rem;
   transition: 400ms;
-  width: ${isMobile ? "80%" : "30%"};
-  height: 15rem;
+  width: ${isMobile ? "100%" : "30%"};
+  height: 20rem;
 `;
 
-const MainTitleEvent = styled.div`
+const EventNameData = styled.h1`
+  font-size: 1.5rem;
   color: ${(props) => props.theme.mainTitlesColor};
   text-transform: uppercase;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  transition: 400ms;
-  
+  font-family: ${(props) => props.theme.generalTextFont};
+  padding-bottom: 10px;
+  border-bottom: 2px solid ${(props) => props.theme.colorLines};
+`;
 
-  h1,
-  h2 {
-    font-size: ${isMobile ? "1.2rem;" : "1.5rem;"}
-    font-family: ${(props) => props.theme.generalTextFont};
-    margin: 0.5rem;
-    
-  }
-`;
-const LocationEvent = styled.div`
+const EventLocationData = styled.h1`
+  font-size: 1rem;
   color: ${(props) => props.theme.generalTextColor};
+  font-family: ${(props) => props.theme.generalTextFont};
+  text-transform: initial;
+`;
+
+const EventContentData = styled.h2`
+  font-size: 1rem;
+  color: ${(props) => props.theme.mainTitlesColor};
+  font-family: ${(props) => props.theme.generalTextFont};
+  margin: 0;
+`;
+const EventCodeData = styled.h2`
+  font-size: 0.8rem;
+  color: ${(props) => props.theme.generalTextColor};
+  font-family: ${(props) => props.theme.generalTextFont};
+  text-transform: uppercase;
+`;
+
+const EventCodeResultData = styled.h2`
+  font-size: 0.9rem;
+  color: ${(props) => props.theme.mainTitlesColor};
+  font-family: ${(props) => props.theme.generalTextFont};
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-left: ${isMobile ? "" : "5px"};
+`;
+
+const ContainerPromo = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: ${isMobile ? "column" : "row"};
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  transition: 400ms;
-  h2 {
-    transition: 400ms;
-    font-size: 1rem;
-    margin: 0;
-    color: ${(props) => props.theme.mainTitlesColor};
-    font-family: ${(props) => props.theme.generalTextFont};
-  }
-  h3 {
-    margin: 0;
-    font-weight: 400;
-    font-family: ${(props) => props.theme.generalTextFont};
-    font-size: 0.8rem;
-  }
-`;
-const DetailEvent = styled(LocationEvent)`
-  gap: 0;
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  transition: 400ms;
-  h2 {
-    margin: 0;
-    font-weight: 400;
-    font-family: ${(props) => props.theme.generalTextFont};
-    font-size: 0.9rem;
-  }
-  h3 {
-    margin: 0;
-    font-weight: 400;
-    font-family: ${(props) => props.theme.generalTextFont};
-    font-size: 0.9rem;
-  }
+  ${isMobile ? "" : "gap: 5px;"}
+  margin-top: 1rem;
 `;
 
 function Item({
-  EventDate,
-  EventName,
-  EventLocation,
-  EventTime,
-  EventContent1,
-  EventContent2,
-  EventContent3,
-  title,
+  eventdate,
+  eventname,
+  eventlocation,
+  eventtime,
+  eventcontent1,
+  eventcontent2,
+  eventcontent3,
+  promocodeavailable,
+  promocode,
 }) {
   return (
     <>
       <EventoContainer>
-        <MainTitleEvent>
-          <h1>{EventDate}</h1>
-        </MainTitleEvent>
-        <LocationEvent>
-          <h2>{EventName}</h2>
+        {eventname && (
+          <EventNameData>
+            <b>{eventname}</b>
+          </EventNameData>
+        )}
+        {eventlocation && (
+          <EventLocationData>{eventlocation}</EventLocationData>
+        )}
 
-          <h2>{EventLocation}</h2>
-        </LocationEvent>
-        <DetailEvent>
-          <h2>{EventTime}</h2>
-          <h3>{EventContent1}</h3>
-          <h3>{EventContent2}</h3>
-          <h3>{EventContent3}</h3>
-        </DetailEvent>
+        <ContainerPromo>
+          {eventdate && <EventLocationData>{eventdate}</EventLocationData>}
+          {eventtime && <EventLocationData> - </EventLocationData>}
+          {eventtime && <EventLocationData>{eventtime}</EventLocationData>}
+        </ContainerPromo>
+
+        {eventcontent1 && <EventContentData>{eventcontent1}</EventContentData>}
+        {eventcontent2 && <EventContentData>{eventcontent2}</EventContentData>}
+        {eventcontent3 && <EventContentData>{eventcontent3}</EventContentData>}
+
+        <ContainerPromo>
+          {" "}
+          <div>
+            {promocodeavailable && (
+              <EventCodeData>Codigo Promocional : </EventCodeData>
+            )}
+          </div>
+          <div>
+            {promocodeavailable && (
+              <EventCodeResultData>
+                <b>{promocode}</b>
+              </EventCodeResultData>
+            )}
+          </div>
+        </ContainerPromo>
       </EventoContainer>
     </>
   );
@@ -139,14 +146,15 @@ const ProximosEventos = ({ show }) => {
           {EventsArray.map((e, Eventos) => (
             <Item
               key={Eventos}
-              EventDate={e.EventDate}
-              EventName={e.EventName}
-              EventLocation={e.EventLocation}
-              EventTime={e.EventTime}
-              EventContent1={e.EventContent1}
-              EventContent2={e.EventContent2}
-              EventContent3={e.EventContent3}
-              title={e.Title}
+              eventdate={e.EventDate}
+              eventname={e.EventName}
+              eventlocation={e.EventLocation}
+              eventtime={e.EventTime}
+              eventcontent1={e.EventContent1}
+              eventcontent2={e.EventContent2}
+              eventcontent3={e.EventContent3}
+              promocodeavailable={e.PromoCodeAvailable}
+              promocode={e.PromoCode}
             />
           ))}
         </GridEventos>
@@ -154,33 +162,35 @@ const ProximosEventos = ({ show }) => {
         <GridEventos>
           {isMobile ? (
             <>
-              {" "}
               {EventsArray.slice(0, 1).map((e, Eventos) => (
                 <Item
                   key={Eventos}
-                  EventDate={e.EventDate}
-                  EventName={e.EventName}
-                  EventLocation={e.EventLocation}
-                  EventTime={e.EventTime}
-                  EventContent1={e.EventContent1}
-                  EventContent2={e.EventContent2}
-                  EventContent3={e.EventContent3}
+                  eventdate={e.EventDate}
+                  eventname={e.EventName}
+                  eventlocation={e.EventLocation}
+                  eventtime={e.EventTime}
+                  eventcontent1={e.EventContent1}
+                  eventcontent2={e.EventContent2}
+                  eventcontent3={e.EventContent3}
+                  promocodeavailable={e.PromoCodeAvailable}
+                  promocode={e.PromoCode}
                 />
               ))}
             </>
           ) : (
             <>
-              {" "}
               {EventsArray.slice(0, 2).map((e, Eventos) => (
                 <Item
                   key={Eventos}
-                  EventDate={e.EventDate}
-                  EventName={e.EventName}
-                  EventLocation={e.EventLocation}
-                  EventTime={e.EventTime}
-                  EventContent1={e.EventContent1}
-                  EventContent2={e.EventContent2}
-                  EventContent3={e.EventContent3}
+                  eventdate={e.EventDate}
+                  eventname={e.EventName}
+                  eventlocation={e.EventLocation}
+                  eventtime={e.EventTime}
+                  eventcontent1={e.EventContent1}
+                  eventcontent2={e.EventContent2}
+                  eventcontent3={e.EventContent3}
+                  promocodeavailable={e.PromoCodeAvailable}
+                  promocode={e.PromoCode}
                 />
               ))}
             </>
