@@ -10,10 +10,7 @@ import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const SeparadorBanner = styled.div`
-  background-color: ${(props) => props.theme.mainTitlesColor};
   width: 100%;
-  border-radius: 0.2rem;
-  margin: 2rem 0;
   padding: 0 0.1rem;
   display: flex;
   justify-content: center;
@@ -43,6 +40,13 @@ const BannerText = styled.h1`
   padding: ${isMobile ? "" : "0 0 5px 0;"};
 `;
 
+const ContainerCarousel = styled(Carousel)`
+  transition: 1s;
+  background-color: ${(props) => props.theme.navigationLinksColor};
+  border-radius: 0.2rem;
+  margin: 5rem 0;
+`;
+
 AOS.init();
 
 const BannerSeparator = () => {
@@ -55,7 +59,7 @@ const BannerSeparator = () => {
       data-aos-easing="ease-in-out"
       data-aos-once="true"
     >
-      <Carousel indicators={false} controls={false} interval={3000}>
+      <ContainerCarousel indicators={false} controls={false} interval={3000}>
         <Carousel.Item>
           <ExternalLinks
             href="https://www.patreon.com/bePatron?u=38804295"
@@ -106,7 +110,7 @@ const BannerSeparator = () => {
             </SeparadorBanner>
           </ExternalLinks>
         </Carousel.Item>
-      </Carousel>
+      </ContainerCarousel>
     </div>
   );
 };

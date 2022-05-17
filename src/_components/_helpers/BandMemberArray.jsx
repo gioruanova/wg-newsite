@@ -24,6 +24,7 @@ const Titles = styled.h1`
 
 const BandMembersName = styled(Titles)`
   border-radius: 0rem;
+  margin: 0;
 `;
 
 const ExternalLinks = styled.a`
@@ -51,7 +52,7 @@ transition:1s;
 text-align:justify;
 `;
 
-function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
+function BandMembers({ name, memberimg, instagram, hash }) {
   const MemberCards = styled.div`
     display: flex;
     flex-direction: column;
@@ -59,7 +60,7 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
     border: 2px solid ${(props) => props.theme.colorLines};
     border-radius: 0.5rem;
     margin: 1rem;
-    height: 100%;
+    height: auto;
     transition: 1s;
 
     transition: 400ms;
@@ -122,9 +123,6 @@ function BandMembers({ name, paragraphmember, memberimg, instagram, hash }) {
               </ImgContainer>
             )}
             {name && <BandMembersName>{name}</BandMembersName>}
-            {paragraphmember && (
-              <ParagraphsCards>{paragraphmember}</ParagraphsCards>
-            )}
           </MemberCards>
         </ExternalLinks>
       </ContainerContent>
@@ -139,7 +137,6 @@ const BandMemberArray = () => {
         {MusicArray.slice(5).map((e, Name) => (
           <BandMembers
             key={Name}
-            paragraphmember={e.ParagraphMember}
             name={e.Name}
             memberimg={e.MemberImg}
             instagram={e.Instagram}

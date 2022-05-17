@@ -203,13 +203,11 @@ export const MusicArray = [
   {
     Name: "Hernan 'Bocha' Rodriguez",
     MemberImg: BandMember1,
-    ParagraphMember: "",
     Hash: "@herbanar",
     Instagram: "https://www.instagram.com/herbanar/",
   },
   {
     Name: "Juan Martinez",
-    ParagraphMember: "",
     MemberImg: BandMember2,
     Hash: "@juanchmar",
     Instagram: "https://www.instagram.com/juanchmar/",
@@ -217,7 +215,6 @@ export const MusicArray = [
   {
     Name: "Batero",
     MemberImg: BandMember3,
-    ParagraphMember: "",
     Hash: "@batero",
     Instagram: "https://www.instagram.com/",
   },
