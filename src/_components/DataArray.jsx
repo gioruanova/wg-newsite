@@ -23,9 +23,9 @@ import MusicImg2 from "../_images/_music/MusicImg2.jpg";
 import MusicImg3 from "../_images/_music/MusicImg3.jpg";
 import MusicImg4 from "../_images/_music/MusicImg4.PNG";
 import MusicImg5 from "../_images/_music/MusicImg5.JPG";
-import BandMember1 from "../_images/_music/Integrante1.JPG";
-import BandMember2 from "../_images/_music/Integrante2.jpg";
-import BandMember3 from "../_images/_music/Integrante3.jpg";
+import BandMember1 from "../_images/_music/BandMember1.JPG";
+import BandMember2 from "../_images/_music/BandMember2.jpg";
+import BandMember3 from "../_images/_music/BandMember3.jpg";
 
 // ----------------------------COMPONENTGALLERY----------------------------
 import ArtGalleryImg from "../_images/_pintura/PinturaImg1.jpg";
