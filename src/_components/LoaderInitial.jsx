@@ -66,8 +66,7 @@ const Titles1 = styled.h1`
   font-weight: 100;
   font-family: "Updock", cursive;
   color: ${(props) => props.theme.mainTitlesColor};
-  
-`;
+  `;
 
 const SubTitles = styled(Titles)`
   color: White;

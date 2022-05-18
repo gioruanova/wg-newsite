@@ -30,6 +30,7 @@ const ArtGrid = () => {
 
       }
   `;
+  
 
   return (
     <ContainerTattoo>

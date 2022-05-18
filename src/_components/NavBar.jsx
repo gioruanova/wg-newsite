@@ -46,6 +46,7 @@ const TitleDiv = styled.div`
   display: flex;
   flex-direction: row;
   
+  
 `;
 
 const TitleLogo1 = styled.h1`

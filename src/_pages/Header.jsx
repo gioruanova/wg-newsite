@@ -26,23 +26,6 @@ const SubTitles = styled.p`
   letter-spacing: ${isMobile ? "" : "7px"};
   margin: 0;
   transition: 1s;
-  -webkit-mask-image: linear-gradient(
-    -75deg,
-    rgba(0, 0, 0, 0.6) 30%,
-    #000 50%,
-    rgba(0, 0, 0, 0.6) 70%
-  );
-  -webkit-mask-size: 200%;
-  animation: shine 3s linear infinite;
-
-  @keyframes shine {
-    from {
-      -webkit-mask-position: 150%;
-    }
-    to {
-      -webkit-mask-position: -50%;
-    }
-  }
 `;
 
 const TitlesContainer = styled.div`
@@ -53,7 +36,7 @@ const TitlesContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  margin: 4rem 0 2rem 0;
+  margin: ${isMobile ? "0rem 0 2rem 0;" : "2rem 0 2rem 0;"}
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -86,6 +69,23 @@ function Item({
     border-radius: 5px;
     margin: 1rem;
     filter: sepia(1);
+    -webkit-mask-image: linear-gradient(
+      75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+    -webkit-mask-size: 200%;
+    animation: shine 4s linear infinite;
+
+    @keyframes shine {
+      from {
+        -webkit-mask-position: 150%;
+      }
+      to {
+        -webkit-mask-position: -50%;
+      }
+    }
   `;
 
   return (
