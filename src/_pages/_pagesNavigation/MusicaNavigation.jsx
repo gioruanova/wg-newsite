@@ -112,11 +112,11 @@ const MusicaNavigation = () => {
     
   `;
 
-  const ContainerMemberCards = styled.div`
-    display: flex;
-    flex-direction: ${isMobile ? "column" : "row"};
-    justify-content: center;
-  `;
+  // const ContainerMemberCards = styled.div`
+  //   display: flex;
+  //   flex-direction: ${isMobile ? "column" : "row"};
+  //   justify-content: center;
+  // `;
 
   return (
     <MainContent className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
@@ -146,15 +146,15 @@ const MusicaNavigation = () => {
       ))}
       <MultimediaContent />
 
-      {MusicArray.map((e, ArtGalleryParagraph) => (
+      {/* {MusicArray.map((e, ArtGalleryParagraph) => (
         <MainMusicBio
           key={ArtGalleryParagraph}
           musicsubtitle2={e.MusicSubtitle2}
         />
       ))}
       <ContainerMemberCards>
-        {/* <BandMemberArray /> */}
-      </ContainerMemberCards>
+        <BandMemberArray />
+      </ContainerMemberCards> */}
     </MainContent>
   );
 };
