@@ -29,10 +29,10 @@ function Item({ title }) {
 const ProximosEventos = () => {
   return (
     <div
-      data-aos="fade-up"
+      data-aos="fade-in"
       data-aos-offset="200"
-      data-aos-delay="800"
-      data-aos-duration="1000"
+      data-aos-delay="2500"
+      data-aos-duration="800"
       data-aos-easing="ease-in-out"
       data-aos-once="true"
     >

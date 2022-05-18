@@ -92,7 +92,14 @@ function Item({
     <>
       {isMobile ? (
         <>
-          <HeaderContainerMobile>
+          <HeaderContainerMobile
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="500"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
             {" "}
             <Titles>{title1}</Titles>
             <Titles>
@@ -101,7 +108,14 @@ function Item({
           </HeaderContainerMobile>
 
           <HeaderContainer>
-            <TitlesContainer>
+            <TitlesContainer
+              data-aos="fade-in"
+              data-aos-offset="200"
+              data-aos-delay="1800"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            >
               <div>
                 <SubTitles>{headersubTitle1}</SubTitles>
                 <SubTitles>{headersubTitle2}</SubTitles>
@@ -109,12 +123,27 @@ function Item({
                 <SubTitles>{headersubTitle4}</SubTitles>
               </div>
             </TitlesContainer>
-            <ImgContainer src={headerimg} />
+            <ImgContainer
+              src={headerimg}
+              data-aos="fade-in"
+              data-aos-offset="200"
+              data-aos-delay="1200"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            />
           </HeaderContainer>
         </>
       ) : (
         <HeaderContainer>
-          <TitlesContainer>
+          <TitlesContainer
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="500"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
             <div>
               {" "}
               <Titles>{title1}</Titles>
@@ -122,14 +151,29 @@ function Item({
                 <b>{title2}</b>
               </Titles>
             </div>
-            <div>
+            <div
+              data-aos="fade-in"
+              data-aos-offset="200"
+              data-aos-delay="1800"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            >
               <SubTitles>{headersubTitle1}</SubTitles>
               <SubTitles>{headersubTitle2}</SubTitles>
               <SubTitles>{headersubTitle3}</SubTitles>
               <SubTitles>{headersubTitle4}</SubTitles>
             </div>
           </TitlesContainer>
-          <ImgContainer src={headerimg} />
+          <ImgContainer
+            src={headerimg}
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="1200"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          />
         </HeaderContainer>
       )}
     </>
@@ -138,14 +182,7 @@ function Item({
 
 const Header = () => {
   return (
-    <div
-      data-aos="fade-in"
-      data-aos-offset="200"
-      data-aos-delay="1300"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true"
-    >
+    <div>
       {HeaderArray.map((e, HeaderId) => (
         <Item
           key={HeaderId}
