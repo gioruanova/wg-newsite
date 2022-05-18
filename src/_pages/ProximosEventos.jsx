@@ -32,7 +32,7 @@ const ProximosEventos = () => {
         <div
           data-aos="fade-in"
           data-aos-offset="200"
-          data-aos-delay="2000"
+          data-aos-delay="200"
           data-aos-duration="800"
           data-aos-easing="ease-in-out"
           data-aos-once="true"

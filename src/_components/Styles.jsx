@@ -288,7 +288,7 @@ export const RightPanelContainer = () => {
 
 export const ContaininerTheme = styled.div`
   position: fixed;
-  top: ${isMobile ? "1.3rem" : "2rem"};
+  top: ${isMobile ? "1.5rem" : "2rem"};
   right: 1.5rem;
   z-index: 2;
 `;
