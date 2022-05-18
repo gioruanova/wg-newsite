@@ -91,5 +91,12 @@ img {
   border-radius: 0.5rem !important;
   height: 10rem;
   width: auto;
-  
+  transition: 1s;
+  border: 2px solid #ad9a72;
+}
+img:hover {
+  height: 12rem;
+}
+.react-photo-gallery--gallery div {
+  justify-content: center;
 }

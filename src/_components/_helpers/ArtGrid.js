@@ -21,26 +21,25 @@ function ArtGrid() {
 
 
   return (
-    <>
+    <div className="Check">
       <Gallery photos={GalleryGrid} onClick={openLightbox} />
-      <>
-        <ModalGateway className="artgallery">
-          {viewerIsOpen ? (
-            <Modal onClose={closeLightbox} >
-              <Carousel
-                currentIndex={currentImage}
-                views={GalleryGrid.map(x => ({
-                  ...x,
-                  srcset: x.srcSet,
-                  caption: x.title
+      <ModalGateway >
+        {viewerIsOpen ? (
+           <Modal onClose={closeLightbox} >
+            <Carousel
+              currentIndex={currentImage}
+              views={GalleryGrid.map(x => ({
+                ...x,
+                srcset: x.srcSet,
+                caption: x.title
 
-                }))}
-              />
-            </Modal>
-          ) : null}
-        </ModalGateway>
-      </>
-    </>
+              }))}
+            />
+          </Modal>
+        ) : null}
+      </ModalGateway>
+
+    </div>
   );
 }
 export default ArtGrid;
