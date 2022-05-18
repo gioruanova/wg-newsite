@@ -5,7 +5,7 @@ import { isMobile } from "react-device-detect";
 import { MusicArray } from "../../_components/DataArray";
 import { MainContent } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
-import BandMemberArray from "../../_components/_helpers/BandMemberArray";
+// import BandMemberArray from "../../_components/_helpers/BandMemberArray";
 import BotonClasesLink from "../../_components/BotonClasesLink";
 import MultimediaContent from "../../_components/_helpers/MultimediaContent";
 
@@ -153,7 +153,7 @@ const MusicaNavigation = () => {
         />
       ))}
       <ContainerMemberCards>
-        <BandMemberArray />
+        {/* <BandMemberArray /> */}
       </ContainerMemberCards>
     </MainContent>
   );
