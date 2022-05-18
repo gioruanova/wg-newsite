@@ -290,7 +290,7 @@ export const ContaininerTheme = styled.div`
   position: fixed;
   top: ${isMobile ? "1.3rem" : "2rem"};
   right: 1.5rem;
-  z-index: 9999;
+  z-index: 2;
 `;
 
 export const ContaininerTheme2 = styled.div`

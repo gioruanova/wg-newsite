@@ -31,7 +31,7 @@ const NavBarContainer = styled.div`
   position: fixed;
   top: 0;
   left: 0rem;
-  z-index: 9999;
+  z-index: 1;
   transition: 1s;
   ${isMobile ? "padding: 1rem" : "padding: 1rem 15rem 1rem 15rem;"}
 `;

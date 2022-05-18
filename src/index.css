@@ -80,3 +80,16 @@ input:checked + .slider:before {
 }
 
 /* --------------------------------------- */
+
+.react-images__header,
+.react-images__header_button {
+  justify-content: center !important;
+}
+
+img {
+  margin: 5px !important;
+  border-radius: 0.5rem !important;
+  height: 10rem;
+  width: auto;
+  
+}
