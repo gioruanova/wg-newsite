@@ -95,7 +95,7 @@ function Item({
           <HeaderContainerMobile
             data-aos="fade-in"
             data-aos-offset="200"
-            data-aos-delay="500"
+            data-aos-delay="1200"
             data-aos-duration="800"
             data-aos-easing="ease-in-out"
             data-aos-once="true"
@@ -127,7 +127,7 @@ function Item({
               src={headerimg}
               data-aos="fade-in"
               data-aos-offset="200"
-              data-aos-delay="1200"
+              data-aos-delay="500"
               data-aos-duration="800"
               data-aos-easing="ease-in-out"
               data-aos-once="true"
@@ -165,15 +165,17 @@ function Item({
               <SubTitles>{headersubTitle4}</SubTitles>
             </div>
           </TitlesContainer>
-          <ImgContainer
-            src={headerimg}
-            data-aos="fade-in"
-            data-aos-offset="200"
-            data-aos-delay="1200"
-            data-aos-duration="800"
-            data-aos-easing="ease-in-out"
-            data-aos-once="true"
-          />
+          <div>
+            <ImgContainer
+              src={headerimg}
+              data-aos="fade-in"
+              data-aos-offset="200"
+              data-aos-delay="1200"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+              data-aos-once="true"
+            />
+          </div>
         </HeaderContainer>
       )}
     </>
