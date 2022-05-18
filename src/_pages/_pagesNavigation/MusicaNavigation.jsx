@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { MusicArray } from "../../_components/DataArray";
 import { MainContent } from "../../_components/Styles";
 import Redes from "../../_components/Redes";
@@ -101,7 +104,7 @@ function MainMusicBio({
     </>
   );
 }
-
+AOS.init();
 const MusicaNavigation = () => {
   const MainContainer = styled.div`
     margin:${isMobile ? " 0 1rem;" : " 0 10rem;"}
@@ -119,7 +122,14 @@ const MusicaNavigation = () => {
   // `;
 
   return (
-    <MainContent className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
+    <MainContent
+      data-aos="fade-in"
+      data-aos-offset="200"
+      data-aos-delay="500"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
       <>
         <MainContainer>
           {MusicArray.map((e, MusicParagraph) => (

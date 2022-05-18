@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { GalleryArray } from "../../_components/DataArray";
 import ArtGrid from "../../_components/_helpers/ArtGrid";
 import { MainContent, StudioTitle } from "../../_components/Styles";
@@ -102,6 +105,7 @@ function Item({
   );
 }
 
+AOS.init();
 const BioNavigation = () => {
   const MainContainer = styled.div`
     margin:${isMobile ? " 0 1rem;" : " 0 10rem;"}
@@ -114,9 +118,16 @@ const BioNavigation = () => {
   `;
 
   return (
-    <MainContent className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
+    <MainContent>
       <>
-        <MainContainer>
+        <MainContainer
+          data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay="500"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true"
+        >
           {GalleryArray.slice(0, 3).map((e, ArtGalleryParagraph) => (
             <Item
               key={ArtGalleryParagraph}
@@ -131,14 +142,24 @@ const BioNavigation = () => {
           ))}
 
           <BotonGalleriaLink />
-          {GalleryArray.slice(0, 3).map((e, ArtGalleryParagraph) => (
-            <Item
-              key={ArtGalleryParagraph}
-              gallerysubtitle={e.GallerySubTitle}
-            />
-          ))}
+          <div
+            data-aos="fade-in"
+            data-aos-offset="200"
+            data-aos-delay="1000"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-out"
+            data-aos-once="true"
+          >
+            {GalleryArray.slice(0, 3).map((e, ArtGalleryParagraph) => (
+              <Item
+                key={ArtGalleryParagraph}
+                gallerysubtitle={e.GallerySubTitle}
+              />
+            ))}
+
+            <ArtGrid />
+          </div>
         </MainContainer>
-        <ArtGrid />
       </>
     </MainContent>
   );
