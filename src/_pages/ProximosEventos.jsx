@@ -6,7 +6,6 @@ import EventosList from "../_components/_helpers/EventosList";
 import Box from "../_components/Box";
 import { EventsArray } from "../_components/DataArray";
 
-
 // ------------------------------------------------------------
 
 export const Titles = styled.h1`
@@ -28,19 +27,37 @@ function Item({ title }) {
 
 const ProximosEventos = () => {
   return (
-    <div
-      data-aos="fade-in"
-      data-aos-offset="200"
-      data-aos-delay="2500"
-      data-aos-duration="800"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true"
-    >
-      {EventsArray.map((e, Eventos) => (
-        <Item key={Eventos} title={e.Title} />
-      ))}
-      <Box content={EventosList} button />
-    </div>
+    <>
+      {isMobile ? (
+        <div
+          data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay="2000"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true"
+        >
+          {EventsArray.map((e, Eventos) => (
+            <Item key={Eventos} title={e.Title} />
+          ))}
+          <Box content={EventosList} button />
+        </div>
+      ) : (
+        <div
+          data-aos="fade-in"
+          data-aos-offset="200"
+          data-aos-delay="2500"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-once="true"
+        >
+          {EventsArray.map((e, Eventos) => (
+            <Item key={Eventos} title={e.Title} />
+          ))}
+          <Box content={EventosList} button />
+        </div>
+      )}
+    </>
   );
 };
 
