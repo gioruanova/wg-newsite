@@ -86,6 +86,14 @@ input:checked + .slider:before {
   justify-content: center !important;
 }
 
+.react-images__header  svg{
+  color: #ad9a72;
+}
+
+button svg{
+  color: #ad9a72;
+}
+
 img {
   margin: 5px !important;
   border-radius: 0.5rem !important;
