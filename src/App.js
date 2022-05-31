@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { LightTheme, DarkTheme, GlobalStyles } from "./_components/themes";
 import { ContaininerTheme, ContaininerTheme2 } from "./_components/Styles";
 
-import DesktopLayout from "./_layout/DesktopLayout"
+import Layout from "./_layout/Layout"
 import LoaderInitial from "./_components/LoaderInitial";
 import Icons from './_components/Icons';
 import ScrollToTop from "./_components/ScrollToTop";
@@ -29,7 +29,8 @@ function App() {
       {show ? <ThemeProvider theme={theme === 'light' ? LightTheme : DarkTheme}>
         <GlobalStyles />
         <ScrollToTop />
-        <DesktopLayout />
+        
+        <Layout />
 
         <ContaininerTheme className="animate__animated animate__fadeIn animate__delay-1s">
           <label className="switch">

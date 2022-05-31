@@ -12,13 +12,13 @@ import { SponsorArray } from "../_components/DataArray";
 
 AOS.init();
 
-const Marcas = () => {
+const Brands = () => {
   const ImgContainer = styled.img`
-    height: ${isMobile ? "5rem" : "8rem"};
+    height: ${isMobile ? "5rem" : "7rem"};
   `;
 
   const ImgDivContainer = styled.div`
-    height: ${isMobile ? "5rem" : "8rem"};
+    height: ${isMobile ? "6rem" : "8rem"};
     margin: 3rem 0 0rem 0;
   `;
   return (
@@ -57,4 +57,4 @@ const Marcas = () => {
   );
 };
 
-export default Marcas;
+export default Brands;

@@ -8,7 +8,7 @@ import ContactForm from "../_components/ContactForm";
 
 AOS.init();
 
-const Contacto = () => {
+const Contact = () => {
   return (
     <div
       data-aos="fade-left"
@@ -23,4 +23,4 @@ const Contacto = () => {
   );
 };
 
-export default Contacto;
+export default Contact;

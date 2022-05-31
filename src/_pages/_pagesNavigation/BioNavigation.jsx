@@ -97,6 +97,8 @@ function Item({ bioparagraph, bioimg, isreverseimg, biotitle }) {
 }
 
 AOS.init();
+
+
 const BioNavigation = () => {
   const MainContainer = styled.div`
     margin:${isMobile ? " 0 1rem;" : " 0 10rem;"}

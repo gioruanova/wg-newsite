@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../_pages/Home";
 import Bio from "../_pages/Bio";
 import Eshop from "../_pages/Eshop";
-import Contacto from "../_pages/Contacto";
+import Contact from "../_pages/Contact";
 
 import BioNavigation from "../_pages/_pagesNavigation/BioNavigation";
 import MusicaNavigation from "../_pages/_pagesNavigation/MusicaNavigation";
@@ -24,7 +24,7 @@ export default function RoutesData() {
 
       <Route path="eshop" element={<Eshop />} />
 
-      <Route path="contacto" element={<Contacto />} />
+      <Route path="contact" element={<Contact />} />
 
       <Route path="biographysite" element={<BioNavigation />} />
       <Route path="musicsite" element={<MusicaNavigation />} />

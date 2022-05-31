@@ -23,6 +23,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-spring": "^9.4.5",
     "react-svg": "^15.0.0",
     "styled-components": "^5.3.5",
     "svg-icon": "^0.8.2",

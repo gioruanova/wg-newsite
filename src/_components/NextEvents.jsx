@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { isMobile } from "react-device-detect";
 
-import EventosList from "../_components/_helpers/EventosList";
-import Box from "../_components/Box";
-import { EventsArray } from "../_components/DataArray";
+import EventosList from "./_helpers/EventosList";
+import Box from "./Box";
+import { EventsArray } from "./DataArray";
 
 // ------------------------------------------------------------
 
@@ -25,7 +25,7 @@ function Item({ title }) {
   return <>{title && <Titles>{title}</Titles>}</>;
 }
 
-const ProximosEventos = () => {
+const NextEvents = () => {
   return (
     <>
       {isMobile ? (
@@ -61,4 +61,4 @@ const ProximosEventos = () => {
   );
 };
 
-export default ProximosEventos;
+export default NextEvents;

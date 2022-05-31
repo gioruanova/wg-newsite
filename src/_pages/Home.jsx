@@ -1,14 +1,14 @@
 import React from "react";
 
 import Header from "./Header";
-import ProximosEventos from "./ProximosEventos";
+import NextEvents from "../_components/NextEvents";
 
 import Bio from "./Bio";
 import BannerSeparator from "../_components/BannerSeparator";
 import ArtSection from "./ArtSection";
 
-import Contacto from "./Contacto";
-import Marcas from "./Marcas";
+import Contact from "./Contact";
+import Brands from "../_components/Brands";
 // import Eshop from "./Eshop";
 
 import { Content, MainContentHome, Separator } from "../_components/Styles";
@@ -20,13 +20,13 @@ const Home = () => {
     <MainContentHome className="animate__animated animate__fadeIn animate__delay-1s animate__slower">
       <Content>
         <Header />
-        <ProximosEventos />
+        <NextEvents />
         <Bio />
         <BannerSeparator />
         <ArtSection />
-        <Contacto />
+        <Contact />
         <Separator />
-        <Marcas />
+        <Brands />
       </Content>
     </MainContentHome>
   );
