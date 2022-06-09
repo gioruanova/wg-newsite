@@ -479,7 +479,7 @@ export const EventsArray = [
   {
     EventName: "Clases de Armonica",
     EventLocation: "Walter Gandini",
-    EventDate: "Reservá tu clase!!!",
+    EventDate: "Reservá tu clase!",
     EventContent1: "Técnica, teoría, improvisación,",
     EventContent2: "escalas, arpegios, tcnica de bloque, efectos",
     PromoCodeAvailable: true,
