@@ -475,7 +475,7 @@ export const EventsArray = [
     PromoCodeAvailable: false,
     PromoCode: "SailorTattoo",
   },
-
+ 
   {
     EventName: "Clases de Armonica",
     EventLocation: "Walter Gandini",
