@@ -482,7 +482,6 @@ export const EventsArray = [
     EventDate: "Reservá tu clase!!!",
     EventContent1: "Técnica, teoría, improvisación,",
     EventContent2: "escalas, arpegios, tcnica de bloque, efectos",
-    
     PromoCodeAvailable: true,
     PromoCode: "jedibluesmaster",
   },
