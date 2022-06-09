@@ -27,7 +27,10 @@
     "react-svg": "^15.0.0",
     "styled-components": "^5.3.5",
     "svg-icon": "^0.8.2",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "resolutions": {
+      "autoprefixer": "10.4.5"
+  }
   },
   "scripts": {
     "start": "react-scripts start",
